@@ -1,6 +1,6 @@
 site_name: Librian中文文檔
 pages:
-- 主页.md
+- 主頁.md
 - 用戶指南:
   - 用戶指南/劇本寫法.md
   - 用戶指南/立繪.md
