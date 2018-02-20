@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Librian: 簡明強大的Galgame引擎 - Librian中文文檔</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Librian: \u7c21\u660e\u5f37\u5927\u7684Galgame\u5f15\u64ce";
+    var mkdocs_page_input_path = "\u4e3b\u9875.md";
+    var mkdocs_page_url = "/\u4e3b\u9875/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="./" class="icon icon-home"> Librian中文文檔</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Librian: 簡明強大的Galgame引擎</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#librian-galgame">Librian: 簡明強大的Galgame引擎</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#_1">簡介</a></li>
+        
+            <li><a class="toctree-l3" href="#_2">劇本格式</a></li>
+        
+            <li><a class="toctree-l3" href="#_3">擴展功能</a></li>
+        
+            <li><a class="toctree-l3" href="#_4">快速安裝</a></li>
+        
+            <li><a class="toctree-l3" href="#_5">赞助</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">用戶指南</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../%E7%94%A8%E6%88%B6%E6%8C%87%E5%8D%97/%E5%8A%87%E6%9C%AC%E5%AF%AB%E6%B3%95/">劇本寫法</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../%E7%94%A8%E6%88%B6%E6%8C%87%E5%8D%97/%E7%AB%8B%E7%B9%AA/">立繪</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../%E7%94%A8%E6%88%B6%E6%8C%87%E5%8D%97/%E5%AE%A2%E8%A3%BD%E5%8C%96%E4%BD%A0%E7%9A%84%E9%81%8A%E6%88%B2/">客製化你的遊戲</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">接下來要做的</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../%E6%8E%A5%E4%B8%8B%E4%BE%86%E8%A6%81%E5%81%9A%E7%9A%84/%E4%B8%80%E4%BA%9B%E9%81%BA%E6%86%BE/">一些遺憾</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="./">Librian中文文檔</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="./">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Librian: 簡明強大的Galgame引擎</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="librian-galgame">Librian: 簡明強大的Galgame引擎</h1>
+<h2 id="_1">簡介</h2>
+<p>Librian是一个容易上手的gal引擎，Librian由純python編寫而成，並基於pyqt前端。</p>
+<p>Librian適用於快速高效的adv實現，能將你的idea迅速轉換爲結果，你只需提供素材文件和简单的劇本就能觀賞adv演出！</p>
+<p>Librian是面向劇本的引擎，在設計時首要的考慮是「劇本是否易讀」「劇本是否易寫」。</p>
+<p>Librian支持在劇本中嵌入即時解釋的python代碼來實現任意的可擴展性。</p>
+<h2 id="_2">劇本格式</h2>
+<p>假設「劇本.play」如下:</p>
+<pre><code>&gt; BG 機房.png
+排成列的高過人的金屬箱子的微光，讓黑暗的空間浸染上了青色。
+Librian 6，似乎是被這樣稱呼的。
+儘管嗡嗡的機械噪聲從耳膜的左邊穿到右邊，又從右邊穿到左邊，像是劣質的鐘錶一樣描述着時間的流逝。但時間就像是反反覆覆地停止了一樣。
+潘大爺 (嘆)「美妙，真是美妙。」
+不如說，時間不停止的話就是極大的失禮。
+潘大爺 (笑)「把我的理論獻給你吧………不，到現在爲止還剩什麼理論呢……」
+潘大爺 (笑)「來吧，和我一起，去到地上！」
+沒有回應，因爲自始至終這個狹長的空間裏只有一個人。如果他不回應自己的話，就一定沒有回應他的人了。
+青色的光像是風中的火，頻繁而隨機地稍稍淡下又變得更強，也許有人會不禁懷疑電路是不是出了故障…………
+…………又像是裝可愛的女兒眨着俏皮的眼睛。
+#這是隨便編的www，本來想隨便寫幾句程序的哲理體現一下潘大爺的厲害，結果就變成了小說23333
+</code></pre>
+<p>不需要任何其他標記，一小段劇本就完成了。 <br />
+直接演出大概是這樣的效果。 <br />
+<img alt="圖1" src="../樣例_潘大爺.jpg" />
+關於更詳細的劇本格式，參考<a href="../%E7%94%A8%E6%88%B6%E6%8C%87%E5%8D%97/%E5%8A%87%E6%9C%AC%E5%AF%AB%E6%B3%95/">劇本寫法</a>。</p>
+<h2 id="_3">擴展功能</h2>
+<p>你可以輕鬆客製化你的遊戲，包括遊標，界面，標題畫面等。參考<a href="../%E7%94%A8%E6%88%B6%E6%8C%87%E5%8D%97/%E5%AE%A2%E8%A3%BD%E5%8C%96%E4%BD%A0%E7%9A%84%E9%81%8A%E6%88%B2/">客製化</a></p>
+<p>不只是adv，你甚至可以嵌入線上交互等功能！</p>
+<h2 id="_4">快速安裝</h2>
+<p>如果你並沒有使用過python，可以去<a href="">这里</a>下載預編譯的版本。
+(媽的用了psd_tools以後打包不支持了……不知道怎麼辦)</p>
+<ul>
+<li>git clone https://github.com/fchollet/keras.git</li>
+<li>pip install pyqt5 pyyaml psd_tools pillow</li>
+<li>python3 Librian.py</li>
+</ul>
+<h2 id="_5">赞助</h2>
+<p>如果你覺得本文檔對你的……
+錯了，廢話少說，快給錢！</p>
+<p><img alt="圖1" src="../支付寶.jpg" /></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../%E7%94%A8%E6%88%B6%E6%8C%87%E5%8D%97/%E5%8A%87%E6%9C%AC%E5%AF%AB%E6%B3%95/" class="btn btn-neutral float-right" title="劇本寫法">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+        <span style="margin-left: 15px"><a href="../%E7%94%A8%E6%88%B6%E6%8C%87%E5%8D%97/%E5%8A%87%E6%9C%AC%E5%AF%AB%E6%B3%95/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/require.js"></script>
+      <script src="../search/search.js"></script>
+
+</body>
+</html>

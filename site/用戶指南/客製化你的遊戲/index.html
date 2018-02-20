@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>客製化你的遊戲 - Librian中文文檔</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\u5ba2\u88fd\u5316\u4f60\u7684\u904a\u6232";
+    var mkdocs_page_input_path = "\u7528\u6236\u6307\u5357\\\u5ba2\u88fd\u5316\u4f60\u7684\u904a\u6232.md";
+    var mkdocs_page_url = "/\u7528\u6236\u6307\u5357/\u5ba2\u88fd\u5316\u4f60\u7684\u904a\u6232/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../%E4%B8%BB%E9%A1%B5/" class="icon icon-home"> Librian中文文檔</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../%E4%B8%BB%E9%A1%B5/">Librian: 簡明強大的Galgame引擎</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">用戶指南</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../%E5%8A%87%E6%9C%AC%E5%AF%AB%E6%B3%95/">劇本寫法</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../%E7%AB%8B%E7%B9%AA/">立繪</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">客製化你的遊戲</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#_1">客製化你的遊戲</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#_2">修改配置</a></li>
+        
+            <li><a class="toctree-l4" href="#css">自定css</a></li>
+        
+            <li><a class="toctree-l4" href="#_3">主解析度</a></li>
+        
+            <li><a class="toctree-l4" href="#_4">標題畫面的寫法</a></li>
+        
+            <li><a class="toctree-l4" href="#_5">嵌入其他功能</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">接下來要做的</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../%E6%8E%A5%E4%B8%8B%E4%BE%86%E8%A6%81%E5%81%9A%E7%9A%84/%E4%B8%80%E4%BA%9B%E9%81%BA%E6%86%BE/">一些遺憾</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../%E4%B8%BB%E9%A1%B5/">Librian中文文檔</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../%E4%B8%BB%E9%A1%B5/">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>用戶指南 &raquo;</li>
+        
+      
+    
+    <li>客製化你的遊戲</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="_1">客製化你的遊戲</h1>
+<p>如果你想要客製化你的遊戲，最好瞭解一些關聯的知識，如html和css。畢竟，武裝自己的應該是知識，而不是一堆廢銅爛鐵。當然不學也沒關係吧……</p>
+<h2 id="_2">修改配置</h2>
+<p>在工程的「配置.yaml」中，你可以指定一些和項目相關的參數。</p>
+<p><strong>標題</strong> <br />
+指定「標題」來改變標題欄文字。</p>
+<p><strong>圖標</strong> <br />
+指定「圖標」來改變標題欄圖標。</p>
+<pre><code>標題: 夢想下鄉
+圖標: 畫面/萃香.ico
+</code></pre>
+
+<p><img alt="" src="../標題欄.jpg" /></p>
+<p><img alt="" src="../標題欄2.jpg" /></p>
+<p><strong>標題畫面</strong> <br />
+指定「標題畫面」來使用一個title界面。你也許想要自己的title界面，如果你有一定的html基礎，這並不是什麼難事。</p>
+<pre><code>標題畫面: 標題畫面/title.html
+</code></pre>
+
+<p><img alt="" src="../標題畫面.jpg" />
+至於title.html的寫法之後再介紹吧。</p>
+<p><strong>劇本入口</strong> <br />
+指定「劇本入口」來選擇開始遊戲時的劇本。</p>
+<p><strong>對話模式</strong> <br />
+指定「對話模式」來說明哪些形式可以被識別爲對話。在正則表達式的檢出dict中，'名'代表人物名，'顏'代表表情，'代'表示對話框中顯示的名字，'語'代表說的話。</p>
+<pre><code>對話模式: 
+  通常: ^(?P&lt;名&gt;.+?)(\|(?P&lt;代&gt;.+?))? (\((?P&lt;顏&gt;.+?)\))?(?P&lt;語&gt;「.*?」)$
+  隱式: ^(?P&lt;名&gt;.+?)(\|(?P&lt;代&gt;.+?))? (\((?P&lt;顏&gt;.+?)\))$
+</code></pre>
+
+<p>這樣匹配的就是「劇本寫法」中推薦的默認情況了。 <br />
+該死的正則表達式這還是不要改吧我自己都看不懂了……</p>
+<p><strong>自定css</strong> <br />
+指定「自定css」後，你可以在你的css中改變adv畫面的外觀，比如更換遊戲的字體大小，光標樣式，對話框圖片等。 <br />
+詳細在接下來介紹。</p>
+<p><strong>默認立繪位置</strong>
+不同人数时，各人从左到右的位置。
+在鏡頭的簡化寫法中，如 <strong>+ [潘大爺, 林梓雨]</strong> ，就會使用他們的默認立繪位置。</p>
+<pre><code>默認立繪位置: 
+    1:
+      - [300,0]
+    2:
+      - [100,0]
+      - [550,0]
+</code></pre>
+
+<p>當畫面中只有潘大爺時，潘大爺就會被安排在[300,0]的位置。
+當畫面中有兩個人，第一個是潘大爺，第二個是林梓雨時，潘大爺就會被放在[100,0]的位置，而林梓雨就會被放在[550,0]的位置。</p>
+<h2 id="css">自定css</h2>
+<p>如果你想要給遊戲添加漂亮的指針，或者漂亮的對話框，你就應當自定css。自定css是adv頁面會額外引用的css，在其中覆蓋原有的css設定就可以完全改變畫面的樣貌。當然別忘了把你自己的素材放在與css同一路徑。</p>
+<h2 id="_3">主解析度</h2>
+<p>就是你的遊戲窗口的大小。你準備的CG啊，BG啊，最好都符合這個大小，否則webkit的crossfade會有奇怪的表現。還有要記住主解析度不是16:9的場合在很多用戶的顯示器下全屏時會有黑邊。</p>
+<h2 id="_4">標題畫面的寫法</h2>
+<p>標題畫面是一個可以天馬行空地創作的html。不過要實現標題畫面的功能，還需要一點花樣。 <br />
+在head裏你得引用「/html/黑科技/qwebchannel.js」和「/html/title_js.js」來獲取標題畫面用到的幾個函數。然後在「開始遊戲」「繼續遊戲」等按鈕的點擊事件中調用對應的函數。 <br />
+如果你不太清楚這些函數的功能的話，也可以參考默認html的寫法。</p>
+<h2 id="_5">嵌入其他功能</h2>
+<p>比如說這個adv劇情到一半，要進入一個魔法打架的遊戲(當然這是你自己寫好的)。 <br />
+這樣的情況下，我覺得好像應該把在&gt;py/&gt;endpy裏調用你的遊戲。如果你的遊戲能嵌入pyqt5，在主窗口添加一個層，然後嵌入你的遊戲，在結束時把層消除就好了。 <br />
+我也沒試過……</p>
+<p>不過現在的遊戲引擎很多都能生成html5遊戲，說不定還不錯？</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../%E6%8E%A5%E4%B8%8B%E4%BE%86%E8%A6%81%E5%81%9A%E7%9A%84/%E4%B8%80%E4%BA%9B%E9%81%BA%E6%86%BE/" class="btn btn-neutral float-right" title="一些遺憾">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../%E7%AB%8B%E7%B9%AA/" class="btn btn-neutral" title="立繪"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../%E7%AB%8B%E7%B9%AA/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../%E6%8E%A5%E4%B8%8B%E4%BE%86%E8%A6%81%E5%81%9A%E7%9A%84/%E4%B8%80%E4%BA%9B%E9%81%BA%E6%86%BE/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/require.js"></script>
+      <script src="../../search/search.js"></script>
+
+</body>
+</html>
