@@ -13,11 +13,12 @@
 
   <link rel="stylesheet" href="/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="/css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="/css/highlight.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   
-  <script src="/js/jquery-2.1.1.min.js"></script>
-  <script src="/js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="/js/highlight.pack.js"></script> 
+  <script src="/js/jquery-2.1.1.min.js" defer></script>
+  <script src="/js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
   
 </head>
 
@@ -28,10 +29,10 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href="/%E4%B8%BB%E9%A0%81/" class="icon icon-home"> Librian中文文檔</a>
+        <a href="/." class="icon icon-home"> Librian中文文檔</a>
         <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="/search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+  <form id ="rtd-search-form" class="wy-form" action="//search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -42,7 +43,7 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="/%E4%B8%BB%E9%A0%81/">主頁</a>
+    <a class="" href="/主頁/">Librian: 簡明強大的Galgame引擎</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -51,15 +52,15 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="/%E7%94%A8%E6%88%B6%E6%8C%87%E5%8D%97/%E5%8A%87%E6%9C%AC%E5%AF%AB%E6%B3%95/">劇本寫法</a>
+    <a class="" href="/用戶指南/劇本寫法/">劇本寫法</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="/%E7%94%A8%E6%88%B6%E6%8C%87%E5%8D%97/%E7%AB%8B%E7%B9%AA/">立繪</a>
+    <a class="" href="/用戶指南/立繪/">立繪</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="/%E7%94%A8%E6%88%B6%E6%8C%87%E5%8D%97/%E5%AE%A2%E8%A3%BD%E5%8C%96%E4%BD%A0%E7%9A%84%E9%81%8A%E6%88%B2/">客製化你的遊戲</a>
+    <a class="" href="/用戶指南/客製化你的遊戲/">客製化你的遊戲</a>
                 </li>
     </ul>
 	    </li>
@@ -70,7 +71,7 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="/%E6%8E%A5%E4%B8%8B%E4%BE%86%E8%A6%81%E5%81%9A%E7%9A%84/%E4%B8%80%E4%BA%9B%E9%81%BA%E6%86%BE/">一些遺憾</a>
+    <a class="" href="/接下來要做的/一些遺憾/">一些遺憾</a>
                 </li>
     </ul>
 	    </li>
@@ -85,7 +86,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="/%E4%B8%BB%E9%A0%81/">Librian中文文檔</a>
+        <a href="/.">Librian中文文檔</a>
       </nav>
 
       
@@ -93,7 +94,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="/%E4%B8%BB%E9%A0%81/">Docs</a> &raquo;</li>
+    <li><a href="/.">Docs</a> &raquo;</li>
     
     
     <li class="wy-breadcrumbs-aside">
@@ -140,10 +141,9 @@
       
     </span>
 </div>
-    <script>var base_url = '';</script>
-    <script src="/js/theme.js"></script>
-      <script src="/search/require.js"></script>
-      <script src="/search/search.js"></script>
+    <script>var base_url = '/';</script>
+    <script src="/js/theme.js" defer></script>
+      <script src="/search/main.js" defer></script>
 
 </body>
 </html>

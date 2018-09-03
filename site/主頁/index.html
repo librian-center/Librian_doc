@@ -13,18 +13,19 @@
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="../css/highlight.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   
   <script>
     // Current page data
     var mkdocs_page_name = "Librian: \u7c21\u660e\u5f37\u5927\u7684Galgame\u5f15\u64ce";
     var mkdocs_page_input_path = "\u4e3b\u9801.md";
-    var mkdocs_page_url = "/\u4e3b\u9801/";
+    var mkdocs_page_url = null;
   </script>
   
-  <script src="../js/jquery-2.1.1.min.js"></script>
-  <script src="../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
   
 </head>
 
@@ -35,10 +36,10 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href="./" class="icon icon-home"> Librian中文文檔</a>
+        <a href=".." class="icon icon-home"> Librian中文文檔</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -78,15 +79,15 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../%E7%94%A8%E6%88%B6%E6%8C%87%E5%8D%97/%E5%8A%87%E6%9C%AC%E5%AF%AB%E6%B3%95/">劇本寫法</a>
+    <a class="" href="../用戶指南/劇本寫法/">劇本寫法</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../%E7%94%A8%E6%88%B6%E6%8C%87%E5%8D%97/%E7%AB%8B%E7%B9%AA/">立繪</a>
+    <a class="" href="../用戶指南/立繪/">立繪</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../%E7%94%A8%E6%88%B6%E6%8C%87%E5%8D%97/%E5%AE%A2%E8%A3%BD%E5%8C%96%E4%BD%A0%E7%9A%84%E9%81%8A%E6%88%B2/">客製化你的遊戲</a>
+    <a class="" href="../用戶指南/客製化你的遊戲/">客製化你的遊戲</a>
                 </li>
     </ul>
 	    </li>
@@ -97,7 +98,7 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../%E6%8E%A5%E4%B8%8B%E4%BE%86%E8%A6%81%E5%81%9A%E7%9A%84/%E4%B8%80%E4%BA%9B%E9%81%BA%E6%86%BE/">一些遺憾</a>
+    <a class="" href="../接下來要做的/一些遺憾/">一些遺憾</a>
                 </li>
     </ul>
 	    </li>
@@ -112,7 +113,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="./">Librian中文文檔</a>
+        <a href="..">Librian中文文檔</a>
       </nav>
 
       
@@ -120,7 +121,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="./">Docs</a> &raquo;</li>
+    <li><a href="..">Docs</a> &raquo;</li>
     
       
     
@@ -150,23 +151,22 @@ Librian 6，似乎是被這樣稱呼的。
 不如說，時間不停止的話就是極大的失禮。
 潘大爺 (笑)「把我的理論獻給你吧………不，到現在爲止還剩什麼理論呢……」
 潘大爺 (笑)「來吧，和我一起，去到地上！」
-沒有回應，因爲自始至終這個狹長的空間裏只有一個人。如果他不回應自己的話，就一定沒有回應他的人了。
+沒有回應，因爲自始至終這個狹長的空間裏只有一個人。如果他不回應自己的話，就一定沒有誰會回應他了。
 青色的光像是風中的火，頻繁而隨機地稍稍淡下又變得更強，也許有人會不禁懷疑電路是不是出了故障…………
 …………又像是裝可愛的女兒眨着俏皮的眼睛。
-#這是隨便編的www，本來想隨便寫幾句程序的哲理體現一下潘大爺的厲害，結果就變成了小說23333
+# 這是隨便編的www，本來想隨便寫幾句程序的哲理體現一下潘大爺的厲害，結果就變成了小說23333
 </code></pre>
 <p>不需要任何其他標記，一小段劇本就完成了。 <br />
 直接演出大概是這樣的效果。 <br />
 <img alt="圖1" src="../樣例_潘大爺.jpg" />
-關於更詳細的劇本格式，參考<a href="../%E7%94%A8%E6%88%B6%E6%8C%87%E5%8D%97/%E5%8A%87%E6%9C%AC%E5%AF%AB%E6%B3%95/">劇本寫法</a>。</p>
+關於更詳細的劇本格式，參考<a href="../用戶指南/劇本寫法/">劇本寫法</a>。</p>
 <h2 id="_3">擴展功能</h2>
-<p>你可以輕鬆客製化你的遊戲，包括遊標，界面，標題畫面等。參考<a href="../%E7%94%A8%E6%88%B6%E6%8C%87%E5%8D%97/%E5%AE%A2%E8%A3%BD%E5%8C%96%E4%BD%A0%E7%9A%84%E9%81%8A%E6%88%B2/">客製化</a></p>
+<p>你可以輕鬆客製化你的遊戲，包括遊標，界面，標題畫面等。參考<a href="../用戶指南/客製化你的遊戲/">客製化</a></p>
 <p>不只是adv，你甚至可以嵌入線上交互等功能！</p>
 <h2 id="_4">快速安裝</h2>
 <p>如果你並沒有使用過python，可以去<a href="">这里</a>下載預編譯的版本。
-(媽的用了psd_tools以後打包不支持了……不知道怎麼辦)</p>
+話說python打包真難，太難搞了我就直接嵌了一個python36進去。</p>
 <ul>
-<li>git clone https://github.com/fchollet/keras.git</li>
 <li>pip install pyqt5 pyyaml psd_tools pillow</li>
 <li>python3 Librian.py</li>
 </ul>
@@ -181,7 +181,7 @@ Librian 6，似乎是被這樣稱呼的。
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../%E7%94%A8%E6%88%B6%E6%8C%87%E5%8D%97/%E5%8A%87%E6%9C%AC%E5%AF%AB%E6%B3%95/" class="btn btn-neutral float-right" title="劇本寫法">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../用戶指南/劇本寫法/" class="btn btn-neutral float-right" title="劇本寫法">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
     </div>
@@ -209,14 +209,13 @@ Librian 6，似乎是被這樣稱呼的。
       
       
       
-        <span style="margin-left: 15px"><a href="../%E7%94%A8%E6%88%B6%E6%8C%87%E5%8D%97/%E5%8A%87%E6%9C%AC%E5%AF%AB%E6%B3%95/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../用戶指南/劇本寫法/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
     <script>var base_url = '..';</script>
-    <script src="../js/theme.js"></script>
-      <script src="../search/require.js"></script>
-      <script src="../search/search.js"></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
 
 </body>
 </html>

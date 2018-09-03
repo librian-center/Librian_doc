@@ -13,18 +13,19 @@
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/highlight.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   
   <script>
     // Current page data
     var mkdocs_page_name = "\u5287\u672c\u5beb\u6cd5";
     var mkdocs_page_input_path = "\u7528\u6236\u6307\u5357\\\u5287\u672c\u5beb\u6cd5.md";
-    var mkdocs_page_url = "/\u7528\u6236\u6307\u5357/\u5287\u672c\u5beb\u6cd5/";
+    var mkdocs_page_url = null;
   </script>
   
-  <script src="../../js/jquery-2.1.1.min.js"></script>
-  <script src="../../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
   
 </head>
 
@@ -35,10 +36,10 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href="../../%E4%B8%BB%E9%A0%81/" class="icon icon-home"> Librian中文文檔</a>
+        <a href="../.." class="icon icon-home"> Librian中文文檔</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -49,7 +50,7 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../../%E4%B8%BB%E9%A0%81/">Librian: 簡明強大的Galgame引擎</a>
+    <a class="" href="../../主頁/">Librian: 簡明強大的Galgame引擎</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -69,11 +70,11 @@
         
             <li><a class="toctree-l4" href="#_3">劇本功能</a></li>
         
-            <li><a class="toctree-l4" href="#_4">立繪安排</a></li>
+            <li><a class="toctree-l4" href="#_5">立繪安排</a></li>
         
-            <li><a class="toctree-l4" href="#_5">流程控制</a></li>
+            <li><a class="toctree-l4" href="#_6">流程控制</a></li>
         
-            <li><a class="toctree-l4" href="#_6">語義着色</a></li>
+            <li><a class="toctree-l4" href="#_7">語義着色</a></li>
         
         </ul>
     
@@ -82,11 +83,11 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../%E7%AB%8B%E7%B9%AA/">立繪</a>
+    <a class="" href="../立繪/">立繪</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../%E5%AE%A2%E8%A3%BD%E5%8C%96%E4%BD%A0%E7%9A%84%E9%81%8A%E6%88%B2/">客製化你的遊戲</a>
+    <a class="" href="../客製化你的遊戲/">客製化你的遊戲</a>
                 </li>
     </ul>
 	    </li>
@@ -97,7 +98,7 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../../%E6%8E%A5%E4%B8%8B%E4%BE%86%E8%A6%81%E5%81%9A%E7%9A%84/%E4%B8%80%E4%BA%9B%E9%81%BA%E6%86%BE/">一些遺憾</a>
+    <a class="" href="../../接下來要做的/一些遺憾/">一些遺憾</a>
                 </li>
     </ul>
 	    </li>
@@ -112,7 +113,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../%E4%B8%BB%E9%A0%81/">Librian中文文檔</a>
+        <a href="../..">Librian中文文檔</a>
       </nav>
 
       
@@ -120,7 +121,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="../../%E4%B8%BB%E9%A0%81/">Docs</a> &raquo;</li>
+    <li><a href="../..">Docs</a> &raquo;</li>
     
       
         
@@ -159,18 +160,17 @@
 <p>相比之下少了後面的方引號內的內容。 <br />
 這不會作爲潘大爺說的一句話來處理，也不需要玩家點擊來跳過，但是會把鏡頭指向潘大爺並改變潘大爺的表情。</p>
 <p>如果你想按你自己喜歡的格式書寫也很簡單，你可以簡單修改配置文件來客製化你的格式。(如果你能熟練使用正則表達式……)</p>
-<p>關於立繪的自動化，參考下方的「立繪安排」。關於如何準備立繪，參考<a href="../%E7%AB%8B%E7%B9%AA/">立繪</a>。</p>
+<p>關於立繪的自動化，參考下方的「立繪安排」。關於如何準備立繪，參考<a href="../立繪/">立繪</a>。</p>
 <p>文件中的空行總是被忽略，沒有任何影響。 <br />
 對話超過一行的得用「\」續行。 <br />
 以#開頭的一行爲註釋。   </p>
 <h2 id="_3">劇本功能</h2>
-<p>以@開頭的是控制語句。 <br />
+<p>一般以 &gt;(大於號) 開頭的是控制的函數。 <br />
 它們將會對劇本的演出產生控制作用。</p>
 <p>包括 : 
  - <em>&gt; BG</em> 背景圖片文件名
  - <em>&gt; BGM</em> 背景音樂文件名
  - <em>&gt; CG</em> CG的文件名
- - <em>&gt; T</em> 切斷圖片的名字
  - <em>&gt; CL</em> 人物名 衣着
  - <em>&gt; VIDEO</em> 影片的名字
  - <em>&gt; WRAP</em> 快速控制選項和跳轉
@@ -184,9 +184,9 @@ BG總是在一點時間內漸變的。
 </code></pre>
 <p><em>BGM</em> 會替換當前的BGM到你指定的文件。 <br />
 如果指定爲None，會有一點淡出時間。但總是沒有淡入。
-內核好像只支持ogg格式……</p>
+webkit更新了之後終於支持mp3了</p>
 <pre><code>&gt; BGM {{文件名}} {{音量=1}}
-&gt; BGM 愉快的音樂.ogg
+&gt; BGM 愉快的音樂.mp3
 &gt; BGM 不愉快的音樂.ogg 0.5
 &gt; BGM None
 </code></pre>
@@ -195,11 +195,6 @@ BG總是在一點時間內漸變的。
 <pre><code>&gt; CG {{文件名=None}}
 &gt; CG 極夜大戰.png
 &gt; CG
-</code></pre>
-<p><em>T</em>使用一張圖片將劇本切斷一小段時間。比如第一章結束，第二章開始的時候就用 @T 二章.png 來插入第二章的標題。 <br />
-這個方法一旦被使用，BG呀，BGM呀，立繪呀，都會重置所以要注意。</p>
-<pre><code>&gt; T {{文件名=None}}
-&gt; T 第一章.png
 </code></pre>
 <p><em>CL</em>改變人物衣着。在使用之後，目標人物的立繪衣着持續變成對應的形態。</p>
 <pre><code>&gt; CL {{人物}} {{衣着}}
@@ -230,6 +225,13 @@ s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 alert('快交錢才能玩！')
 &gt; endjs
 </code></pre>
+<h3 id="_4">還有一點</h3>
+<p><em>===</em>使用一張圖片將劇本切斷一小段時間。比如第一章結束，第二章開始的時候就用 =====二章.png 來插入第二章的標題。 <br />
+3個以上的等號都是可以的。</p>
+<pre><code>===第一章.png
+=========================第一章.png
+</code></pre>
+<p>*(星號)表示一個躍點，和註釋一樣會被跳過。不過在goto的時候指定這個位置就可以跳轉。</p>
 <p>注意: 
 + 命令都是大小寫敏感的。</p>
 <ul>
@@ -240,16 +242,18 @@ alert('快交錢才能玩！')
     這兩種寫法都可以。</p>
 </li>
 <li>
-<p>你的文件名裏含有空格的話，得用引號把它包起來，就像在命令列裏那樣。</p>
+<p>你的文件名裏含有空格的話，得用引號把它包起來。
+    <code>&gt; BG "librian wiki.png"</code>
+    就像在命令列裏那樣。</p>
 </li>
 </ul>
-<h2 id="_4">立繪安排</h2>
+<h2 id="_5">立繪安排</h2>
 <p>Librian會自動安排你的立繪，你不需要對每句話指定立繪的位置。</p>
 <p>你也可以使用類似這個寫法的「鏡頭」功能來隨心所欲地控制他們。</p>
 <pre><code>+ [靈夢, 萃香]
 </code></pre>
-<p>關於更詳細的鏡頭，可參考<a href="../%E7%AB%8B%E7%B9%AA/">立繪</a>中的鏡頭。</p>
-<h2 id="_5">流程控制</h2>
+<p>關於更詳細的鏡頭，可參考<a href="../立繪/">立繪</a>中的鏡頭。</p>
+<h2 id="_6">流程控制</h2>
 <p>在py/endpy中，預備了幾個函數供你使用：</p>
 <pre><code class="python">    goto(path=None, lable=None)
 
@@ -258,9 +262,20 @@ alert('快交錢才能玩！')
     choice(c1, c2, c3, ...)
 </code></pre>
 
-<p>goto跳轉到另一個路徑爲path劇本（默认是自身）的一個寫作tag的註釋的位置。如果tag不指定就會跳到開頭。 <br />
+<p>goto跳轉到另一個路徑爲path劇本（默认是自身）的一個躍點的位置。如果tag不指定就會跳到開頭。 <br />
 push的功能是goto加上目標劇本演出結束後回到調用處。   </p>
-<p>choice在adv演出中提供幾個選項，每一個選項都是一個list，包括一個選項名和一個回調函數。 <br />
+<pre><code class="python">    &gt; py
+        goto(path='第9章.play', lable='躍點A')
+    &gt; endpy
+</code></pre>
+
+<p>在目標文件裏要有對應的躍點。</p>
+<pre><code class="python">    *躍點A
+    蘿莉 「喵喵喵。」
+    ……
+</code></pre>
+
+<p>choice在adv演出中提供幾個選項，每一個選項都是一個list或者tuple，包括一個選項名和一個回調函數。 <br />
 下面是樣例。   </p>
 <pre><code class="python">    def f():
         good+=1      #英文真難！
@@ -276,18 +291,18 @@ push的功能是goto加上目標劇本演出結束後回到調用處。   </p>
 但這些代碼仍是在主線程執行的，對費事的操作也許import threading是個不錯的主意。</p>
 <p>WRAP是choice/push的語法糖。
 (顯然WRAP是劇本函數)</p>
-<pre><code>WRAP [接受治療,壞結局.play] [放棄治療,好結局.play] [動物治療,一章.play,#原點]
+<pre><code>WRAP [接受治療,壞結局.play] [放棄治療,好結局.play] [動物治療,一章.play,原點]
 # 話說第三個是什麼鬼……
 </code></pre>
 <p>相當於</p>
 <pre><code class="python">choice(
     ('接受治療',lambda: push('壞結局.play')),
     ('放棄治療',lambda: push('好結局.play')),
-    ('動物治療',lambda: push('一章.play','#原點'))
+    ('動物治療',lambda: push('一章.play','原點'))
 )
 </code></pre>
 
-<h2 id="_6">語義着色</h2>
+<h2 id="_7">語義着色</h2>
 <p>「資源」中贈送的sublime語義文件可以幫助你進行語義着色。 <br />
 在我這裏，着色後的劇本看起來就像這樣。 <br />
 <img alt="着色" src="../着色.png" />
@@ -299,10 +314,10 @@ sublime真是太棒了！</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../%E7%AB%8B%E7%B9%AA/" class="btn btn-neutral float-right" title="立繪">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../立繪/" class="btn btn-neutral float-right" title="立繪">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../../%E4%B8%BB%E9%A0%81/" class="btn btn-neutral" title="Librian: 簡明強大的Galgame引擎"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../主頁/" class="btn btn-neutral" title="Librian: 簡明強大的Galgame引擎"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -328,17 +343,16 @@ sublime真是太棒了！</p>
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../../%E4%B8%BB%E9%A0%81/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../../主頁/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../%E7%AB%8B%E7%B9%AA/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../立繪/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
     <script>var base_url = '../..';</script>
-    <script src="../../js/theme.js"></script>
-      <script src="../../search/require.js"></script>
-      <script src="../../search/search.js"></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
 
 </body>
 </html>

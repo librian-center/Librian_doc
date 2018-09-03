@@ -13,18 +13,19 @@
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/highlight.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   
   <script>
     // Current page data
     var mkdocs_page_name = "\u4e00\u4e9b\u907a\u61be";
     var mkdocs_page_input_path = "\u63a5\u4e0b\u4f86\u8981\u505a\u7684\\\u4e00\u4e9b\u907a\u61be.md";
-    var mkdocs_page_url = "/\u63a5\u4e0b\u4f86\u8981\u505a\u7684/\u4e00\u4e9b\u907a\u61be/";
+    var mkdocs_page_url = null;
   </script>
   
-  <script src="../../js/jquery-2.1.1.min.js"></script>
-  <script src="../../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
   
 </head>
 
@@ -35,10 +36,10 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href="../../%E4%B8%BB%E9%A0%81/" class="icon icon-home"> Librian中文文檔</a>
+        <a href="../.." class="icon icon-home"> Librian中文文檔</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -49,7 +50,7 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../../%E4%B8%BB%E9%A0%81/">Librian: 簡明強大的Galgame引擎</a>
+    <a class="" href="../../主頁/">Librian: 簡明強大的Galgame引擎</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -58,15 +59,15 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../../%E7%94%A8%E6%88%B6%E6%8C%87%E5%8D%97/%E5%8A%87%E6%9C%AC%E5%AF%AB%E6%B3%95/">劇本寫法</a>
+    <a class="" href="../../用戶指南/劇本寫法/">劇本寫法</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../%E7%94%A8%E6%88%B6%E6%8C%87%E5%8D%97/%E7%AB%8B%E7%B9%AA/">立繪</a>
+    <a class="" href="../../用戶指南/立繪/">立繪</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../%E7%94%A8%E6%88%B6%E6%8C%87%E5%8D%97/%E5%AE%A2%E8%A3%BD%E5%8C%96%E4%BD%A0%E7%9A%84%E9%81%8A%E6%88%B2/">客製化你的遊戲</a>
+    <a class="" href="../../用戶指南/客製化你的遊戲/">客製化你的遊戲</a>
                 </li>
     </ul>
 	    </li>
@@ -84,11 +85,7 @@
     
         <ul>
         
-            <li><a class="toctree-l4" href="#saveload">爲什麼save/load有時不按我預想的方式工作？</a></li>
-        
             <li><a class="toctree-l4" href="#goto">爲什麼goto的表現有時不一致？</a></li>
-        
-            <li><a class="toctree-l4" href="#pythonphpasm">爲什麼語法這麼彆扭，明明是python，寫起來卻像是php和asm？</a></li>
         
         </ul>
     
@@ -100,8 +97,6 @@
             <li><a class="toctree-l4" href="#_3">衣着</a></li>
         
             <li><a class="toctree-l4" href="#jsendjs">js/endjs</a></li>
-        
-            <li><a class="toctree-l4" href="#_4">立繪漸變</a></li>
         
             <li><a class="toctree-l4" href="#saveload-py">save/load py的狀態</a></li>
         
@@ -123,7 +118,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../%E4%B8%BB%E9%A0%81/">Librian中文文檔</a>
+        <a href="../..">Librian中文文檔</a>
       </nav>
 
       
@@ -131,7 +126,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="../../%E4%B8%BB%E9%A0%81/">Docs</a> &raquo;</li>
+    <li><a href="../..">Docs</a> &raquo;</li>
     
       
         
@@ -150,25 +145,14 @@
             <div class="section">
               
                 <h2 id="_1">已知問題</h2>
-<p>如果你發現什麼有鬼的問題的話，我很樂意見到你掃描<a href="../../主頁/#_5">前面</a>的那個QRcode，並把問題寫在備註裏。</p>
-<h3 id="saveload">爲什麼save/load有時不按我預想的方式工作？</h3>
-<p>save/load可以儲存和恢復當時的劇本狀態。 <br />
- 但是我在試圖儲存&gt;py中的變量時出現了問題，pickle並不能儲存你定義的函數之類的。下次想想辦法吧。   </p>
+<p>如果你發現什麼有鬼的問題的話，我很樂意見到你掃描<a href="../主頁/#_5">前面</a>的那個QRcode，並把問題寫在備註裏。</p>
 <h3 id="goto">爲什麼goto的表現有時不一致？</h3>
 <p>goto實際上並不會改變當前adv畫面，生效的是你之前的點擊。也就是說，定時調用需要自行更新……</p>
-<h3 id="pythonphpasm">爲什麼語法這麼彆扭，明明是python，寫起來卻像是php和asm？</h3>
-<p>php大師 「你看不起php嗎？！ 就讓我php大師告訴你，php是世界上最好的語言！ <br />
- <small>(抱歉，上面那個php大師已經被敵法師打死了。)</small> <br />
- 本意是像正規adv那樣劇本爲主，小部分地方用邏輯，所以才這樣做。所以中間多填點劇本，把py之間的間隔撐開就好啦。</p>
 <h2 id="_2">未實現的功能</h2>
 <h3 id="_3">衣着</h3>
 <p><em>&gt;CL</em> 暫時沒有任何效果，因爲我自己也沒有用到給人換衣服所以先擱置吧……</p>
 <h3 id="jsendjs">js/endjs</h3>
 <p><em>&gt;js/&gt;endjs</em> 當初是爲了在畫面中添加特殊效果而設計的語法糖，好像也用不到。</p>
-<h3 id="_4">立繪漸變</h3>
-<p>立繪沒有漸變效果確實是個大問題呢。要是說都是html的錯的話是不是推卸責任呢。我一開始的想法是把舊立繪alpha--同時新立繪alpha++，然而有一個問題是這樣整體alpha卻不是100%，讓角色一瞬間看起來虛無了。 <br />
-話說隔壁AVGjs在更換表情時也沒有漸變的嘛……  <br />
-還有前一段忘記在哪看了個日文的html5的在線galgame，就是我上面想過的那個實現。</p>
 <h3 id="saveload-py">save/load py的狀態</h3>
 <p>這個有點難。我都準備了一個字典作爲在py中的環境了，原本我想儲存下字典，利用python神奇的pickle，但是卻發現在劇本內定義的函數之類的不能被pickle導致完全pickle失敗……似乎pickle只儲存了函數名和其校驗碼，難道就沒有把函數代碼直接pickle出來的模式嗎……</p>
               
@@ -179,7 +163,7 @@
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="../../%E7%94%A8%E6%88%B6%E6%8C%87%E5%8D%97/%E5%AE%A2%E8%A3%BD%E5%8C%96%E4%BD%A0%E7%9A%84%E9%81%8A%E6%88%B2/" class="btn btn-neutral" title="客製化你的遊戲"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../用戶指南/客製化你的遊戲/" class="btn btn-neutral" title="客製化你的遊戲"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -205,15 +189,14 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../../%E7%94%A8%E6%88%B6%E6%8C%87%E5%8D%97/%E5%AE%A2%E8%A3%BD%E5%8C%96%E4%BD%A0%E7%9A%84%E9%81%8A%E6%88%B2/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../../用戶指南/客製化你的遊戲/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
     </span>
 </div>
     <script>var base_url = '../..';</script>
-    <script src="../../js/theme.js"></script>
-      <script src="../../search/require.js"></script>
-      <script src="../../search/search.js"></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
 
 </body>
 </html>
