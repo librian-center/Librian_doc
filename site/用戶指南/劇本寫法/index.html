@@ -237,21 +237,15 @@ alert('快交錢才能玩！')
 <ul>
 <li>
 <p>多餘的空格會被忽略。   </p>
-<p>```</p>
-<blockquote>
-<p>BG   河上.png
-BG 河上.png
-```</p>
-</blockquote>
+<pre><code>&gt; BG   河上.png
+&gt;BG 河上.png
+</code></pre>
 <p>這兩種寫法都可以。</p>
 </li>
 <li>
 <p>你的文件名裏含有空格的話，得用引號把它包起來。</p>
-<p>```</p>
-<blockquote>
-<p>BG "librian wiki.png" 
-```</p>
-</blockquote>
+<pre><code>&gt; BG "librian wiki.png"
+</code></pre>
 <p>就像在命令列裏那樣。</p>
 </li>
 </ul>
@@ -299,7 +293,7 @@ push的功能是goto加上目標劇本演出結束後回到調用處。   </p>
 但這些代碼仍是在主線程執行的，對費事的操作也許import threading是個不錯的主意。</p>
 <p>WRAP是choice/push的語法糖。
 (顯然WRAP是劇本函數)</p>
-<pre><code>WRAP [接受治療,壞結局.play] [放棄治療,好結局.play] [動物治療,一章.play,原點]
+<pre><code>WRAP [接受治療,壞結局.play] [放棄治療,好結局.play] [蘿莉治療,一章.play,原點]
 # 話說第三個是什麼鬼……
 </code></pre>
 <p>相當於</p>
