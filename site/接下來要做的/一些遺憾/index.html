@@ -340,8 +340,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#goto" title="爲什麼goto的表現有時不一致？" class="md-nav__link">
-    爲什麼goto的表現有時不一致？
+  <a href="#goto" title="goto在非主線程調用時不會立即跳轉？" class="md-nav__link">
+    goto在非主線程調用時不會立即跳轉？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#saveloadpython" title="save/load只保存劇本進度，不保存python的變量？" class="md-nav__link">
+    save/load只保存劇本進度，不保存python的變量？
   </a>
   
 </li>
@@ -352,8 +359,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" title="未實現的功能" class="md-nav__link">
-    未實現的功能
+  <a href="#_2" title="文檔中未實現的功能" class="md-nav__link">
+    文檔中未實現的功能
   </a>
   
     <nav class="md-nav">
@@ -374,8 +381,49 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#saveload-py" title="save/load py的狀態" class="md-nav__link">
-    save/load py的狀態
+  <a href="#_4" title="演出功能設定" class="md-nav__link">
+    演出功能設定
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="還想做的功能" class="md-nav__link">
+    還想做的功能
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python" title="&gt;直接嵌入python" class="md-nav__link">
+    &gt;直接嵌入python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="縮進控制" class="md-nav__link">
+    縮進控制
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="爲立繪提供獨立的默認縮放" class="md-nav__link">
+    爲立繪提供獨立的默認縮放
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="演出功能的自動發言表情" class="md-nav__link">
+    演出功能的自動發言表情
   </a>
   
 </li>
@@ -428,8 +476,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#goto" title="爲什麼goto的表現有時不一致？" class="md-nav__link">
-    爲什麼goto的表現有時不一致？
+  <a href="#goto" title="goto在非主線程調用時不會立即跳轉？" class="md-nav__link">
+    goto在非主線程調用時不會立即跳轉？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#saveloadpython" title="save/load只保存劇本進度，不保存python的變量？" class="md-nav__link">
+    save/load只保存劇本進度，不保存python的變量？
   </a>
   
 </li>
@@ -440,8 +495,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" title="未實現的功能" class="md-nav__link">
-    未實現的功能
+  <a href="#_2" title="文檔中未實現的功能" class="md-nav__link">
+    文檔中未實現的功能
   </a>
   
     <nav class="md-nav">
@@ -462,8 +517,49 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#saveload-py" title="save/load py的狀態" class="md-nav__link">
-    save/load py的狀態
+  <a href="#_4" title="演出功能設定" class="md-nav__link">
+    演出功能設定
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="還想做的功能" class="md-nav__link">
+    還想做的功能
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python" title="&gt;直接嵌入python" class="md-nav__link">
+    &gt;直接嵌入python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="縮進控制" class="md-nav__link">
+    縮進控制
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="爲立繪提供獨立的默認縮放" class="md-nav__link">
+    爲立繪提供獨立的默認縮放
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="演出功能的自動發言表情" class="md-nav__link">
+    演出功能的自動發言表情
   </a>
   
 </li>
@@ -494,15 +590,43 @@
                 
                 <h2 id="_1">已知問題</h2>
 <p>如果你發現什麼有鬼的問題的話，我很樂意見到你掃描<a href="../../主頁/#_5">前面</a>的那個QRcode，並把問題寫在備註裏。</p>
-<h3 id="goto">爲什麼goto的表現有時不一致？</h3>
-<p>goto實際上並不會改變當前adv畫面，生效的是你之前的點擊。也就是說，定時調用需要自行更新……</p>
-<h2 id="_2">未實現的功能</h2>
+<h3 id="goto">goto在非主線程調用時不會立即跳轉？</h3>
+<p>goto實際上並不會改變當前adv畫面，生效的是你之前的點擊。也就是說，定時調用需要再調用一次更新方法。</p>
+<h3 id="saveloadpython">save/load只保存劇本進度，不保存python的變量？</h3>
+<p>這個有點難。我都準備了一個字典作爲在py中的環境了，原本我想儲存下字典，利用python神奇的pickle，但是卻發現在劇本內定義的函數之類的不能被pickle導致完全pickle失敗……似乎pickle只儲存了函數名和其校驗碼，難道就沒有把函數代碼直接pickle出來的模式嗎……</p>
+<h2 id="_2">文檔中未實現的功能</h2>
 <h3 id="_3">衣着</h3>
 <p><em>&gt;CL</em> 暫時沒有任何效果，因爲我自己也沒有用到給人換衣服所以先擱置吧……</p>
 <h3 id="jsendjs">js/endjs</h3>
 <p><em>&gt;js/&gt;endjs</em> 當初是爲了在畫面中添加特殊效果而設計的語法糖，好像也用不到。</p>
-<h3 id="saveload-py">save/load py的狀態</h3>
-<p>這個有點難。我都準備了一個字典作爲在py中的環境了，原本我想儲存下字典，利用python神奇的pickle，但是卻發現在劇本內定義的函數之類的不能被pickle導致完全pickle失敗……似乎pickle只儲存了函數名和其校驗碼，難道就沒有把函數代碼直接pickle出來的模式嗎……</p>
+<h3 id="_4">演出功能設定</h3>
+<p>演出功能設定並不會生效。</p>
+<h2 id="_5">還想做的功能</h2>
+<h3 id="python">&gt;直接嵌入python</h3>
+<pre><code>&gt; BG 家裏.png
+&gt; BG('家裏.png')
+</code></pre>
+<p>提供下面這種寫法也不錯嘛。</p>
+<h3 id="_6">縮進控制</h3>
+<p>with塊，利用縮進和進入退出控制來改變狀態，類似這樣: </p>
+<pre><code>&gt;with CG('蘿莉H.png'):
+    蘿莉 「呣~」
+    潘大爺 「你真可愛。」
+    潘大爺撫摸蘿莉的頭。
+    蘿莉 「喵喵喵！」
+H好了。
+</code></pre>
+<p>這樣只有在說H話的時候才有HCG。</p>
+<p>if塊，顧名思義，類似這樣: </p>
+<pre><code>&gt;if 好感度==0:
+    蘿莉 「CNM！」
+</code></pre>
+<p><big>(笑)</big> <br />
+沒錯我就是故意打的big標籤。</p>
+<h3 id="_7">爲立繪提供獨立的默認縮放</h3>
+<p>不難，只是還沒寫。</p>
+<h3 id="_8">演出功能的自動發言表情</h3>
+<p>畫師表示不想畫這麼多表情，我表示忙着程序也不畫，所以沒有用得上這個功能的表情……</p>
                 
                   
                 
