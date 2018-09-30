@@ -418,8 +418,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#gotopush" title="goto/push" class="md-nav__link">
-    goto/push
+  <a href="#gotocall" title="goto/call" class="md-nav__link">
+    goto/call
   </a>
   
 </li>
@@ -600,8 +600,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#gotopush" title="goto/push" class="md-nav__link">
-    goto/push
+  <a href="#gotocall" title="goto/call" class="md-nav__link">
+    goto/call
   </a>
   
 </li>
@@ -735,9 +735,9 @@ choice(
 
 <p>相當於</p>
 <pre><code class="python">choice(
-    ('接受治療',lambda: push('壞結局.play')),
-    ('放棄治療',lambda: push('好結局.play')),
-    ('蘿莉治療',lambda: push('一章.play','原點'))
+    ('接受治療',lambda: call('壞結局.play')),
+    ('放棄治療',lambda: call('好結局.play')),
+    ('蘿莉治療',lambda: call('一章.play','原點'))
 )
 </code></pre>
 
@@ -820,15 +820,35 @@ goto(lable='決鬥開始')
 此外，費時的操作最好另開一個線程來執行，主線程阻塞的話畫面會停止響應。</p>
 <h2 id="_6">一些坑</h2>
 <h3 id="_7">實際的執行順序</h3>
-<p>每次的py塊總是會執行到底，也就是說goto,fusion的並不是即時的，他們真正的作用只是改變了劇本棧的順序，導致在一個塊中多次調用會引起順序混亂。 <br />
-我打算將讀者的實例改爲遞歸的來解決。</p>
+<p>每次的py塊總是會執行到底，也就是說goto,fusion的並不是即時的，他們真正的作用只是改變了劇本棧的順序，導致在一個塊中多次調用會引起順序混亂。   </p>
+<p>我雖然想將讀者的實例改爲遞歸的來解決這個問題，但是卻發現這樣存在一個不能存檔的問題，舉這樣一個例子。</p>
+<pre><code>&gt;py
+call('第一章.play')
+call('第二章.play')
+&gt;endpy
+</code></pre>
+
+<p>寫的人的想法是想要先演出第一章，第一章結束之後返回調用點，然後演出第二章。 <br />
+但實際上的執行順序是 call('第一章.play') -&gt; call('第二章.play') -&gt; 演出第二章 -&gt; 演出第一章。</p>
+<p>因爲在call的時候劇本的棧頂被先後壓入了第一章和第二章，成爲(.., 當前劇本, 第一章, 第二章)第二章在棧頂導致先演出。</p>
+<p>我想的解決辦法是在每一次call的時候直接重建一個讀者實例，然後直接進入這個新實例執行，在這個實例執行完畢之後就可以回到調用點執行之後的語句了……但問題是存檔時只能儲存劇本棧不能儲存調用棧，也就是無法在新劇本執行完畢之後返回調用點。</p>
+<p>也就是說，由於這個問題，這個做法暫時只能寫成: </p>
+<pre><code>&gt;py
+call('第一章.play')
+&gt;endpy
+&gt;py
+call('第二章.play')
+&gt;endpy
+</code></pre>
+
+<p>如果你有方法的話，歡迎掃描前面的QRcode……不，這個還是火速聯繫我吧。</p>
 <h3 id="goto">goto在非主線程調用時不會立即跳轉</h3>
 <p>goto實際上並不會改變當前adv畫面，生效的是你之前的點擊。也就是說，定時調用需要再調用一次更新方法。</p>
 <h2 id="_8">內置函數參考</h2>
 <p>在py/endpy中，這幾個函數是預備了的：</p>
 <pre><code class="python">goto(path=None, lable=None)
 
-push(path=None, lable=None)
+call(path=None, lable=None)
 
 fusion(s)
 
@@ -837,7 +857,7 @@ choice(c1, c2, c3, ...)
 adv_end()
 </code></pre>
 
-<h3 id="gotopush">goto/push</h3>
+<h3 id="gotocall">goto/call</h3>
 <p>goto跳轉到另一個路徑爲path劇本（默认是自身）的一個躍點的位置。如果tag不指定就會跳到開頭。 <br />
 push的功能是goto加上目標劇本演出結束後回到調用處。   </p>
 <pre><code>&gt; py
@@ -854,11 +874,11 @@ push的功能是goto加上目標劇本演出結束後回到調用處。   </p>
 <h3 id="fusion">fusion</h3>
 <p>將一個字符串編譯後顯示在adv畫面中。</p>
 <h3 id="choice">choice</h3>
-<p>上面講過了……</p>
+<p>由選項名和回調函數組成選項。</p>
 <h3 id="adv_end">adv_end</h3>
 <p>清空劇本棧使得adv演出進入結束狀態。</p>
 <h2 id="_9">内置函数的别名</h2>
-<p>爲了照顧某些看到英文就頭大的人們而提供了這樣的名字……   </p>
+<p>爲了照顧某些看到英文就頭大的朋友而提供了這樣的名字……   </p>
 <ul>
 <li>goto = 跳轉</li>
 <li>call = 調用</li>
