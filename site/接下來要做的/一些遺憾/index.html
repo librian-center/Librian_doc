@@ -286,18 +286,66 @@
       
       
 
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      進階
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        進階
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../進階/畫面的定製/" title="畫面的定製" class="md-nav__link">
+      畫面的定製
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../進階/嵌入python/" title="嵌入python" class="md-nav__link">
+      嵌入python
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
   
 
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
     
-    <label class="md-nav__link" for="nav-4">
+    <label class="md-nav__link" for="nav-5">
       缺少的功能
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
+      <label class="md-nav__title" for="nav-5">
         缺少的功能
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -338,13 +386,6 @@
   
     <nav class="md-nav">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#goto" title="goto在非主線程調用時不會立即跳轉？" class="md-nav__link">
-    goto在非主線程調用時不會立即跳轉？
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#saveloadpython" title="save/load只保存劇本進度，不保存python的變量？" class="md-nav__link">
@@ -417,13 +458,6 @@
           <li class="md-nav__item">
   <a href="#_7" title="爲立繪提供獨立的默認縮放" class="md-nav__link">
     爲立繪提供獨立的默認縮放
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" title="演出功能的自動發言表情" class="md-nav__link">
-    演出功能的自動發言表情
   </a>
   
 </li>
@@ -476,13 +510,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#goto" title="goto在非主線程調用時不會立即跳轉？" class="md-nav__link">
-    goto在非主線程調用時不會立即跳轉？
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#saveloadpython" title="save/load只保存劇本進度，不保存python的變量？" class="md-nav__link">
     save/load只保存劇本進度，不保存python的變量？
   </a>
@@ -557,13 +584,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#_8" title="演出功能的自動發言表情" class="md-nav__link">
-    演出功能的自動發言表情
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -590,8 +610,6 @@
                 
                 <h2 id="_1">已知問題</h2>
 <p>如果你發現什麼有鬼的問題的話，我很樂意見到你掃描<a href="../../主頁/#_5">前面</a>的那個QRcode，並把問題寫在備註裏。</p>
-<h3 id="goto">goto在非主線程調用時不會立即跳轉？</h3>
-<p>goto實際上並不會改變當前adv畫面，生效的是你之前的點擊。也就是說，定時調用需要再調用一次更新方法。</p>
 <h3 id="saveloadpython">save/load只保存劇本進度，不保存python的變量？</h3>
 <p>這個有點難。我都準備了一個字典作爲在py中的環境了，原本我想儲存下字典，利用python神奇的pickle，但是卻發現在劇本內定義的函數之類的不能被pickle導致完全pickle失敗……似乎pickle只儲存了函數名和其校驗碼，難道就沒有把函數代碼直接pickle出來的模式嗎……</p>
 <h2 id="_2">文檔中未實現的功能</h2>
@@ -625,8 +643,6 @@ H好了。
 沒錯我就是故意打的big標籤。</p>
 <h3 id="_7">爲立繪提供獨立的默認縮放</h3>
 <p>不難，只是還沒寫。</p>
-<h3 id="_8">演出功能的自動發言表情</h3>
-<p>畫師表示不想畫這麼多表情，我表示忙着程序也不畫，所以沒有用得上這個功能的表情……</p>
                 
                   
                 
@@ -647,7 +663,7 @@ H好了。
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../用戶指南/其他組件/" title="其他組件" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../進階/嵌入python/" title="嵌入python" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -656,7 +672,7 @@ H好了。
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                其他組件
+                嵌入python
               </span>
             </div>
           </a>

@@ -291,15 +291,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" title="立繪安排" class="md-nav__link">
-    立繪安排
+  <a href="#_5" title="關於空白" class="md-nav__link">
+    關於空白
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" title="流程控制" class="md-nav__link">
-    流程控制
+  <a href="#_6" title="立繪安排" class="md-nav__link">
+    立繪安排
   </a>
   
 </li>
@@ -373,10 +373,58 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
-      缺少的功能
+      進階
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
+        進階
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../進階/畫面的定製/" title="畫面的定製" class="md-nav__link">
+      畫面的定製
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../進階/嵌入python/" title="嵌入python" class="md-nav__link">
+      嵌入python
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      缺少的功能
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
         缺少的功能
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -447,15 +495,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" title="立繪安排" class="md-nav__link">
-    立繪安排
+  <a href="#_5" title="關於空白" class="md-nav__link">
+    關於空白
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" title="流程控制" class="md-nav__link">
-    流程控制
+  <a href="#_6" title="立繪安排" class="md-nav__link">
+    立繪安排
   </a>
   
 </li>
@@ -516,10 +564,7 @@
 <p>對話中可以適當嵌入html來增強表現力，html也會渲染到adv畫面中。</p>
 <pre><code>潘大爺 「&lt;small&gt;才不是特意給你做的&lt;/small&gt;」
 </code></pre>
-<p>如果你想按你自己喜歡的格式書寫也很簡單，你可以簡單修改配置文件來客製化你的格式。(如果你能熟練使用正則表達式……)(不過這個功能在某次更新之後被停用了)</p>
 <p>關於立繪的自動化，參考下方的「立繪安排」。關於如何準備立繪，參考<a href="../立繪/">立繪</a>。</p>
-<p>文件中的空行總是被忽略，在adv的表現上沒有任何影響。   </p>
-<p>以#開頭的一行爲註釋。   </p>
 <h2 id="_3">劇本功能</h2>
 <p>一般以 &gt;(大於號) 開頭的是控制的函數。 <br />
 它們將會對劇本的演出產生控制作用。</p>
@@ -567,21 +612,29 @@ webkit更新了之後終於支持mp3了</p>
 <pre><code>&gt; WRAP {{參數1}} {{參數2}} ... 
 &gt; WRAP [接受治療,壞結局.play] [放棄治療,好結局.play]
 </code></pre>
-<p><em>py/endpy</em>（用於插入一段python代碼） <br />
-填在py和endpy之間的python代碼會像真正的python代碼一樣執行，這部分代碼運行在一個獨立的環境裏，所以不能調用外部的函數，也不會產生名衝突。<br />
-不過如果你的代碼過長，我建議寫成獨立的.py文件，然後import。</p>
+<p><em>py/endpy</em>用於插入一段python代碼  <br />
+填在py和endpy之間的python代碼會像真正的python代碼一樣執行。</p>
 <pre><code>&gt; py
 import socket
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 #這遊戲有毒wwww
 &gt; endpy
 </code></pre>
-<p><em>js/endjs</em>（用於插入一段javascript代碼） <br />
-填在中間的js代碼會像真正的javascript代碼一樣執行，這部分代碼是直接運行在畫面上的，所以可以調用任意的函數，但需要注意名衝突。</p>
+<p><em>js/endjs</em>用於插入一段javascript代碼 <br />
+填在中間的js代碼會像真正的javascript代碼一樣執行。</p>
 <pre><code>&gt; js
 alert('快交錢才能玩！')
 &gt; endjs
 </code></pre>
+<p><small>(要是寫成「用於插入JS」就會變得很H)</small></p>
+<p><em>WARP</em> 可以簡單地控制劇本跳轉。</p>
+<pre><code>WARP [接受治療,壞結局.play] [放棄治療,好結局.play] [蘿莉治療,一章.play,原點]
+</code></pre>
+<p>會產生3個選項。 <br />
+第一個選項是「接受治療」，選擇後跳轉到劇本「壞結局.play」。 <br />
+第二個選項是「接受治療」，選擇後跳轉到劇本「好結局.play」。 <br />
+第二個選項是「蘿莉治療」，選擇後跳轉到劇本「一章.play」的躍點「原點」處。   </p>
+<p>想要瞭解進階的流程控制的話，可以參考<a href="../../進階/嵌入python/">進階/嵌入python.md</a>。</p>
 <h3 id="_4">還有一點</h3>
 <p><em>===</em>使用一張圖片將劇本切斷一小段時間。比如第一章結束，第二章開始的時候就用 =====二章.png 來插入第二章的標題。 <br />
 3個以上的等號都是可以的。</p>
@@ -606,61 +659,15 @@ alert('快交錢才能玩！')
 <p>就像在命令列裏那樣。</p>
 </li>
 </ul>
-<h2 id="_5">立繪安排</h2>
+<h2 id="_5">關於空白</h2>
+<p>文件中的空行總是被忽略，在adv的表現上沒有任何影響。   </p>
+<p>以#開頭的一行爲註釋，相當於空行，也不會有實際影響。   </p>
+<h2 id="_6">立繪安排</h2>
 <p>Librian會自動安排你的立繪，你不需要對每句話指定立繪的位置。</p>
 <p>你也可以使用類似這個寫法的「鏡頭」功能來隨心所欲地控制他們。</p>
 <pre><code>+ [靈夢, 萃香]
 </code></pre>
 <p>關於更詳細的鏡頭，可參考<a href="../立繪/">立繪</a>中的鏡頭。</p>
-<h2 id="_6">流程控制</h2>
-<p>在py/endpy中，預備了幾個函數供你使用：</p>
-<pre><code class="python">    goto(path=None, lable=None)
-
-    push(path=None, lable=None)
-
-    choice(c1, c2, c3, ...)
-</code></pre>
-
-<p>goto跳轉到另一個路徑爲path劇本（默认是自身）的一個躍點的位置。如果tag不指定就會跳到開頭。 <br />
-push的功能是goto加上目標劇本演出結束後回到調用處。   </p>
-<pre><code class="python">    &gt; py
-        goto(path='第9章.play', lable='躍點A')
-    &gt; endpy
-</code></pre>
-
-<p>在目標文件裏要有對應的躍點。</p>
-<pre><code class="python">    *躍點A
-    蘿莉 「喵喵喵。」
-    ……
-</code></pre>
-
-<p>choice在adv演出中提供幾個選項，每一個選項都是一個list或者tuple，包括一個選項名和一個回調函數。 <br />
-下面是樣例。   </p>
-<pre><code class="python">    def f():
-        good+=1      #英文真難！
-    choice(
-        ('跳到一章',lambda: goto('一章.play')),
-        ('跳到二章',lambda: goto('二章.play')),
-        ('刷好感度', f )
-    )
-</code></pre>
-
-<p>每一次執行是互相關聯的，因此你可以使用上次留下的變量進行判斷。 <br />
-當然你可以使用python的黑魔法來使用我的其他函數。 <br />
-但這些代碼仍是在主線程執行的，對費事的操作也許import threading是個不錯的主意。</p>
-<p>WRAP是choice/push的語法糖。
-(顯然WRAP是劇本函數)</p>
-<pre><code>WRAP [接受治療,壞結局.play] [放棄治療,好結局.play] [蘿莉治療,一章.play,原點]
-# 話說第三個是什麼鬼……
-</code></pre>
-<p>相當於</p>
-<pre><code class="python">choice(
-    ('接受治療',lambda: push('壞結局.play')),
-    ('放棄治療',lambda: push('好結局.play')),
-    ('蘿莉治療',lambda: push('一章.play','原點'))
-)
-</code></pre>
-
 <h2 id="_7">語義着色</h2>
 <p>「資源」中贈送的sublime語義文件可以幫助你進行語義着色。 <br />
 在我這裏，着色後的劇本看起來就像這樣。 <br />
