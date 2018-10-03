@@ -388,8 +388,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#saveloadpython" title="save/load只保存劇本進度，不保存python的變量？" class="md-nav__link">
-    save/load只保存劇本進度，不保存python的變量？
+  <a href="#saveloadpython" title="save/load不能保存python塊中定義的函數？" class="md-nav__link">
+    save/load不能保存python塊中定義的函數？
   </a>
   
 </li>
@@ -503,8 +503,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#saveloadpython" title="save/load只保存劇本進度，不保存python的變量？" class="md-nav__link">
-    save/load只保存劇本進度，不保存python的變量？
+  <a href="#saveloadpython" title="save/load不能保存python塊中定義的函數？" class="md-nav__link">
+    save/load不能保存python塊中定義的函數？
   </a>
   
 </li>
@@ -596,15 +596,16 @@
                 
                 <h2 id="_1">已知問題</h2>
 <p>如果你發現什麼有鬼的問題的話，我很樂意見到你掃描<a href="../../主頁/#_5">前面</a>的那個QRcode，並把問題寫在備註裏。</p>
-<h3 id="saveloadpython">save/load只保存劇本進度，不保存python的變量？</h3>
-<p>這個有點難。我都準備了一個字典作爲在py中的環境了，原本我想儲存下字典，利用python神奇的pickle，但是卻發現在劇本內定義的函數之類的不能被pickle導致完全pickle失敗……似乎pickle只儲存了函數名和其校驗碼，難道就沒有把函數代碼直接pickle出來的模式嗎……</p>
+<h3 id="saveloadpython">save/load不能保存python塊中定義的函數？</h3>
+<p>這個有點難。我都準備了一個字典作爲在py中的環境了，原本我想儲存下字典，利用python神奇的pickle，但是卻發現在劇本內定義的函數之類的不能被pickle導致完全pickle失敗……似乎pickle只儲存了函數名和其校驗碼，難道就沒有把函數代碼直接pickle出來的模式嗎…… <br />
+所以退而求其次地在save時，只會保存可以被pickle的對象了。</p>
 <h2 id="_2">文檔中未實現的功能</h2>
 <h3 id="_3">衣着</h3>
 <p><em>&gt;CL</em> 暫時沒有任何效果，因爲我自己也沒有用到給人換衣服所以先擱置吧……</p>
 <h3 id="jsendjs">js/endjs</h3>
 <p><em>&gt;js/&gt;endjs</em> 當初是爲了在畫面中添加特殊效果而設計的語法糖，好像也用不到。</p>
 <h3 id="_4">演出功能設定</h3>
-<p>演出功能設定並不會生效。</p>
+<p>演出功能總是全部開啓的，設定爲關閉並不會生效。</p>
 <h2 id="_5">還想做的功能</h2>
 <h3 id="python">&gt;直接嵌入python</h3>
 <pre><code>&gt; BG 家裏.png
