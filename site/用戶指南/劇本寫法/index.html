@@ -285,6 +285,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#python" title="python風格的寫法" class="md-nav__link">
+    python風格的寫法
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -489,6 +496,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#python" title="python風格的寫法" class="md-nav__link">
+    python風格的寫法
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -660,6 +674,16 @@ alert('快交錢才能玩！')
 <p>就像在命令列裏那樣。</p>
 </li>
 </ul>
+<h3 id="python">python風格的寫法</h3>
+<pre><code>&gt; BG 家裏.png
+&gt; BGM 打架的聲音.mp3
+</code></pre>
+<p>也可以寫成</p>
+<pre><code>&gt; BG('家裏.png')
+&gt; BGM('打架的聲音.mp3')
+</code></pre>
+<p>這些命令都可以直接寫成python語句，參數和原本的寫法是一樣的。 <br />
+因爲直接調用了eval語句所以其實可以調用系統函數……不過每句都使用獨立的運行環境，不會互相干擾。</p>
 <h2 id="_5">關於空白</h2>
 <p>文件中的空行總是被忽略，在adv的表現上沒有任何影響。   </p>
 <p>以#開頭的一行爲註釋，相當於空行，也不會有實際影響。   </p>
