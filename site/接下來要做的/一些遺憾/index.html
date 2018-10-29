@@ -608,8 +608,14 @@
                 
                   <h1>一些遺憾</h1>
                 
-                <h2 id="_1">已知問題</h2>
-<p>如果你發現什麼有鬼的問題的話，我很樂意見到你掃描<a href="../../主頁/#_5">前面</a>的那個QRcode，並把問題寫在備註裏。</p>
+                <p>如果你發現什麼有鬼的問題(或者是有想要的新功能)的話，歡迎在任何時候向我反饋。   </p>
+<p>通信方法有:</p>
+<ul>
+<li>在github頁面提交issue。<small>(issue多的話顯得我比較有人氣……)</small></li>
+<li>發送郵件到我的郵箱<a href="mailto:RimoChan@stu.xmu.edu.cn">RimoChan@stu.xmu.edu.cn</a>。</li>
+<li>掃描<a href="../../主頁/#_5">前面</a>的那個QRcode，並把問題寫在備註裏。<small>(笑)</small></li>
+</ul>
+<h2 id="_1">已知問題</h2>
 <h3 id="saveloadpython">save/load不能保存python塊中定義的函數？</h3>
 <p>這個有點難。我都準備了一個字典作爲在py中的環境了，原本我想儲存下字典，利用python神奇的pickle，但是卻發現在劇本內定義的函數之類的不能被pickle導致完全pickle失敗……似乎pickle只儲存了函數名和其校驗碼，難道就沒有把函數代碼直接pickle出來的模式嗎…… <br />
 所以退而求其次地在save時，只會保存可以被pickle的對象了。</p>
