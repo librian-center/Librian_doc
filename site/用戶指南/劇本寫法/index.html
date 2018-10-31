@@ -581,70 +581,108 @@
 </code></pre>
 <p>關於立繪的自動化，參考下方的「立繪安排」。關於如何準備立繪，參考<a href="../立繪/">立繪</a>。</p>
 <h2 id="_3">劇本功能</h2>
-<p>一般以 &gt;(大於號) 開頭的是控制的函數。 <br />
+<p>一般以 &gt;<small>(大於號)</small> 開頭的是控制的函數。 <br />
 它們將會對劇本的演出產生控制作用。</p>
+<p><small>(用豎線分割的漢字是給看到英文就頭大的開發者提供的中文寫法)</small></p>
 <p>包括:</p>
 <ul>
-<li><em>&gt; BG</em> 背景圖片文件名   </li>
-<li><em>&gt; BGM</em> 背景音樂文件名   </li>
-<li><em>&gt; CG</em> CG的文件名   </li>
-<li><em>&gt; CL</em> 人物名 衣着   </li>
-<li><em>&gt; VIDEO</em> 影片的名字   </li>
-<li><em>&gt; WRAP</em> 快速控制選項和跳轉   </li>
-<li><em>&gt; py/endpy</em> (用於插入一段python代碼)    </li>
-<li><em>&gt; js/endjs</em> (用於插入一段javascript代碼)    </li>
+<li><strong>&gt; BG | 背景</strong> 背景圖片文件名   </li>
+<li><strong>&gt; BGM | 背景音樂 | 背景音乐</strong> 背景音樂文件名   </li>
+<li><strong>&gt; CG</strong> CG的文件名   </li>
+<li><strong>&gt; CL</strong> 人物名 衣着   </li>
+<li><strong>&gt; VIDEO | 視頻 | 视频</strong> 影片的名字   </li>
+<li><strong>&gt; py/endpy</strong> (用於插入一段python代碼)    </li>
+<li><strong>&gt; js/endjs</strong> (用於插入一段javascript代碼)    </li>
+<li><strong>&gt; WRAP | 快速選項 | 快速选项</strong> 快速控制選項和跳轉   </li>
 </ul>
-<p><em>BG</em> 會更換當前的BG到你指定的文件 <br />
-BG總是在一點時間內漸變的。
-可以使用多種圖片格式。</p>
-<pre><code>&gt; BG {{文件名}}
-&gt; BG 家裏.png
+<p><strong><em>BG</em> 會更換當前的BG爲你指定的文件</strong> <br />
+BG總是在一點時間內漸變的。 <br />
+語法:</p>
+<pre><code>    &gt; BG {{文件名}}
 </code></pre>
-<p><em>BGM</em> 會替換當前的BGM到你指定的文件。 <br />
-如果指定爲None，會有一點淡出時間。但總是沒有淡入。
-webkit更新了之後終於支持mp3了</p>
-<pre><code>&gt; BGM {{文件名}} {{音量=1}}
-&gt; BGM 愉快的音樂.mp3
-&gt; BGM 不愉快的音樂.ogg 0.5
-&gt; BGM None
+
+<p>樣例:</p>
+<pre><code>    &gt; BG 家裏.png
+    &gt; 背景 街.png
 </code></pre>
-<p><em>CG</em> 進入CG模式並立即使用指定的CG。在這個模式下，CG佔據整個畫面，立繪不會被顯示，背景也是無效的。 <br />
-不指定參數會解除CG模式。</p>
-<pre><code>&gt; CG {{文件名=None}}
-&gt; CG 極夜大戰.png
-&gt; CG
+
+<p><strong><em>BGM</em> 會更換當前的BGM爲你指定的文件。</strong> <br />
+如果指定爲None，會有一點淡出時間。但總是沒有淡入。 <br />
+語法:</p>
+<pre><code>    &gt; BGM {{文件名}} {{音量=1}}
 </code></pre>
-<p><em>CL</em>改變人物衣着。在使用之後，目標人物的立繪衣着持續變成對應的形態。</p>
-<pre><code>&gt; CL {{人物}} {{衣着}}
-&gt; CL 靈夢 巫女服
+
+<p>樣例:</p>
+<pre><code>    &gt; BGM 愉快的音樂.mp3
+    &gt; 背景音樂 不愉快的音樂.ogg 0.5
+    &gt; BGM None
 </code></pre>
-<p><em>VIDEO</em> 插入一個視頻，用於OP、ED之類的場合。 
-以前內核好像只支持webm格式，現在應該都能用了。</p>
-<pre><code>&gt; VIDEO {{影片名}}
-&gt; VIDEO OP.webm
+
+<p><strong><em>CG</em> 進入CG模式並立即使用指定的CG。</strong> <br />
+在CG模式下，CG佔據整個畫面，立繪不會被顯示，背景也是無效的。 <br />
+不指定參數會解除CG模式。 <br />
+語法:</p>
+<pre><code>    &gt; CG {{文件名=None}}
 </code></pre>
-<p><em>WRAP</em> 設置產生跳轉的選項。在下面的流程控制中講解。   </p>
-<pre><code>&gt; WRAP {{參數1}} {{參數2}} ... 
-&gt; WRAP [接受治療,壞結局.play] [放棄治療,好結局.play]
+
+<p>樣例:</p>
+<pre><code>    &gt; CG 極夜大戰.png
+    &gt; CG
 </code></pre>
-<p><em>py/endpy</em>用於插入一段python代碼  <br />
-填在py和endpy之間的python代碼會像真正的python代碼一樣執行。</p>
-<pre><code>&gt; py
-import socket
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-#這遊戲有毒wwww
-&gt; endpy
+
+<p><strong><em>CL</em> 改變人物衣着。在使用之後，目標人物的立繪衣着持續變成對應的形態。</strong><br />
+語法:</p>
+<pre><code>    &gt; CL {{人物}} {{衣着}}
 </code></pre>
-<p><em>js/endjs</em>用於插入一段javascript代碼 <br />
-填在中間的js代碼會像真正的javascript代碼一樣執行。</p>
-<pre><code>&gt; js
-alert('快交錢才能玩！')
-&gt; endjs
+
+<p>樣例:</p>
+<pre><code>    &gt; CL 靈夢 巫女服
 </code></pre>
+
+<p><strong><em>VIDEO</em> 插入一個視頻，用於OP、ED之類的場合。</strong> <br />
+以前內核好像只支持webm格式，現在應該都能用了。 <br />
+語法:</p>
+<pre><code>    &gt; VIDEO {{影片名}}
+</code></pre>
+
+<p>樣例:</p>
+<pre><code>    &gt; VIDEO OP.webm
+    &gt; 視頻 ED.mp4
+</code></pre>
+
+<p><strong><em>py/endpy</em> 用於插入一段python3代碼。</strong>  <br />
+填在py和endpy之間的python代碼會像真正的python代碼一樣執行。 <br />
+樣例:</p>
+<pre><code>    &gt; py
+    import socket
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    #這遊戲有毒wwww
+    &gt; endpy
+</code></pre>
+
+<p><strong><em>js/endjs</em> 用於插入一段javascript代碼。</strong> <br />
+填在中間的js代碼會像真正的javascript代碼一樣執行。 <br />
+樣例:</p>
+<pre><code>    &gt; js
+    alert('快交錢才能玩！')
+    &gt; endjs
+</code></pre>
+
 <p><small>(要是寫成「用於插入JS」就會變得很H)</small></p>
-<p><em>WARP</em> 可以簡單地控制劇本跳轉。</p>
-<pre><code>WARP [接受治療,壞結局.play] [放棄治療,好結局.play] [蘿莉治療,一章.play,原點]
+<p><strong><em>WRAP</em> 設置產生跳轉的選項，可以簡單地控制劇本跳轉。</strong> <br />
+語法:</p>
+<pre><code>    WRAP [文字1, 跳轉文件1, 躍點1=None] [文字2, 跳轉文件2, 躍點2=None] ... 
 </code></pre>
+
+<p>樣例:</p>
+<pre><code>    &gt; WRAP [接受治療,壞結局.play] [放棄治療,好結局.play]
+    &gt; 快速選項 [上,H劇情.play] [不上,正常劇情.play,不H]
+</code></pre>
+
+<p>對於這個例子:</p>
+<pre><code>    &gt; WARP [接受治療,壞結局.play] [放棄治療,好結局.play] [蘿莉治療,一章.play,原點]
+</code></pre>
+
 <p>會產生3個選項。 <br />
 第一個選項是「接受治療」，選擇後跳轉到劇本「壞結局.play」。 <br />
 第二個選項是「接受治療」，選擇後跳轉到劇本「好結局.play」。 <br />
@@ -656,10 +694,17 @@ alert('快交錢才能玩！')
 <pre><code>===第一章.png
 =========================第一章.png
 </code></pre>
-<p>*(星號)表示一個躍點，和註釋一樣會被跳過。不過在goto的時候指定這個位置就可以跳轉。</p>
-<p>注意: 
-+ 命令都是大小寫敏感的。</p>
+<p>「*」<small>(星號，不含引號)</small>表示一個躍點，普通的時候和註釋一樣會被跳過。不過在WRAP呀goto之類的時候指定這個位置，也就是星號後面的文本，就可以跳轉。</p>
+<pre><code>*原點
+</code></pre>
+<p>注意: </p>
 <ul>
+<li>
+<p>命令都是大小寫敏感的<small>(當然對簡化字也是敏感的所以我定義了兩次別名……)</small>。</p>
+</li>
+<li>
+<p>應該可以支持所有主流文件格式<small>(因爲不是我寫的我也不知道)</small>。</p>
+</li>
 <li>
 <p>多餘的空格會被忽略。   </p>
 <pre><code>&gt; BG   河上.png
@@ -683,7 +728,7 @@ alert('快交錢才能玩！')
 &gt; BGM('打架的聲音.mp3')
 </code></pre>
 <p>這些命令都可以直接寫成python語句，參數和原本的寫法是一樣的。 <br />
-因爲直接調用了eval語句所以其實可以調用系統函數……不過每句都使用獨立的運行環境，不會互相干擾。</p>
+因爲直接調用了eval語句所以其實可以調用系統函數……不過好在每句都使用獨立的運行環境，不會互相干擾。</p>
 <h2 id="_5">關於空白</h2>
 <p>文件中的空行總是被忽略，在adv的表現上沒有任何影響。   </p>
 <p>以#開頭的一行爲註釋，相當於空行，也不會有實際影響。   </p>
