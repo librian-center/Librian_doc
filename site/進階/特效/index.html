@@ -36,7 +36,7 @@
     
     
       
-        <title>畫面的定製 - Librian中文文檔</title>
+        <title>特效 - Librian中文文檔</title>
       
     
     
@@ -97,7 +97,7 @@
                 Librian中文文檔
               </span>
               <span class="md-header-nav__topic">
-                畫面的定製
+                特效
               </span>
             
           
@@ -307,6 +307,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../畫面的定製/" title="畫面的定製" class="md-nav__link">
+      畫面的定製
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -318,11 +330,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        畫面的定製
+        特效
       </label>
     
-    <a href="./" title="畫面的定製" class="md-nav__link md-nav__link--active">
-      畫面的定製
+    <a href="./" title="特效" class="md-nav__link md-nav__link--active">
+      特效
     </a>
     
       
@@ -336,15 +348,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#css" title="使用css" class="md-nav__link">
-    使用css
+  <a href="#_2" title="內置的特效" class="md-nav__link">
+    內置的特效
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" title="標題畫面" class="md-nav__link">
-    標題畫面
+  <a href="#_3" title="定義特效" class="md-nav__link">
+    定義特效
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="注意" class="md-nav__link">
+    注意
   </a>
   
 </li>
@@ -357,18 +376,6 @@
   
 </nav>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../特效/" title="特效" class="md-nav__link">
-      特效
-    </a>
   </li>
 
         
@@ -446,15 +453,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#css" title="使用css" class="md-nav__link">
-    使用css
+  <a href="#_2" title="內置的特效" class="md-nav__link">
+    內置的特效
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" title="標題畫面" class="md-nav__link">
-    標題畫面
+  <a href="#_3" title="定義特效" class="md-nav__link">
+    定義特效
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="注意" class="md-nav__link">
+    注意
   </a>
   
 </li>
@@ -476,31 +490,44 @@
               
                 
                 
-                <h1 id="_1">畫面的定製</h1>
-<p>這一章的內容和前面的內容不太一樣，涉及到了一些和核心組件較爲接近的內容——如果你有一些編程語言的基礎的話會比較好。 </p>
-<p>如果你看到HTML和python時想到的是「前面這個是什麼單詞縮寫，後面這個是蛇<small>(大概)</small>」，說不定跳過這一章會比較好。 <br />
-不過人必須要持續學習——武裝自己的應該是知識而不是一堆廢銅爛鐵。對你來說人生還有80年，或者60年，或者40年，即使什麼都不會，從現在開始學習python的話，只需要一年就能學有所成年薪過萬——然後就沉迷寫程序再也不寫劇本了<small>(笑)</small>。<small>(然後我再趁現在推薦幾個野雞網校賺一波廣告收入)</small></p>
-<p><small>(之後才發現那句名言原來已經在這個文檔的前面說過一次了)</small></p>
-<h2 id="css">使用css</h2>
-<p>如果想要改變adv畫面的表現，你可以指定額外的css文件。</p>
-<p>之前雖然說過在「工程配置.yaml」裏可以設置「自定css」，但是沒有說該怎麼寫。 <br />
-首先觀察「{librian路徑}/html/adv.html」，理解文檔結構以後，挑出你想要自定義的塊，把你的樣式寫進自定css裏。 <br />
-這樣一來，在工程啓動時，Librian會一併加載你的css，這樣一來樣式就應用了。   </p>
-<p>需要注意的是css裏的路徑是相對css文件的路徑<small>(我不知道這個有沒有必要提醒)</small>。</p>
-<h2 id="_2">標題畫面</h2>
-<p>標題畫面是一個可以天馬行空地創作的html，不過要實現標題畫面的功能，還需要一點花樣。  <br />
-在head裏你得引用「/html/黑科技/qwebchannel.js」和「/html/title_js.js」來獲取標題畫面用到的幾個函數。   </p>
-<p>像是這樣:</p>
-<pre><code class="html">    &lt;button click='開始()'&gt;Click Me!&lt;/button&gt;
+                <h1 id="_1">特效</h1>
+<p>Librian使用css來實現特效和動作。</p>
+<pre><code>潘大爺 [灰]「什麼情況！」
+</code></pre>
+<p><img alt="1" src="../1.jpg" />   </p>
+<p>在爲人物添加特效時，添加一個用方括號圈住的特效名就可以了。</p>
+<h2 id="_2">內置的特效</h2>
+<p><strong>灰</strong> 使目標變成灰色(去除飽和度)。 <br />
+<strong>透明</strong> 使目標變得透明(施加一半的透明度)。 <br />
+<strong>淡入</strong> 在出現時使用短暫的漸變動畫。 <br />
+<strong>下入</strong> 在出現時使用短暫的從下方的漸變動畫。   </p>
+<h2 id="_3">定義特效</h2>
+<p>首先，在上個章節 <a href="../畫面的定製/">進階/畫面的定製</a> 中指定「自定css」後，向css中添加類。 <br />
+<small>(這個類是內置的特效，這裏先假裝他並沒有內置，算你自己寫出來的吧)</small></p>
+<pre><code>    .透明{
+        opacity:0.5
+    }
 </code></pre>
 
-<p>title_js.js提供的函數包括: </p>
-<ul>
-<li>開始()  <br />
-  調用之後Librian開始讀取劇本，當前頁面由標題頁面轉到adv頁面。</li>
-<li>從title讀檔()  <br />
-  讀檔，並在讀檔完成後轉到adv頁面。</li>
-</ul>
+<p>然後在人物處調用: </p>
+<pre><code>    潘大爺 [透明]「相位轉移！」
+</code></pre>
+
+<p><img alt="2" src="../2.jpg" /></p>
+<p>動作也是一樣的，只要先定義幀然後用animation屬性就行了。</p>
+<pre><code>    @keyframes _淡入{
+        0%{opacity:0;}
+        100%{opacity:1;}
+    }
+    .淡入{
+        animation:_淡入 0.6s;
+        animation-fill-mode:forwards;
+    }
+</code></pre>
+
+<h2 id="_4">注意</h2>
+<p>由於pyqt的webkit引擎更新得很慢，並不能支持所有css的特性，比如說在animation作用的時候，filter會失效。 <br />
+大概等他們更新就能解決吧……</p>
                 
                   
                 
@@ -521,7 +548,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../用戶指南/其他組件/" title="其他組件" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../畫面的定製/" title="畫面的定製" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -530,19 +557,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                其他組件
+                畫面的定製
               </span>
             </div>
           </a>
         
         
-          <a href="../特效/" title="特效" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../嵌入python/" title="嵌入python" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                特效
+                嵌入python
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

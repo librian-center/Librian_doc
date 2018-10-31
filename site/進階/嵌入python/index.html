@@ -319,6 +319,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../特效/" title="特效" class="md-nav__link">
+      特效
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -660,6 +672,7 @@
 <p>Librian的嵌入python可以用於實現劇本的邏輯，也可以成爲獨立的擴展功能。如果你想要完成一個完整的galgame的話，嵌入python應該是必須用到的功能吧。 <br />
 不過這並不意味着你必須去學習這門編程語言——如果只是簡單的功能的話，看樣例就足夠了。</p>
 <h2 id="_1">從簡單的例子開始</h2>
+<p><strong>hello world:</strong></p>
 <pre><code>潘大爺 「準備好了嗎？」
 &gt;py
 print('hello, world')
@@ -667,7 +680,9 @@ print('hello, world')
 潘大爺 「你在控制檯窗口上看到剛纔輸出的 hello world 了嗎？」    
 </code></pre>
 
-<p>如果你看到了hello world說明你已經成爲了python大師<small>(笑)</small>，馬上就可以從這裏畢業了。</p>
+<p>如果你看到了hello world說明你已經成爲了python大師<small>(笑)</small>，馬上就可以從這裏畢業了。 <br />
+<img alt="hw" src="../hw.jpg" /></p>
+<p><strong>定義變量:</strong></p>
 <pre><code>潘大爺 「試着定義一些變量。」
 &gt;py
 hp=150
@@ -682,6 +697,7 @@ print(f'潘大爺還有{hp}點生命值！')
 
 <p>print只會輸出在控制檯上，最終發佈的遊戲並沒有控制檯，所以這個消息是給開發人員看的。
 如果你把print換成fusion的話，「潘大爺還有100點生命值」除了會顯示在控制檯上以外，也會顯示在adv畫面中。這種方式顯示的文字和劇本一樣經過編譯——也就是說在前面寫上人名的話就會變成對話。</p>
+<p><strong>輸出到adv界面:</strong></p>
 <pre><code>潘大爺 「我試試這樣說話……」
 &gt;py
 hp=150
@@ -690,7 +706,8 @@ fusion(f'潘大爺 「我還有{hp}點生命值！」')
 &gt;endpy
 潘大爺 「感覺不錯。」
 </code></pre>
-<p>對了，每一次執行是互相關聯的，因此你可以使用上次的代碼塊留下的變量進行判斷。   </p>
+<p><img alt="100" src="../100.jpg" /> <br />
+對了，每一次執行是互相關聯的，因此你可以使用上次的代碼塊留下的變量進行判斷。   </p>
 <h2 id="_2">稍微提升</h2>
 <p>接下來就是分支跳轉了，之前說了劇本函數WARP，接下來介紹通用的if: </p>
 <pre><code>潘大爺 「if真是太棒了。」
@@ -711,6 +728,8 @@ adv_end()
 &gt;endpy
 </code></pre>
 
+<p>在潘大爺的生命小於0的時候，跳轉到劇本「gameover.play」。 <br />
+在「gameover.play」，潘大爺說出「騙人的吧？」之後，調用adv_end結束遊戲。</p>
 <h2 id="_3">難題</h2>
 <p>提供選擇肢的choice函數並不是很好理解。 <br />
 choice在adv演出中提供幾個選項，每一個選項都是一個list或者tuple，包括一個選項名和一個回調函數。<br />
@@ -725,9 +744,9 @@ choice(
 </code></pre>
 
 <p>爲什麼分了三行……lambda是什麼玩意……爲什麼單獨定義了函數f…… <br />
-好像對於沒學過的小夥伴來說太難了點，要解釋的話甚至還設計到了語句和表達式的關係…… <br />
+好像對於沒python的小夥伴來說太難了點，要解釋的話甚至還設計到了語句和表達式的關係…… <br />
 只是依葫蘆畫瓢的話會比較好嗎，不過搞不清楚什麼時候填lambda的話就連依葫蘆畫瓢都做不到了……都是不學習的錯<small>(傲嬌臉)</small>！</p>
-<p>如果你覺得這個函數有更簡單的設計方法的話，歡迎掃描前面的QRcode，然後把方法寫在備註裏<small>(笑)</small>。</p>
+<p>如果你覺得這個函數有更簡單的設計方法的話，歡迎在 <a href="../../接下來要做的/一些遺憾/">缺少的功能/一些遺憾</a> 提出寶貴意見。</p>
 <p>之前說過的WARP是choice/push的語法糖。
 (顯然WARP是劇本函數)</p>
 <pre><code>WARP [接受治療,壞結局.play] [放棄治療,好結局.play] [蘿莉治療,一章.play,原點]
@@ -746,6 +765,7 @@ choice(
 <pre><code>潘大爺 「点一下来开始大约持续5秒的自動更新！」
 
 &gt;py
+import threading
 def 更新():
     time.sleep(5)   # 连接到你自己的发布地址
     goto(lable='更新完了')
@@ -767,7 +787,8 @@ goto(lable='back')
 潘大爺 「更新完了。」
 </code></pre>
 
-<p><small>(話說下次提供一個副線程支持吧)</small></p>
+<p>這個我怎麼解釋……
+<small>(話說下次提供一個副線程支持吧)</small></p>
 <p>試試RPG打架。</p>
 <pre><code>&gt; py
 from random import randint
@@ -813,6 +834,7 @@ goto(lable='決鬥開始')
 &gt;endpy
 </code></pre>
 
+<p><small>話說死亡一指不是應該把目標旁邊的人殺死嗎(笑)</small></p>
 <h2 id="_5">注意</h2>
 <p>這部分python代碼運行在一個相對獨立的環境裏，所以不能調用外部的函數，好處是愉快地定義變量也不會和外部產生名衝突。<br />
 當然你可以使用python的黑魔法來使用我的其他函數。 <br />
@@ -915,7 +937,7 @@ push的功能是goto加上目標劇本演出結束後回到調用處。   </p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../畫面的定製/" title="畫面的定製" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../特效/" title="特效" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -924,7 +946,7 @@ push的功能是goto加上目標劇本演出結束後回到調用處。   </p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                畫面的定製
+                特效
               </span>
             </div>
           </a>
