@@ -440,13 +440,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_5" title="圖層特效" class="md-nav__link">
+    圖層特效
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" title="還想做的功能" class="md-nav__link">
+  <a href="#_6" title="還想做的功能" class="md-nav__link">
     還想做的功能
   </a>
   
@@ -454,22 +461,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_6" title="縮進控制" class="md-nav__link">
+  <a href="#_7" title="縮進控制" class="md-nav__link">
     縮進控制
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_7" title="改進編譯器" class="md-nav__link">
+  <a href="#_8" title="改進編譯器" class="md-nav__link">
     改進編譯器
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" title="圖層特效" class="md-nav__link">
-    圖層特效
   </a>
   
 </li>
@@ -477,6 +477,13 @@
           <li class="md-nav__item">
   <a href="#js" title="js的控制方法添加從特定文件開始" class="md-nav__link">
     js的控制方法添加從特定文件開始
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" title="移動端引擎" class="md-nav__link">
+    移動端引擎
   </a>
   
 </li>
@@ -569,13 +576,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_5" title="圖層特效" class="md-nav__link">
+    圖層特效
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" title="還想做的功能" class="md-nav__link">
+  <a href="#_6" title="還想做的功能" class="md-nav__link">
     還想做的功能
   </a>
   
@@ -583,22 +597,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_6" title="縮進控制" class="md-nav__link">
+  <a href="#_7" title="縮進控制" class="md-nav__link">
     縮進控制
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_7" title="改進編譯器" class="md-nav__link">
+  <a href="#_8" title="改進編譯器" class="md-nav__link">
     改進編譯器
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" title="圖層特效" class="md-nav__link">
-    圖層特效
   </a>
   
 </li>
@@ -606,6 +613,13 @@
           <li class="md-nav__item">
   <a href="#js" title="js的控制方法添加從特定文件開始" class="md-nav__link">
     js的控制方法添加從特定文件開始
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" title="移動端引擎" class="md-nav__link">
+    移動端引擎
   </a>
   
 </li>
@@ -646,15 +660,22 @@
 <p>這個有點難。我都準備了一個字典作爲在py中的環境了，原本我想儲存下字典，利用python神奇的pickle，但是卻發現在劇本內定義的函數之類的不能被pickle導致完全pickle失敗……似乎pickle只儲存了函數名和其校驗碼，難道就沒有把函數代碼直接pickle出來的模式嗎…… <br />
 所以退而求其次地在save時，只會保存可以被pickle的對象了。</p>
 <h3 id="unix">在unix系統中無法找到路徑？</h3>
-<p>編程真難……我還是改行吧，對了聽說最近有一個叫後宮王的職業好像前程似錦，不如去試試吧！
+<p>編程真難……我還是改行吧，對了聽說最近有一個叫後宮王的職業好像前程似錦，不如去試試吧！ <br />
 windows下的pyqt5的QtWebEngine在加載路徑的時候可以使用相對路徑，但似乎unix就不行。雖然有考慮過全部轉換爲絕對路徑，但實際上在轉換的時候會出問題，因爲自定義標題在引用js的時候應該不能用絕對路徑找到js文件，怎麼辦呢……好在unix用戶比較少 (潘大爺: ？？？)</p>
 <h2 id="_2">文檔中未實現的功能</h2>
 <h3 id="_3">衣着</h3>
 <p><em>&gt;CL</em> 暫時沒有任何效果，因爲我自己也沒有用到給人換衣服所以先擱置吧……</p>
 <h3 id="_4">演出功能設定</h3>
 <p>演出功能總是全部開啓的，設定爲關閉並不會生效。</p>
-<h2 id="_5">還想做的功能</h2>
-<h3 id="_6">縮進控制</h3>
+<h3 id="_5">圖層特效</h3>
+<p>希望能對於不同的圖層整體添加特效效果。</p>
+<pre><code>    &gt; class tot 灰
+    &gt; class('tot','灰')
+</code></pre>
+
+<p>雖然想過讓編程人員在內嵌js塊中設置對應div的class——但是仔細想了以後不行，因爲如果在有特效的時候存檔，下次讀入的時候就沒有特效了……</p>
+<h2 id="_6">還想做的功能</h2>
+<h3 id="_7">縮進控制</h3>
 <p>with塊，利用縮進和進入退出控制來改變狀態，類似這樣: </p>
 <pre><code>&gt;with CG('蘿莉H.png'):
     蘿莉 「呣~」
@@ -670,18 +691,14 @@ H好了。
 </code></pre>
 <p><big>(笑)</big> <br />
 沒錯我就是故意打的big標籤。</p>
-<h3 id="_7">改進編譯器</h3>
+<h3 id="_8">改進編譯器</h3>
 <p>話說我自己做的這個正則編譯器<small>(真的是編譯器嗎笑)</small>有時候不太好用。
 於是後來想用lex+yacc重新寫一個，但是lex和yacc實在是不稱手……</p>
-<h3 id="_8">圖層特效</h3>
-<p>希望能對於不同的圖層整體添加特效效果。</p>
-<pre><code>    &gt; class tot 灰
-    &gt; class('tot','灰')
-</code></pre>
-
-<p>雖然想過讓編程人員在內嵌js塊中設置對應div的class——但是仔細想了以後不行，因爲如果在有特效的時候存檔，下次讀入的時候就沒有特效了……</p>
 <h3 id="js">js的控制方法添加從特定文件開始</h3>
 <p>沒有這個方法的話，似乎「回想模式 / 鑑賞室」挺難實現的？</p>
+<h3 id="_9">移動端引擎</h3>
+<p>最近手遊很流行……然後聽說pyqt5可以在安卓運行，於是就想能不能做一個…… <br />
+不過可能會卡成sb就是了……</p>
                 
                   
                 
