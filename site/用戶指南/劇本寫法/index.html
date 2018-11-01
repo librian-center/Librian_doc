@@ -597,12 +597,12 @@
 這不會作爲潘大爺說的一句話來處理，也不需要玩家點擊來跳過，但是會把鏡頭指向潘大爺並改變潘大爺的表情和特效。</p>
 <p><strong>html格式:</strong></p>
 <p>對話中可以自由地嵌入html來增強表現力，html也會渲染到adv畫面中。</p>
-<pre><code>幼馴染 「&lt;small&gt;才不是特意給你做的&lt;/small&gt;」
+<pre><code>幼馴染 「&lt;small&gt;不是特意給你做的&lt;/small&gt;」
 </code></pre>
 <p>顯示的效果大概是這樣:    </p>
 <blockquote>
 <p>&nbsp;&nbsp;&nbsp;幼馴染  <br />
-「<small>才不是特意給你做的</small>」</p>
+「<small>不是特意給你做的</small>」</p>
 </blockquote>
 <p><small>(這個地方原本寫的人物是潘大爺……人物崩壞真可怕……)</small></p>
 <p>關於可用的內置特效和自定義特效，參考 <a href="../../進階/特效/">進階/特效</a>。<br />
@@ -623,7 +623,7 @@
 <li><strong>&gt; js/endjs</strong> (用於插入一段javascript代碼)    </li>
 <li><strong>&gt; WRAP | 快速選項 | 快速选项</strong> 快速控制選項和跳轉   </li>
 </ul>
-<p><strong><em>BG</em> 會更換當前的BG爲你指定的文件</strong> <br />
+<p><strong><em>BG</em> 會更換當前的BG爲你指定的文件。</strong> <br />
 BG總是在一點時間內漸變的。 <br />
 語法:</p>
 <pre><code>    &gt; BG {{文件名}}
@@ -667,7 +667,7 @@ BG總是在一點時間內漸變的。 <br />
 <pre><code>    &gt; CL 靈夢 巫女服
 </code></pre>
 
-<p><strong><em>CLASS</em> 改變畫面元素的效果</strong></p>
+<p><strong><em>CLASS</em> 改變畫面元素的效果。</strong></p>
 <p>語法:</p>
 <pre><code>    &gt; CLASS {{元素ID}} {{特效名}}
 </code></pre>
@@ -689,7 +689,7 @@ BG總是在一點時間內漸變的。 <br />
 </code></pre>
 
 <p><strong><em>py/endpy</em> 用於插入一段python3代碼。</strong>  <br />
-填在py和endpy之間的python代碼會像真正的python代碼一樣執行。 <br />
+填在py和endpy之間的代碼會像真正的python代碼一樣執行。 <br />
 樣例:</p>
 <pre><code>    &gt; py
     import socket
@@ -699,10 +699,10 @@ BG總是在一點時間內漸變的。 <br />
 </code></pre>
 
 <p><strong><em>js/endjs</em> 用於插入一段javascript代碼。</strong> <br />
-填在中間的js代碼會像真正的javascript代碼一樣執行。 <br />
+填在中間的代碼會像真正的javascript代碼一樣執行。 <br />
 樣例:</p>
 <pre><code>    &gt; js
-    alert('快交錢才能玩！')
+    alert('快交錢纔能玩！')
     &gt; endjs
 </code></pre>
 
