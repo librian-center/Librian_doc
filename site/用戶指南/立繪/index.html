@@ -284,14 +284,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" title="固有縮放" class="md-nav__link">
+  <a href="#_3" title="準備文件" class="md-nav__link">
+    準備文件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="固有縮放" class="md-nav__link">
     固有縮放
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" title="話語表情" class="md-nav__link">
+  <a href="#_5" title="話語表情" class="md-nav__link">
     話語表情
   </a>
   
@@ -303,14 +310,48 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" title="使用鏡頭" class="md-nav__link">
+  <a href="#_6" title="使用鏡頭" class="md-nav__link">
     使用鏡頭
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="數值鏡頭" class="md-nav__link">
+    數值鏡頭
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="簡化鏡頭" class="md-nav__link">
+    簡化鏡頭
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" title="樣例" class="md-nav__link">
+    樣例
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" title="注意" class="md-nav__link">
+    注意
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" title="立繪來源" class="md-nav__link">
+  <a href="#_11" title="立繪來源" class="md-nav__link">
     立繪來源
   </a>
   
@@ -481,14 +522,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" title="固有縮放" class="md-nav__link">
+  <a href="#_3" title="準備文件" class="md-nav__link">
+    準備文件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="固有縮放" class="md-nav__link">
     固有縮放
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" title="話語表情" class="md-nav__link">
+  <a href="#_5" title="話語表情" class="md-nav__link">
     話語表情
   </a>
   
@@ -500,14 +548,48 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" title="使用鏡頭" class="md-nav__link">
+  <a href="#_6" title="使用鏡頭" class="md-nav__link">
     使用鏡頭
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="數值鏡頭" class="md-nav__link">
+    數值鏡頭
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="簡化鏡頭" class="md-nav__link">
+    簡化鏡頭
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" title="樣例" class="md-nav__link">
+    樣例
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" title="注意" class="md-nav__link">
+    注意
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" title="立繪來源" class="md-nav__link">
+  <a href="#_11" title="立繪來源" class="md-nav__link">
     立繪來源
   </a>
   
@@ -540,8 +622,9 @@
 </code></pre>
 <p><small>(說的什麼鬼)</small></p>
 <p>儘管潘大爺以憤怒的表情說出了這句話，但在你配置立繪文件之前，這句話不會有任何立繪表現。</p>
-<p>爲了顯示潘大爺，你得在工程的立繪路徑下放置photoshop文件「潘大爺.psd」，纔會以圖片作爲立繪。但這個潘大爺只能使用固定的表情和衣着。</p>
-<p>爲了使用表情，你得在「映射.yaml」裏指定你的表情配置文檔。</p>
+<h3 id="_3">準備文件</h3>
+<p>爲了顯示潘大爺，你得在工程的立繪路徑下放置photoshop文件「潘大爺.psd」，這個文件就是叫「潘大爺」的人物的立繪了。</p>
+<p>但這個潘大爺只能使用固定的表情和衣着，爲了使用表情，你得在「映射.yaml」裏指定你的表情配置文檔。</p>
 <p>表情配置文檔的一個示例如下: </p>
 <pre><code class="yaml">    潘大爺:
         衣:
@@ -562,7 +645,7 @@
 <p>項中的路徑是你在ps文件裏的圖層組路徑。 <br />
 「潘大爺.psd」看起來應該像這樣:  <br />
 <img alt="圖3" src="../圖3.png" /> <br />
-(說明用，圖層是隨便畫的)</p>
+<small>(說明用……圖層是隨便畫的，你看那兩個表情是不是長得一樣)</small></p>
 <p>如果你正確配置了它，那麼之前的對話中會將
 【衣】-&gt; 「潘大爺.psd」中 <strong>「衣」圖層組的「制服」圖層</strong><br />
 和
@@ -570,7 +653,7 @@
         <strong>「顏」圖層組的「怒」圖層</strong> ，
         <strong>「特效」圖層組的「怒氣特效」</strong> 疊加。</p>
 <p>疊加位置是總是保持psd文件中圖層原本的位置。</p>
-<h3 id="_3">固有縮放</h3>
+<h3 id="_4">固有縮放</h3>
 <p>在「映射.yaml」裏你可以對每個立繪指定一個固有縮放值，將立繪整體縮放一個數值。</p>
 <pre><code class="yaml">    潘大爺:
         縮放:
@@ -582,7 +665,7 @@
 </code></pre>
 
 <p>在鏡頭中縮放的數值是在固有縮放的基礎上相乘的。</p>
-<h3 id="_4">話語表情</h3>
+<h3 id="_5">話語表情</h3>
 <p>在「映射.yaml」裏你可以對每個表情指定「默認狀態」和「話語狀態」，當前人物在說話時，當前的表情就會暫時地變成說話時的狀態。   </p>
 <pre><code class="yaml">        顏: 
             _默認:
@@ -602,26 +685,64 @@
 
 <p>對於這個例子，如果潘大爺的表情是「笑」，平時會使用圖層「顏/笑」而在輪到他說話的時候使用圖層「顏/開口笑」。 <br />
 如果潘大爺的表情是「怒」，因爲沒有指定表情狀態，輪到他說話的時候就沒有變化。</p>
-<h2 id="_5">使用鏡頭</h2>
-<p>鏡頭可以簡便地管理和顯示和立繪。</p>
-<pre><code>+ {潘大爺:[100,100,1.5]}
+<h2 id="_6">使用鏡頭</h2>
+<p>鏡頭是組織立繪的工具，可以自動管理和顯示立繪。</p>
+<p>雖然立繪在默認情況下就會根據劇本的走向自動改變，而鏡頭的功能是指示立繪應該如何改變。</p>
+<h3 id="_7">數值鏡頭</h3>
+<pre><code>    + {潘大爺:[100,110,1.5]}
 </code></pre>
-<p>這就確定了一個鏡頭，潘大爺的立繪就固定在窗口上距離左上角(100,100)處出現，并且变成原本的1.5倍大小。直到下次設定有關潘大爺的鏡頭纔會改變。</p>
-<p>第三个参数可以省略，这样就是保持原本大小。</p>
-<pre><code>+ {潘大爺:[100,100],林梓雨:[500,100]}
+
+<p>這就確定了一個鏡頭，潘大爺的立繪就固定在窗口上距離左上角(100,110)處出現<small>(橫軸x距離左方邊界100像素，縱軸y距離上方邊界110像素)</small>，并且变成原本的1.5倍大小。直到下次設定有關潘大爺的鏡頭纔會改變。</p>
+<p>第三个参数可以省略，这样就是保持原本大小<small>(即1倍縮放)</small>。</p>
+<pre><code>    + {潘大爺:[100,100], 林梓雨:[500,100]}
 </code></pre>
-<p>這是一個「多人鏡頭」，不僅確定了潘大爺和林梓雨的位置，而且綁定了兩人。當其中一人在對話中出現時，另一人也會隨之出現。 </p>
-<pre><code>+ [潘大爺, 林梓雨]
-</code></pre>
-<p>這是簡化的寫法。 <br />
-同樣是雙人鏡頭，這會直接把潘大爺和林梓雨放在他們的默認位置上。在項目設置中設定「默認位置」。</p>
+
+<p>這是一個「多人鏡頭」，不僅確定了潘大爺和林梓雨的位置，而且綁定了兩人。當其中一人在對話中出現時，另一人也會隨之出現。<br />
+<small>(話說林梓雨是誰……)</small></p>
 <p>像是這樣的效果: 
 <img alt="圖2" src="../樣例_東方.jpg" />
 <small>(我上哪去找林梓雨……姑且用可愛的女孩子湊個數吧)</small></p>
-<pre><code>- 潘大爺
+<h3 id="_8">簡化鏡頭</h3>
+<pre><code>    + [潘大爺, 林梓雨]
 </code></pre>
+
+<p>這是推薦的簡化寫法。 <br />
+同樣是雙人鏡頭，這會直接把潘大爺和林梓雨放在他們的默認位置上。在項目設置中設定「默認位置」。</p>
+<pre><code>    - 潘大爺
+</code></pre>
+
 <p>這會解除鏡頭綁定，出現潘大爺時不使用鏡頭，用於某些特殊場景(比如潘大爺躲在衣櫃裏 <small>(笑)</small>)。</p>
-<p>注意: </p>
+<h3 id="_9">樣例</h3>
+<p>以這段劇本爲例: 
+<small>(在意名字你就輸了)</small></p>
+<pre><code>    潘大爺 「你們又把系統更新了嗎？」
+    + [潘大爺, 林梓雨]
+    + [校長, 某梓某]
+    林梓雨 「欸，沒聽說啊？」
+    校長 「啊啊，我昨天看到路上的〇學生就順便把系統更新了。」
+    某梓某 「話說系統和〇學生有什麼關係……」
+    潘大爺 「怪不得我這裏連不上了……」
+</code></pre>
+
+<p>會產生如下的 立繪|鏡頭 變化: </p>
+<blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;潘大爺  <br />
+「你們又把系統更新了嗎？」 <br />
+<small>( <strong>潘大爺</strong> 的立繪單獨處於畫面中央)</small></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;林梓雨  <br />
+「欸，沒聽說啊？」 <br />
+<small>( <strong>潘大爺</strong> 的立繪移動到左側，<strong>林梓雨</strong> 的立繪出現在右側。)</small></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;校長  <br />
+「啊啊，我昨天看到路上的〇學生就順便把系統更新了。」 <br />
+<small>( <strong>潘大爺</strong> 和 <strong>林梓雨</strong> 的立繪消失，<strong>校長</strong> 和 <strong>某梓某</strong>出現在畫面的左右兩側)</small></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;某梓某  <br />
+「話說系統和〇學生有什麼關係……」 <br />
+<small>(鏡頭和立繪沒有變化)</small></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;潘大爺  <br />
+「怪不得我這裏連不上了……」 <br />
+<small>( <strong>校長</strong> 和 <strong>某梓某</strong> 的立繪消失，<strong>潘大爺</strong> 和 <strong>林梓雨</strong> 出現在畫面的左右兩側)</small></p>
+</blockquote>
+<h3 id="_10">注意</h3>
 <ol>
 <li>
 <p>在邏輯上，畫面出現的是一個完整的鏡頭，而不是人的立繪。所有人物有一個關聯鏡頭，新鏡頭關聯時舊關聯會解除。所有人物都有一個僅包含自身的默認鏡頭。</p>
@@ -634,7 +755,7 @@
 潘大爺 「那我走了。」
 潘大爺走了。
 - 潘大爺
-林梓雨 「潘大爺走了……我要偷偷把他的成績改掉。」
+林梓雨 「潘大爺走了……我要偷偷把他的期末成績改掉。」
 ```
 </code></pre>
 <p>這個寫法會讓潘大爺在說話的時候不出現立繪，而林梓雨說話時出現潘大爺和林梓雨。 <br />
@@ -645,12 +766,12 @@
 潘大爺 「那我走了。」
 潘大爺走了。
 + [林梓雨]
-林梓雨 「潘大爺走了……我要偷偷把他的成績改掉。」
+林梓雨 「潘大爺走了……我要偷偷把他的期末成績改掉。」
 ```
 </code></pre>
 </li>
 </ol>
-<h2 id="_6">立繪來源</h2>
+<h2 id="_11">立繪來源</h2>
 <p>雖然立繪功能很好，但是顯然Librian並不能解決你沒有立繪的問題……   </p>
 <p>對於這個問題，我能想到的解決方案有: </p>
 <ul>
