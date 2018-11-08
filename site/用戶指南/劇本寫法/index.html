@@ -279,8 +279,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" title="還有一點" class="md-nav__link">
-    還有一點
+  <a href="#_4" title="用法" class="md-nav__link">
+    用法
   </a>
   
 </li>
@@ -292,27 +292,61 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_5" title="注意" class="md-nav__link">
+    注意
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" title="關於空白" class="md-nav__link">
-    關於空白
+  <a href="#_6" title="劇本記號" class="md-nav__link">
+    劇本記號
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="「#」" class="md-nav__link">
+    「#」
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="「*」" class="md-nav__link">
+    「*」
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-" title="「+」「-」" class="md-nav__link">
+    「+」「-」
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" title="「===」" class="md-nav__link">
+    「===」
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" title="立繪安排" class="md-nav__link">
-    立繪安排
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" title="語義着色" class="md-nav__link">
+  <a href="#_10" title="語義着色" class="md-nav__link">
     語義着色
   </a>
   
@@ -502,8 +536,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" title="還有一點" class="md-nav__link">
-    還有一點
+  <a href="#_4" title="用法" class="md-nav__link">
+    用法
   </a>
   
 </li>
@@ -515,27 +549,61 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_5" title="注意" class="md-nav__link">
+    注意
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" title="關於空白" class="md-nav__link">
-    關於空白
+  <a href="#_6" title="劇本記號" class="md-nav__link">
+    劇本記號
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="「#」" class="md-nav__link">
+    「#」
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="「*」" class="md-nav__link">
+    「*」
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-" title="「+」「-」" class="md-nav__link">
+    「+」「-」
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" title="「===」" class="md-nav__link">
+    「===」
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" title="立繪安排" class="md-nav__link">
-    立繪安排
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" title="語義着色" class="md-nav__link">
+  <a href="#_10" title="語義着色" class="md-nav__link">
     語義着色
   </a>
   
@@ -608,6 +676,7 @@
 <p>關於可用的內置特效和自定義特效，參考 <a href="../../進階/特效/">進階/特效</a>。<br />
 關於立繪的自動化，參考下方的「立繪安排」。關於如何準備立繪，參考 <a href="../立繪/">用戶指南/立繪</a>。</p>
 <h2 id="_3">劇本功能</h2>
+<h3 id="_4">用法</h3>
 <p>一般以 &gt;<small>(大於號)</small> 開頭的是控制的函數。 <br />
 它們將會對劇本的演出產生控制作用。</p>
 <p><small>(用豎線分割的漢字是給看到英文就頭大的開發者提供的中文寫法)</small></p>
@@ -616,7 +685,6 @@
 <li><strong>&gt; BG | 背景</strong> 背景圖片文件名   </li>
 <li><strong>&gt; BGM | 背景音樂 | 背景音乐</strong> 背景音樂文件名   </li>
 <li><strong>&gt; CG</strong> CG的文件名   </li>
-<li><strong>&gt; CL</strong> 人物名 衣着   </li>
 <li><strong>&gt; CLASS</strong> 元素 效果   </li>
 <li><strong>&gt; VIDEO | 視頻 | 视频</strong> 影片的名字   </li>
 <li><strong>&gt; py/endpy</strong> (用於插入一段python代碼)    </li>
@@ -656,15 +724,6 @@ BG總是在一點時間內漸變的。 <br />
 <p>樣例:</p>
 <pre><code>    &gt; CG 極夜大戰.png
     &gt; CG
-</code></pre>
-
-<p><strong><em>CL</em> 改變人物衣着。在使用之後，目標人物的立繪衣着持續變成對應的形態。</strong><br />
-語法:</p>
-<pre><code>    &gt; CL {{人物}} {{衣着}}
-</code></pre>
-
-<p>樣例:</p>
-<pre><code>    &gt; CL 靈夢 巫女服
 </code></pre>
 
 <p><strong><em>CLASS</em> 改變畫面元素的效果。</strong></p>
@@ -726,37 +785,6 @@ BG總是在一點時間內漸變的。 <br />
 第二個選項是「接受治療」，選擇後跳轉到劇本「好結局.play」。 <br />
 第二個選項是「蘿莉治療」，選擇後跳轉到劇本「一章.play」的躍點「原點」處。   </p>
 <p>想要瞭解進階的流程控制的話，可以參考<a href="../../進階/嵌入python/">進階/嵌入python.md</a>。</p>
-<h3 id="_4">還有一點</h3>
-<p><em>===</em>使用一張圖片將劇本切斷一小段時間。比如第一章結束，第二章開始的時候就用 =====二章.png 來插入第二章的標題。 <br />
-3個以上的等號都是可以的。</p>
-<pre><code>===第一章.png
-=========================第一章.png
-</code></pre>
-<p>「*」<small>(星號，不含引號)</small>表示一個躍點，普通的時候和註釋一樣會被跳過。不過在WRAP呀goto之類的時候指定這個位置，也就是星號後面的文本，就可以跳轉。</p>
-<pre><code>*原點
-</code></pre>
-<p>注意: </p>
-<ul>
-<li>
-<p>命令都是大小寫敏感的<small>(當然對簡化字也是敏感的所以我定義了兩次別名……)</small>。</p>
-</li>
-<li>
-<p>應該可以支持所有主流文件格式<small>(因爲不是我寫的我也不知道)</small>。</p>
-</li>
-<li>
-<p>多餘的空格會被忽略。   </p>
-<pre><code>&gt; BG   河上.png
-&gt;BG 河上.png
-</code></pre>
-<p>這兩種寫法都可以。</p>
-</li>
-<li>
-<p>你的文件名裏含有空格的話，得用引號把它包起來。</p>
-<pre><code>&gt; BG "librian wiki.png"
-</code></pre>
-<p>就像在命令列裏那樣。</p>
-</li>
-</ul>
 <h3 id="python">python風格的寫法</h3>
 <pre><code>&gt; BG 家裏.png
 &gt; BGM 打架的聲音.mp3
@@ -767,21 +795,64 @@ BG總是在一點時間內漸變的。 <br />
 </code></pre>
 <p>這些命令都可以直接寫成python語句，參數和原本的寫法是一樣的。 <br />
 因爲直接調用了eval語句所以其實可以調用系統函數……不過好在每句都使用獨立的運行環境，不會互相干擾。</p>
-<h2 id="_5">關於空白</h2>
-<p>文件中的空行總是被忽略，在adv的表現上沒有任何影響。   </p>
-<p>以#開頭的一行爲註釋，相當於空行，也不會有實際影響。   </p>
-<h2 id="_6">立繪安排</h2>
-<p>Librian會自動安排你的立繪，你不需要對每句話指定立繪的位置。</p>
-<p>你也可以使用類似這個寫法的「鏡頭」功能來隨心所欲地控制他們。</p>
-<pre><code>+ [靈夢, 萃香]
+<h3 id="_5">注意</h3>
+<ul>
+<li>
+<p>命令都是大小寫敏感的<small>(當然對簡化字也是敏感的所以我定義了兩次別名……)</small>。</p>
+</li>
+<li>
+<p>應該可以支持所有主流文件格式<small>(因爲不是我寫的我也不知道)</small>。</p>
+</li>
+<li>
+<p>文件中的空行總是被忽略，在adv的表現上沒有任何影響。 </p>
+</li>
+<li>
+<p>多餘的空格會被忽略。   </p>
+<pre><code>&gt; BG   河上.png
+&gt;BG 河上.png
 </code></pre>
-<p>關於更詳細的鏡頭，可參考 <a href="../立繪/">用戶指南/立繪</a> 中的鏡頭。</p>
-<h2 id="_7">語義着色</h2>
+<p>這兩種寫法都可以。</p>
+</li>
+<li>
+<p>在默認寫法中，你的文件名裏含有空格的話，得用引號把它包起來。</p>
+<pre><code>&gt; BG "librian wiki.png"
+</code></pre>
+<p>就像在命令列裏那樣。</p>
+</li>
+</ul>
+<h2 id="_6">劇本記號</h2>
+<h3 id="_7">「#」</h3>
+<p><small>(井號)</small></p>
+<p>以#開頭的一整行都是註釋，在演出時會被跳過，不會有實際影響。   </p>
+<h3 id="_8">「*」</h3>
+<p><small>(星號)</small></p>
+<p>表示一個躍點，普通的時候和註釋一樣會被跳過。不過在WRAP呀goto之類的時候指定這個位置，也就是星號後面的文本，就可以跳轉。</p>
+<pre><code>*原點
+</code></pre>
+<h3 id="-">「+」「-」</h3>
+<p><small>(加號和減號)</small></p>
+<p>加號和減號用於設置鏡頭，鏡頭是組織立繪的工具，可以自動管理和顯示立繪。</p>
+<p>讓 <strong>潘大爺</strong> 和 <strong>林梓雨</strong> 站在一起。</p>
+<pre><code>+ [潘大爺, 林梓雨]
+</code></pre>
+<p>加號也用來設置人物的衣着。</p>
+<p>給 <strong>潘大爺</strong> 穿上西裝:</p>
+<pre><code>潘大爺 + 西裝
+</code></pre>
+<p>關於更詳細的衣着和鏡頭，可參考 <a href="../立繪/">用戶指南/立繪</a> 。。</p>
+<h3 id="_9">「===」</h3>
+<p><small>(三個以上的等號)</small></p>
+<p>使用一張圖片將劇本切斷一小段時間。比如第一章結束，第二章開始的時候就用 =====二章.png 來插入第二章的標題。 <br />
+3個以上的等號都是可以的。</p>
+<pre><code>===第一章.png
+=========================第一章.png
+</code></pre>
+<h2 id="_10">語義着色</h2>
 <p>「資源」中贈送的sublime語義文件可以幫助你進行語義着色。 <br />
 在我這裏，着色後的劇本看起來就像這樣。 <br />
 <img alt="着色" src="../着色.png" />
-sublime真是太棒了！</p>
-<h2 id="_8"></h2>
+sublime真是太棒了！
+<small>(不過這個語義文件寫的很差)</small></p>
                 
                   
                 
