@@ -459,6 +459,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../進階/設計回想/" title="設計回想" class="md-nav__link">
+      設計回想
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -682,16 +694,16 @@
 <p><small>(用豎線分割的漢字是給看到英文就頭大的開發者提供的中文寫法)</small></p>
 <p>包括:</p>
 <ul>
-<li><strong>&gt; BG | 背景</strong> 背景圖片文件名   </li>
-<li><strong>&gt; BGM | 背景音樂 | 背景音乐</strong> 背景音樂文件名   </li>
-<li><strong>&gt; CG</strong> CG的文件名   </li>
-<li><strong>&gt; EF | 特效</strong> 元素 效果   </li>
-<li><strong>&gt; VIDEO | 視頻 | 视频</strong> 影片的名字   </li>
-<li><strong>&gt; py/endpy</strong> (用於插入一段python代碼)    </li>
-<li><strong>&gt; js/endjs</strong> (用於插入一段javascript代碼)    </li>
-<li><strong>&gt; WRAP | 快速選項 | 快速选项</strong> 快速控制選項和跳轉   </li>
+<li><strong>BG | 背景</strong> 背景圖片文件名   </li>
+<li><strong>BGM | 背景音樂 | 背景音乐</strong> 背景音樂文件名   </li>
+<li><strong>CG</strong> CG的文件名   </li>
+<li><strong>EF | 特效</strong> 元素 效果   </li>
+<li><strong>VIDEO | 視頻 | 视频</strong> 影片的名字   </li>
+<li><strong>py/endpy</strong> (用於插入一段python代碼)    </li>
+<li><strong>js/endjs</strong> (用於插入一段javascript代碼)    </li>
+<li><strong>WRAP | 快速選項 | 快速选项</strong> 快速控制選項和跳轉   </li>
 </ul>
-<p><strong><em>BG</em> 會更換當前的BG爲你指定的文件。</strong> <br />
+<p><strong><code>BG</code> 會更換當前的BG爲你指定的文件。</strong> <br />
 BG總是在一點時間內漸變的。 <br />
 語法:</p>
 <pre><code>    &gt; BG {{文件名}}
@@ -702,7 +714,7 @@ BG總是在一點時間內漸變的。 <br />
     &gt; 背景 街.png
 </code></pre>
 
-<p><strong><em>BGM</em> 會更換當前的BGM爲你指定的文件。</strong> <br />
+<p><strong><code>BGM</code> 會更換當前的BGM爲你指定的文件。</strong> <br />
 如果指定爲None，會有一點淡出時間。但總是沒有淡入。 <br />
 語法:</p>
 <pre><code>    &gt; BGM {{文件名}} {{音量=1}}
@@ -714,7 +726,7 @@ BG總是在一點時間內漸變的。 <br />
     &gt; BGM None
 </code></pre>
 
-<p><strong><em>CG</em> 進入CG模式並立即使用指定的CG。</strong> <br />
+<p><strong><code>CG</code> 進入CG模式並立即使用指定的CG。</strong> <br />
 在CG模式下，CG佔據整個畫面，立繪不會被顯示，背景也是無效的。 <br />
 不指定參數會解除CG模式。 <br />
 語法:</p>
@@ -726,7 +738,7 @@ BG總是在一點時間內漸變的。 <br />
     &gt; CG
 </code></pre>
 
-<p><strong><em>EF</em> 改變畫面元素的效果。</strong></p>
+<p><strong><code>EF</code> 改變畫面元素的效果。</strong></p>
 <p>語法:</p>
 <pre><code>    &gt; EF {{元素ID}} {{特效名}}
 </code></pre>
@@ -736,8 +748,7 @@ BG總是在一點時間內漸變的。 <br />
 </code></pre>
 
 <p>樣例將畫面背景變成灰色，需要參考 <a href="../../進階/特效/">進階/特效</a> 。</p>
-<p><strong><em>VIDEO</em> 插入一個視頻，用於OP、ED之類的場合。</strong> <br />
-以前內核好像只支持webm格式，現在應該都能用了。 <br />
+<p><strong><code>VIDEO</code> 插入一個視頻，用於OP、ED之類的場合。</strong> <br />
 語法:</p>
 <pre><code>    &gt; VIDEO {{影片名}}
 </code></pre>
@@ -747,7 +758,7 @@ BG總是在一點時間內漸變的。 <br />
     &gt; 視頻 ED.mp4
 </code></pre>
 
-<p><strong><em>py/endpy</em> 用於插入一段python3代碼。</strong>  <br />
+<p><strong><code>py</code>/<code>endpy</code> 用於插入一段python3代碼。</strong>  <br />
 填在py和endpy之間的代碼會像真正的python代碼一樣執行。 <br />
 樣例:</p>
 <pre><code>    &gt; py
@@ -757,7 +768,7 @@ BG總是在一點時間內漸變的。 <br />
     &gt; endpy
 </code></pre>
 
-<p><strong><em>js/endjs</em> 用於插入一段javascript代碼。</strong> <br />
+<p><strong><code>js</code>/<code>endjs</code> 用於插入一段javascript代碼。</strong> <br />
 填在中間的代碼會像真正的javascript代碼一樣執行。 <br />
 樣例:</p>
 <pre><code>    &gt; js
@@ -766,7 +777,7 @@ BG總是在一點時間內漸變的。 <br />
 </code></pre>
 
 <p><small>(要是寫成「用於插入JS」就會變得很H)</small></p>
-<p><strong><em>WRAP</em> 設置產生跳轉的選項，可以簡單地控制劇本跳轉。</strong> <br />
+<p><strong><code>WRAP</code> 設置產生跳轉的選項，可以簡單地控制劇本跳轉。</strong> <br />
 語法:</p>
 <pre><code>    WRAP [文字1, 跳轉文件1, 躍點1=None] [文字2, 跳轉文件2, 躍點2=None] ... 
 </code></pre>
@@ -794,7 +805,7 @@ BG總是在一點時間內漸變的。 <br />
 &gt; BGM('打架的聲音.mp3')
 </code></pre>
 <p>這些命令都可以直接寫成python語句，參數和原本的寫法是一樣的。 <br />
-因爲直接調用了eval語句所以其實可以調用系統函數……不過好在每句都使用獨立的運行環境，不會互相干擾。</p>
+因爲直接調用了<code>eval</code>語句所以其實可以調用系統函數……不過好在每句都使用獨立的運行環境，不會互相干擾。</p>
 <h3 id="_5">注意</h3>
 <ul>
 <li>
@@ -826,7 +837,7 @@ BG總是在一點時間內漸變的。 <br />
 <p>以#開頭的一整行都是註釋，在演出時會被跳過，不會有實際影響。   </p>
 <h3 id="_8">「*」</h3>
 <p><small>(星號)</small></p>
-<p>表示一個躍點，普通的時候和註釋一樣會被跳過。不過在WRAP呀goto之類的時候指定這個位置，也就是星號後面的文本，就可以跳轉。</p>
+<p>表示一個躍點，普通的時候和註釋一樣會被跳過。不過在<code>WRAP</code>呀<code>goto</code>之類的時候指定這個位置，也就是星號後面的文本，就可以跳轉。</p>
 <pre><code>*原點
 </code></pre>
 <h3 id="-">「+」「-」</h3>
@@ -842,7 +853,7 @@ BG總是在一點時間內漸變的。 <br />
 <p>關於更詳細的衣着和鏡頭，可參考 <a href="../立繪/">用戶指南/立繪</a> 。。</p>
 <h3 id="_9">「===」</h3>
 <p><small>(三個以上的等號)</small></p>
-<p>使用一張圖片將劇本切斷一小段時間。比如第一章結束，第二章開始的時候就用 =====二章.png 來插入第二章的標題。 <br />
+<p>使用一張圖片將劇本切斷一小段時間。比如第一章結束，第二章開始的時候就用 <code>=====二章.png</code> 來插入第二章的標題。 <br />
 3個以上的等號都是可以的。</p>
 <pre><code>===第一章.png
 =========================第一章.png
