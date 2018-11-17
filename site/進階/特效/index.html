@@ -362,8 +362,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" title="元素的特效" class="md-nav__link">
-    元素的特效
+  <a href="#_4" title="畫面元素的特效" class="md-nav__link">
+    畫面元素的特效
   </a>
   
 </li>
@@ -474,8 +474,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" title="元素的特效" class="md-nav__link">
-    元素的特效
+  <a href="#_4" title="畫面元素的特效" class="md-nav__link">
+    畫面元素的特效
   </a>
   
 </li>
@@ -543,12 +543,41 @@
     }
 </code></pre>
 
-<h2 id="_4">元素的特效</h2>
-<pre><code>    &gt; CLASS bg 灰
+<h2 id="_4">畫面元素的特效</h2>
+<pre><code>    &gt; EF bg 灰
 </code></pre>
 
-<p>爲html元素「bg」加上class「灰」，在應用之後所有的背景都會變成灰色的，適用於過去的記憶等場景。 <br />
-元素的特效和立繪的特效是可以通用的。如果確定要用的話，也可以往元素上套用動作特效。</p>
+<p>爲html元素「bg」設置特效「灰」，在應用之後所有的背景都會變成灰色的。</p>
+<pre><code>    &gt; EF adv畫面 灰
+</code></pre>
+
+<p>爲整個畫面設置特效「灰」，適用於過去的記憶等場景。  <br />
+<img alt="3" src="../3.jpg" /></p>
+<p>如果不指定特效就會把原有的特效清除。 <br />
+元素的特效和立繪的特效是可以通用的。 <br />
+此外，也可以往元素上套用動作特效<small>(如果確實有必要的話)</small>。</p>
+<p>在默認的adv畫面中，有這些元素:</p>
+<pre><code>    總畫面:
+        配置面板:
+        工具欄:
+        adv畫面:
+            覆蓋:
+            選項:
+            cg:
+            bg:
+            立繪:
+            對話歷史:
+            對話框:
+                名字框:
+                    名字:
+                    名字框背景:
+                話語框:
+                    話語:
+                    話語框背景:
+                對話框背景:
+        提示:
+</code></pre>
+
 <h2 id="_5">注意</h2>
 <p>由於pyqt的webkit引擎更新得很慢，並不能支持所有css的特性，比如說在animation作用的時候，filter會失效。 <br />
 大概等他們更新就能解決吧……</p>
