@@ -329,22 +329,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#css" title="關於自定css" class="md-nav__link">
-    關於自定css
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" title="關於主解析度" class="md-nav__link">
-    關於主解析度
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" title="嵌入其他功能" class="md-nav__link">
+  <a href="#_7" title="嵌入其他功能" class="md-nav__link">
     嵌入其他功能
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" title="預先配置的主題" class="md-nav__link">
+    預先配置的主題
   </a>
   
 </li>
@@ -547,22 +540,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#css" title="關於自定css" class="md-nav__link">
-    關於自定css
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" title="關於主解析度" class="md-nav__link">
-    關於主解析度
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" title="嵌入其他功能" class="md-nav__link">
+  <a href="#_7" title="嵌入其他功能" class="md-nav__link">
     嵌入其他功能
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" title="預先配置的主題" class="md-nav__link">
+    預先配置的主題
   </a>
   
 </li>
@@ -590,7 +576,13 @@
 <p>在工程的「工程配置.yaml」中，你可以指定一些和項目相關的參數。</p>
 <h3 id="_3">基本設定</h3>
 <p><strong>標題</strong> <br />
-指定「標題」來改變標題欄文字。</p>
+爲你的遊戲起一個帥氣的名字。 <br />
+這個名字會顯示在標題欄。</p>
+<p><strong>主題css</strong> <br />
+選擇一個你喜歡的adv界面外觀。 <br />
+<img alt="" src="../主題圖/黑色花紋邊框.jpg" />  <br />
+<img alt="" src="../主題圖/實框.jpg" />  <br />
+預先配置的主題會在下面列出。  </p>
 <h3 id="_4">路徑設定</h3>
 <p><strong>圖標</strong> <br />
 指定「圖標」來改變標題欄圖標。</p>
@@ -606,17 +598,22 @@
 <pre><code>標題畫面: 標題畫面/title.html
 </code></pre>
 
-<p><img alt="" src="../標題畫面.jpg" />
-至於title.html的寫法之後再介紹吧。</p>
+<p><img alt="" src="../標題畫面.jpg" /> <br />
+title.html的寫法在<a href="../../進階/畫面的定製/">進階/畫面的定製</a>中介紹。</p>
 <p><strong>劇本入口</strong> <br />
 指定「劇本入口」來選擇開始遊戲時的劇本。</p>
 <p><strong>自定css</strong> <br />
-指定「自定css」後，你可以在你的css中改變adv畫面的外觀，比如更換遊戲的字體大小，光標樣式，對話框圖片等。 <br />
-詳細在接下來介紹。</p>
+指定「自定css」後，你可以在你的css中改變adv畫面的外觀，比如更換遊戲的字體大小，添加漂亮的光標或者對話框等。 <br />
+如果想要給遊戲，你可以使用自定css。自定css是adv頁面會額外引用的css，在其中覆蓋原有的css設定就可以完全改變畫面的樣貌。 <br />
+詳細在<a href="../../進階/畫面的定製/">進階/畫面的定製</a>中介紹。</p>
 <h3 id="_5">位置設定</h3>
+<p><strong>主解析度</strong>
+就是你的遊戲窗口的大小。你準備的CG啊，BG啊，最好都符合這個大小，否則切換圖片的時候會有奇怪的縮放表現<small>(webkit的crossfade)</small>。 <br />
+對了，因爲現在16:9很流行，所以在很多用戶的顯示器下，主解析度不是16:9的遊戲全屏時會有邊框。 <br />
+還有就是，更改主解析度以後如果畫面元素的位置不對的話，可以自定css來解決。</p>
 <p><strong>默認立繪位置</strong> <br />
 不同人数时，各人从左到右的位置。
-在鏡頭的簡化寫法中，如 <strong>+ [潘大爺, 林梓雨]</strong> ，就會使用他們的默認立繪位置。</p>
+在鏡頭的簡化寫法中，如 <code>+ [潘大爺, 林梓雨]</code> ，就會使用他們的默認立繪位置。</p>
 <pre><code>默認立繪位置: 
     1:
       - [300,0]
@@ -634,15 +631,20 @@
 當設定爲True時，一個立繪的位置改變的場合，自動應用對應的位移動作。</p>
 <p><strong>自動發言表情</strong> <br />
 當設定爲True時，一個人講話——且她的當前表情有對應的說話表情的場合，將她的表情變成對應的說話表情。</p>
-<h2 id="css">關於自定css</h2>
-<p>如果想要給遊戲添加漂亮的指針，或者漂亮的對話框，你可以使用自定css。自定css是adv頁面會額外引用的css，在其中覆蓋原有的css設定就可以完全改變畫面的樣貌。</p>
-<h2 id="_7">關於主解析度</h2>
-<p>就是你的遊戲窗口的大小。你準備的CG啊，BG啊，最好都符合這個大小，否則webkit的crossfade會有奇怪的表現。還有要記住主解析度不是16:9的場合在很多用戶的顯示器下全屏時會有黑邊。</p>
-<h2 id="_8">嵌入其他功能</h2>
-<p>比如說這個adv劇情到一半，要進入一個魔法打架的遊戲(當然這是你自己寫好的)。 <br />
-這樣的情況下，我覺得好像應該把在&gt;py/&gt;endpy裏調用你的遊戲。如果你的遊戲能嵌入pyqt5，在主窗口添加一個層，然後嵌入你的遊戲，在結束時把層消除就好了。 <br />
+<h2 id="_7">嵌入其他功能</h2>
+<p>比如說這個adv劇情到一半，要進入一個魔法打架的遊戲<small>(當然這是你自己寫好的)</small>。 <br />
+這樣的情況下，我覺得好像應該把在<code>&gt;py</code>/<code>&gt;endpy</code>裏調用你的遊戲。如果你的遊戲能嵌入pyqt5，在主窗口添加一個層，然後嵌入你的遊戲，在結束時把層消除就好了。 <br />
 我也沒試過……</p>
 <p>不過現在的遊戲引擎很多都能生成html5遊戲，說不定還不錯？</p>
+<h2 id="_8">預先配置的主題</h2>
+<p>無 <br />
+<img alt="" src="../主題圖/無.jpg" /></p>
+<p>黑色花紋邊框 <br />
+<img alt="" src="../主題圖/黑色花紋邊框.jpg" /></p>
+<p>實框 <br />
+<img alt="" src="../主題圖/實框.jpg" /></p>
+<p>線框 <br />
+<img alt="" src="../主題圖/線框.jpg" /></p>
                 
                   
                 
