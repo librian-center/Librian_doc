@@ -36,7 +36,7 @@
     
     
       
-        <title>其他組件 - Librian中文文檔</title>
+        <title>起步 - Librian中文文檔</title>
       
     
     
@@ -97,7 +97,7 @@
                 Librian中文文檔
               </span>
               <span class="md-header-nav__topic">
-                其他組件
+                起步
               </span>
             
           
@@ -222,14 +222,78 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
-      用戶指南
+      製作galgame
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
-        用戶指南
+        製作galgame
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        起步
+      </label>
+    
+    <a href="./" title="起步" class="md-nav__link md-nav__link--active">
+      起步
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="默認文件夾" class="md-nav__link">
+    默認文件夾
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="工程配置" class="md-nav__link">
+    工程配置
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="接下來的建議" class="md-nav__link">
+    接下來的建議
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
         
           
           
@@ -271,63 +335,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        其他組件
-      </label>
-    
-    <a href="./" title="其他組件" class="md-nav__link md-nav__link--active">
-      其他組件
+  <li class="md-nav__item">
+    <a href="../生成遊戲/" title="生成遊戲" class="md-nav__link">
+      生成遊戲
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" title="編譯" class="md-nav__link">
-    編譯
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pdf" title="導出pdf" class="md-nav__link">
-    導出pdf
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" title="導出輕文" class="md-nav__link">
-    導出輕文
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -465,22 +477,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" title="編譯" class="md-nav__link">
-    編譯
+  <a href="#_2" title="默認文件夾" class="md-nav__link">
+    默認文件夾
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#pdf" title="導出pdf" class="md-nav__link">
-    導出pdf
+  <a href="#_3" title="工程配置" class="md-nav__link">
+    工程配置
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" title="導出輕文" class="md-nav__link">
-    導出輕文
+  <a href="#_4" title="接下來的建議" class="md-nav__link">
+    接下來的建議
   </a>
   
 </li>
@@ -502,24 +514,34 @@
               
                 
                 
-                <h1 id="_1">其他組件</h1>
-<p>除了主要用到的那個一條龍服務以外，有一些組件單獨使用也可以發揮出強大威力。</p>
-<h2 id="_2">編譯</h2>
-<p>「編譯」將你的劇本經過語法解析之後僅變成可讀的python對象，也就是一條龍服務的第一步。
-「編譯」與工程無關，只對單獨的劇本文件生效。</p>
-<p>python對象可以容易地轉化爲其他引擎的劇本文件，比如輕文或者KRKR。 <br />
-當然不建議這麼做，怎麼還有自己讓搶生意的…… <br />
-實際上不建議的理由是Librian的語法優美，再轉換爲其他劇本的話顯得捨近求遠<small>(總有一種老婆跟別人跑了的感覺)</small>。</p>
-<h2 id="pdf">導出pdf</h2>
-<p>「導出pdf」顧名思義地用於將你的劇本文件導出pdf。
-「導出pdf」與工程無關，只對單獨的劇本文件生效，但需要配置css樣式表。</p>
-<p>將劇本文件「編譯」之後，生成一個pdf文件，去除控制語句同時添加語義和着色。
-當你想要將你的劇本與他人分享時，導出pdf可以提供更強的可讀性。</p>
-<h2 id="_3">導出輕文</h2>
-<p>「導出輕文」可以將你的劇本導出一個可以用於「輕文」的「IQA引擎」的劇本。  </p>
-<p>比較起來現在的輕文引擎的語法過於底層，似乎對人類很不友好<small>(差不多已經是asm碼了)</small>——當然是不開可視化界面的時候<small>(而且居然沒法切換！)</small>……  <br />
-而且我這個文檔比他的漂亮<small>(笑)</small>。   </p>
-<p>雖然受到一些引擎的限制以至於表現並不完全一致，不過放個在線demo應該還是沒問題的。   </p>
+                <h1 id="_1">起步</h1>
+<p>在開始寫劇本之前，希望你能掏出兩分鐘左右的時間來瞭解一下Librian工程的基本結構。 <br />
+<small>(不過爲什麼是掏出？)</small></p>
+<h2 id="_2">默認文件夾</h2>
+<p><img alt="" src="../../第一次使用/文件夾內容.png" /></p>
+<p>顧名思義，<strong>我的劇本</strong>，<strong>我的立繪</strong>，<strong>我的圖片</strong>，<strong>我的音樂</strong> 這些就是放素材的地方。</p>
+<p>任何素材只需要在這些文件夾下直接放好就可以使用了。</p>
+<p><strong>存檔資料</strong> 就是放存檔的地方。刪掉的話存檔就沒了。<small>(不過文件夾本身被刪掉的話，下次運行還會創建。)</small></p>
+<p><strong>測試運行.cmd</strong> 就是直接運行整個工程<small>(不需要使用Librian面板)</small>。</p>
+<p><strong>工程配置.yaml</strong> 是至關重要的工程的配置文件。</p>
+<h2 id="_3">工程配置</h2>
+<p><strong>工程配置.yaml</strong> 是一個文本文件，你可以使用記事本打開它。</p>
+<p><img alt="" src="../配置內容.png" /></p>
+<p>冒號前面的是配置項名，冒號後面的是值。 <br />
+比如你的遊戲的 <code>標題</code> 就是 <code>我的工程</code> <small>(趕緊把它改掉……)</small>。</p>
+<p>配置項的含義就是字面上的意思了。 <br />
+如果項目名太抽象的話，可以在 <a href="../客製化你的遊戲/">客製化你的遊戲</a> 章節中找到詳細的解釋。</p>
+<h2 id="_4">接下來的建議</h2>
+<p>Galgame只要有劇本就能運行，即使劇本中指定的立繪和背景都沒有準備好，演出也不會終止。 <br />
+你可以馬上去編輯 <strong>我的劇本/入口.play</strong> 了。</p>
+<p>對了，如果你在操作的過程中遇到麻煩<small>(應該很少)</small>，或者Librian不按你所想的工作了，你可以看看對應的章節有沒有名爲「注意」的部分，那裏大概會解釋你遇到的問題。</p>
+<hr/>
+
+<blockquote>
+<p>長頸鹿 「开演です！」
+</p>
+</blockquote>
+<hr/>
                 
                   
                 
@@ -540,7 +562,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../客製化你的遊戲/" title="客製化你的遊戲" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../第一次使用/安裝/" title="安裝" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -549,19 +571,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                客製化你的遊戲
+                安裝
               </span>
             </div>
           </a>
         
         
-          <a href="../../進階/畫面的定製/" title="畫面的定製" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../劇本寫法/" title="劇本寫法" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                畫面的定製
+                劇本寫法
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

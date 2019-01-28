@@ -222,14 +222,26 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
-      用戶指南
+      製作galgame
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
-        用戶指南
+        製作galgame
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../起步/" title="起步" class="md-nav__link">
+      起步
+    </a>
+  </li>
+
         
           
           
@@ -393,8 +405,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../其他組件/" title="其他組件" class="md-nav__link">
-      其他組件
+    <a href="../生成遊戲/" title="生成遊戲" class="md-nav__link">
+      生成遊戲
     </a>
   </li>
 
@@ -648,18 +660,18 @@
 <pre><code>機房的門上鎖了，潘大爺被關在外面。
 潘大爺 「你們別玩了快來給我開門！」
 </code></pre>
-<p>第一句是旁白，第二句是潘大爺說的話。 <br />
+<p>第一句是旁白，第二句是 <code>潘大爺</code> 說的話。 <br />
 人物對話的特徵是，用方引號圈住言語，人名後有一個空格。 <br />
 在後方引號之後的空格会被忽略。</p>
 <p><strong>名字的變體:</strong></p>
 <pre><code>傑克|黑衣人 (笑)「咕嘿嘿。」
 </code></pre>
-<p>結果: 人物立繪展現爲傑克，但對話框的名字是【黑衣人】，用於劇情上人名無法得知的場合。此時立繪中傑克的表情是 笑，如果你正確地準備了立繪文件的話，就會使用他洋溢着笑容的表情。</p>
+<p>結果: 人物立繪展現爲 <code>傑克</code> ，但對話框的名字是 <code>黑衣人</code> ，用於劇情上人名無法得知的場合。此時立繪中 <code>傑克</code> 的表情是 <code>笑</code> ，如果你正確地準備了立繪文件的話，就會使用他洋溢着笑容的表情。</p>
 <p><strong>使用特效:</strong></p>
 <pre><code>潘大爺 [灰](驚)「什麼情況！」
 </code></pre>
-<p>結果: 潘大爺擺出驚訝的表情，人物呈現爲灰色。<br />
-其中 [灰] 爲使用的特效，可以和表情一起使用，也可以單獨使用。</p>
+<p>結果:  <code>潘大爺</code> 擺出 <code>驚</code> 的表情，人物呈現爲灰色。<br />
+其中  <code>灰</code> 爲使用的特效，可以和表情一起使用，也可以單獨使用。</p>
 <p><strong>多行對話:</strong></p>
 <pre><code>潘大爺 「
     歡迎來到莆田理工大學……
@@ -674,7 +686,7 @@
 <pre><code>潘大爺 (嘆)
 </code></pre>
 <p>相比之下少了後面的方引號內的內容。 <br />
-這不會作爲潘大爺說的一句話來處理，也不需要玩家點擊來跳過，但是會把鏡頭指向潘大爺並改變潘大爺的表情和特效。</p>
+這不會作爲 <code>潘大爺</code> 說的一句話來處理，也不需要玩家點擊來跳過，但是會把鏡頭指向 <code>潘大爺</code> 並改變潘大爺的表情和特效。</p>
 <p><strong>html格式:</strong></p>
 <p>對話中可以自由地嵌入html來增強表現力，html也會渲染到adv畫面中。</p>
 <pre><code>幼馴染 「&lt;small&gt;不是特意給你做的&lt;/small&gt;」
@@ -703,8 +715,8 @@
 <li><strong>js/endjs</strong> (用於插入一段javascript代碼)    </li>
 <li><strong>WRAP | 快速選項 | 快速选项</strong> 快速控制選項和跳轉   </li>
 </ul>
-<p><strong><code>BG</code> 會更換當前的BG爲你指定的文件。</strong> <br />
-BG總是在一點時間內漸變的。 <br />
+<p><strong><code>BG</code> 會更換當前的背景圖片爲你指定的文件。</strong> <br />
+背景圖片總是在一點時間內漸變的。 <br />
 語法:</p>
 <pre><code>    &gt; BG {{文件名}}
 </code></pre>
@@ -843,11 +855,11 @@ BG總是在一點時間內漸變的。 <br />
 <h3 id="-">「+」「-」</h3>
 <p><small>(加號和減號)</small></p>
 <p>加號和減號用於設置鏡頭，鏡頭是組織立繪的工具，可以自動管理和顯示立繪。</p>
-<p>讓 <strong>潘大爺</strong> 和 <strong>林梓雨</strong> 站在一起。</p>
+<p>讓  <code>潘大爺</code>  和  <code>林梓雨</code> 站在一起。</p>
 <pre><code>+ [潘大爺, 林梓雨]
 </code></pre>
 <p>加號也用來設置人物的衣着。</p>
-<p>給 <strong>潘大爺</strong> 穿上西裝:</p>
+<p>給  <code>潘大爺</code> 穿上西裝:</p>
 <pre><code>潘大爺 + 西裝
 </code></pre>
 <p>關於更詳細的衣着和鏡頭，可參考 <a href="../立繪/">用戶指南/立繪</a> 。。</p>
@@ -884,7 +896,7 @@ sublime真是太棒了！
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../第一次使用/安裝/" title="安裝" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../起步/" title="起步" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -893,7 +905,7 @@ sublime真是太棒了！
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                安裝
+                起步
               </span>
             </div>
           </a>

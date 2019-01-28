@@ -222,14 +222,26 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
-      用戶指南
+      製作galgame
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
-        用戶指南
+        製作galgame
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../起步/" title="起步" class="md-nav__link">
+      起步
+    </a>
+  </li>
+
         
           
           
@@ -359,8 +371,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../其他組件/" title="其他組件" class="md-nav__link">
-      其他組件
+    <a href="../生成遊戲/" title="生成遊戲" class="md-nav__link">
+      生成遊戲
     </a>
   </li>
 
@@ -576,7 +588,7 @@
 <p>在工程的「工程配置.yaml」中，你可以指定一些和項目相關的參數。</p>
 <h3 id="_3">基本設定</h3>
 <p><strong>標題</strong> <br />
-爲你的遊戲起一個帥氣的名字。 <br />
+爲你的遊戲起一個響亮的名字。 <br />
 這個名字會顯示在標題欄。</p>
 <p><strong>主題css</strong> <br />
 選擇一個你喜歡的adv界面外觀。 <br />
@@ -607,12 +619,12 @@ title.html的寫法在<a href="../../進階/畫面的定製/">進階/畫面的�
 如果想要給遊戲，你可以使用自定css。自定css是adv頁面會額外引用的css，在其中覆蓋原有的css設定就可以完全改變畫面的樣貌。 <br />
 詳細在<a href="../../進階/畫面的定製/">進階/畫面的定製</a>中介紹。</p>
 <h3 id="_5">位置設定</h3>
-<p><strong>主解析度</strong>
-就是你的遊戲窗口的大小。你準備的CG啊，BG啊，最好都符合這個大小，否則切換圖片的時候會有奇怪的縮放表現<small>(webkit的crossfade)</small>。 <br />
+<p><strong>主解析度</strong> <br />
+就是你的遊戲窗口的大小。你準備的CG啊，BG啊，最好都符合這個大小，否則切換圖片的時候會有奇怪的縮放表現<small>(由於webkit的crossfade的奇怪特性)</small>。 <br />
 對了，因爲現在16:9很流行，所以在很多用戶的顯示器下，主解析度不是16:9的遊戲全屏時會有邊框。 <br />
 還有就是，更改主解析度以後如果畫面元素的位置不對的話，可以自定css來解決。</p>
 <p><strong>默認立繪位置</strong> <br />
-不同人数时，各人从左到右的位置。
+不同人数时，各人从左到右的位置。 <br />
 在鏡頭的簡化寫法中，如 <code>+ [潘大爺, 林梓雨]</code> ，就會使用他們的默認立繪位置。</p>
 <pre><code>默認立繪位置: 
     1:
@@ -622,8 +634,8 @@ title.html的寫法在<a href="../../進階/畫面的定製/">進階/畫面的�
       - [550,0]
 </code></pre>
 
-<p>當畫面中只有潘大爺時，潘大爺就會被安排在[300,0]的位置。
-當畫面中有兩個人，第一個是潘大爺，第二個是林梓雨時，潘大爺就會被放在[100,0]的位置，而林梓雨就會被放在[550,0]的位置。</p>
+<p>當畫面中有一個人—— <code>潘大爺</code> 時， <code>潘大爺</code> 就會被安排在 <code>[300,0]</code> 的位置。 <br />
+當畫面中有兩個人——第一個是 <code>潘大爺</code> ，第二個是 <code>林梓雨</code> 時， <code>潘大爺</code> 就會被放在 <code>[100,0]</code> 的位置，而 <code>林梓雨</code> 就會被放在 <code>[550,0]</code> 的位置。</p>
 <h3 id="_6">演出功能設定</h3>
 <p><strong>自動淡入動作</strong> <br />
 當設定爲True時，出現了一個新立繪的場合(即不在上個鏡頭中出現)，自動應用動作「淡入」。</p>
@@ -680,13 +692,13 @@ title.html的寫法在<a href="../../進階/畫面的定製/">進階/畫面的�
           </a>
         
         
-          <a href="../其他組件/" title="其他組件" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../生成遊戲/" title="生成遊戲" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                其他組件
+                生成遊戲
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
