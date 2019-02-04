@@ -14,6 +14,6 @@ nav:
   - 進階/特效.md
   - 進階/嵌入python.md
   - 進階/設計回想.md
-- 缺少的功能:
-  - 接下來要做的/一些遺憾.md
+- 一些遺憾: 接下來要做的/一些遺憾.md
+- 關於Librian: 關於Librian/關於Librian.md
 theme: material
