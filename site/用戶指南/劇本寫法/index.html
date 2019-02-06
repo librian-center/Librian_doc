@@ -317,7 +317,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" title="劇本記號" class="md-nav__link">
+  <a href="#_6" title="角色操作" class="md-nav__link">
+    角色操作
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" title="劇本記號" class="md-nav__link">
     劇本記號
   </a>
   
@@ -325,14 +332,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_7" title="「#」" class="md-nav__link">
+  <a href="#_8" title="「#」" class="md-nav__link">
     「#」
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_8" title="「*」" class="md-nav__link">
+  <a href="#_9" title="「*」" class="md-nav__link">
     「*」
   </a>
   
@@ -346,7 +353,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_9" title="「===」" class="md-nav__link">
+  <a href="#_10" title="「===」" class="md-nav__link">
     「===」
   </a>
   
@@ -358,7 +365,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_10" title="語義着色" class="md-nav__link">
+  <a href="#_11" title="語義着色" class="md-nav__link">
     語義着色
   </a>
   
@@ -574,7 +581,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" title="劇本記號" class="md-nav__link">
+  <a href="#_6" title="角色操作" class="md-nav__link">
+    角色操作
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" title="劇本記號" class="md-nav__link">
     劇本記號
   </a>
   
@@ -582,14 +596,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_7" title="「#」" class="md-nav__link">
+  <a href="#_8" title="「#」" class="md-nav__link">
     「#」
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_8" title="「*」" class="md-nav__link">
+  <a href="#_9" title="「*」" class="md-nav__link">
     「*」
   </a>
   
@@ -603,7 +617,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_9" title="「===」" class="md-nav__link">
+  <a href="#_10" title="「===」" class="md-nav__link">
     「===」
   </a>
   
@@ -615,7 +629,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_10" title="語義着色" class="md-nav__link">
+  <a href="#_11" title="語義着色" class="md-nav__link">
     語義着色
   </a>
   
@@ -831,11 +845,35 @@
 <p>就像在命令列裏那樣。</p>
 </li>
 </ul>
-<h2 id="_6">劇本記號</h2>
-<h3 id="_7">「#」</h3>
+<h2 id="_6">角色操作</h2>
+<p>角色操作的語句以「@」開頭，就好像你在@這個人一樣。</p>
+<p><strong>加號</strong>用來設置人物的衣着。</p>
+<p>給  <code>潘大爺</code> 穿上 <code>西裝</code> :</p>
+<pre><code>@潘大爺 + 西裝
+</code></pre>
+<p>關於更詳細的衣着和鏡頭，可參考 <a href="../立繪/">用戶指南/立繪</a> 。</p>
+<p><strong>豎線</strong>用來設置人物在對話框中顯示的名字。</p>
+<p>還記得剛纔的這個例子嗎——</p>
+<pre><code>張主任|黑衣人 (笑)「咕嘿嘿。」
+</code></pre>
+<p>在這句話中， <code>張主任</code> 在對話框中顯示爲 <code>黑衣人</code>。 <br />
+但是如果在一大段劇本中 <code>張主任</code> 都叫 <code>黑衣人</code> 的話，每次都要寫就很不方便。</p>
+<pre><code>@張主任|黑衣人
+</code></pre>
+<p>這個操作會使 <code>張主任</code> 的顯示名稱持續變成 <code>黑衣人</code>，直到下次設定 <code>張主任</code> 的顯示名稱爲止。 </p>
+<p>持續操作的優先級不如嵌入操作高，因此在設置了顯示名稱的情況下，將名稱直接嵌入對話中仍然是有效的。</p>
+<pre><code>@張主任|黑衣人
+張主任 「這外套不錯，我穿上試試」
+張主任|內衣人 「感覺不太適合我，還是脫掉吧」
+張主任 「有點冷，還是穿回來吧。」
+</code></pre>
+<p>在這個例子中，在第<code>1</code>句和和第<code>3</code>句中， <code>張主任</code> 顯示爲 <code>黑衣人</code> ，在第<code>2</code>句中， <code>張主任</code> 顯示爲 <code>內衣人</code>。 <br />
+<small>(我好像可以把內衣人寫成南極人做一波廣告……不過他們沒有給我錢我是不會說好話的！)</small></p>
+<h2 id="_7">劇本記號</h2>
+<h3 id="_8">「#」</h3>
 <p><small>(井號)</small></p>
 <p>以#開頭的一整行都是註釋，在演出時會被跳過，不會有實際影響。   </p>
-<h3 id="_8">「*」</h3>
+<h3 id="_9">「*」</h3>
 <p><small>(星號)</small></p>
 <p>表示一個躍點，普通的時候和註釋一樣會被跳過。不過在 <code>WRAP</code> 呀 <code>goto</code> 之類的時候指定這個位置，也就是星號後面的文本，就可以跳轉。</p>
 <pre><code>*原點
@@ -846,19 +884,15 @@
 <p>讓  <code>潘大爺</code>  和  <code>林梓雨</code> 站在一起。</p>
 <pre><code>+ [潘大爺, 林梓雨]
 </code></pre>
-<p>加號也用來設置人物的衣着。</p>
-<p>給  <code>潘大爺</code> 穿上西裝:</p>
-<pre><code>潘大爺 + 西裝
-</code></pre>
 <p>關於更詳細的衣着和鏡頭，可參考 <a href="../立繪/">用戶指南/立繪</a> 。</p>
-<h3 id="_9">「===」</h3>
+<h3 id="_10">「===」</h3>
 <p><small>(三個以上的等號)</small></p>
 <p>使用一張圖片將劇本切斷一小段時間。比如第一章結束，第二章開始的時候就用 <code>=====二章.png</code> 來插入第二章的標題。 <br />
 3個以上的等號都是可以的。</p>
 <pre><code>===第一章.png
 =========================第一章.png
 </code></pre>
-<h2 id="_10">語義着色</h2>
+<h2 id="_11">語義着色</h2>
 <p>「資源」中贈送的sublime語義文件可以幫助你進行語義着色。 <br />
 在我這裏，着色後的劇本看起來就像這樣。 <br />
 <img alt="着色" src="../着色.png" />
