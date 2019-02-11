@@ -1,618 +1,337 @@
 
-
-
-
 <!DOCTYPE html>
-<html lang="en" class="no-js">
-  <head>
-    
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
-      
-      
-      
-      
-        <meta name="lang:clipboard.copy" content="Copy to clipboard">
-      
-        <meta name="lang:clipboard.copied" content="Copied to clipboard">
-      
-        <meta name="lang:search.language" content="en">
-      
-        <meta name="lang:search.pipeline.stopwords" content="True">
-      
-        <meta name="lang:search.pipeline.trimmer" content="True">
-      
-        <meta name="lang:search.result.none" content="No matching documents">
-      
-        <meta name="lang:search.result.one" content="1 matching document">
-      
-        <meta name="lang:search.result.other" content="# matching documents">
-      
-        <meta name="lang:search.tokenizer" content="[\s\-]+">
-      
-      <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.4">
-    
-    
-      
-        <title>客製化你的遊戲 - Librian中文文檔</title>
-      
-    
-    
-      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
-      
-      
-    
-    
-      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
-    
-    
-      
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
-        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
-      
-    
-    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
-    
-    
-  </head>
-  
-    <body dir="ltr">
-  
-    <svg class="md-svg">
-      <defs>
-        
-        
-      </defs>
-    </svg>
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-    
-      <a href="../../#_1" tabindex="1" class="md-skip">
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<meta content="Copy to clipboard" name="lang:clipboard.copy"/>
+<meta content="Copied to clipboard" name="lang:clipboard.copied"/>
+<meta content="en" name="lang:search.language"/>
+<meta content="True" name="lang:search.pipeline.stopwords"/>
+<meta content="True" name="lang:search.pipeline.trimmer"/>
+<meta content="No matching documents" name="lang:search.result.none"/>
+<meta content="1 matching document" name="lang:search.result.one"/>
+<meta content="# matching documents" name="lang:search.result.other"/>
+<meta content="[\s\-]+" name="lang:search.tokenizer"/>
+<link href="../../assets/images/favicon.png" rel="shortcut icon"/>
+<meta content="mkdocs-1.0.4, mkdocs-material-3.0.4" name="generator"/>
+<title>客製化你的遊戲 - Librian中文文檔</title>
+<link href="../../assets/stylesheets/application.451f80e5.css" rel="stylesheet"/>
+<script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono" rel="stylesheet"/>
+<style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+<link href="../../assets/fonts/material-icons.css" rel="stylesheet"/>
+<link href="../../../pdf.css" rel="stylesheet"/>
+</head>
+<body dir="ltr">
+<svg class="md-svg">
+<defs>
+</defs>
+</svg>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+<a class="md-skip" href="../../#_1" tabindex="1">
         Skip to content
       </a>
-    
-    
-      <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid">
-    <div class="md-flex">
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="Librian中文文檔" class="md-header-nav__button md-logo">
-          
-            <i class="md-icon"></i>
-          
-        </a>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
-      </div>
-      <div class="md-flex__cell md-flex__cell--stretch">
-        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
-          
-            
-              <span class="md-header-nav__topic">
+<header class="md-header" data-md-component="header">
+<nav class="md-header-nav md-grid">
+<div class="md-flex">
+<div class="md-flex__cell md-flex__cell--shrink">
+<a class="md-header-nav__button md-logo" href="../.." title="Librian中文文檔">
+<i class="md-icon"></i>
+</a>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+</div>
+<div class="md-flex__cell md-flex__cell--stretch">
+<div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+<span class="md-header-nav__topic">
                 Librian中文文檔
               </span>
-              <span class="md-header-nav__topic">
+<span class="md-header-nav__topic">
                 客製化你的遊戲
               </span>
-            
-          
-        </div>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        
-          
-            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-            
-<div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="__search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
-        &#xE5CD;
-      </button>
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
-          <div class="md-search-result__meta">
-            Type to start searching
-          </div>
-          <ol class="md-search-result__list"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
-          
-        
-      </div>
-      
-    </div>
-  </nav>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+</div>
+</div>
+</nav>
 </header>
-    
-    <div class="md-container">
-      
-        
-      
-      
-      <main class="md-main">
-        <div class="md-main__inner md-grid" data-md-component="container">
-          
-            
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="../.." title="Librian中文文檔" class="md-nav__button md-logo">
-      
-        <i class="md-icon"></i>
-      
-    </a>
+<div class="md-container">
+<main class="md-main">
+<div class="md-main__inner md-grid" data-md-component="container">
+<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title md-nav__title--site" for="__drawer">
+<a class="md-nav__button md-logo" href="../.." title="Librian中文文檔">
+<i class="md-icon"></i>
+</a>
     Librian中文文檔
   </label>
-  
-  <ul class="md-nav__list" data-md-scrollfix>
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../../主頁/" title="主頁" class="md-nav__link">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../主頁/" title="主頁">
       主頁
     </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
-    
-    <label class="md-nav__link" for="nav-2">
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" id="nav-2" type="checkbox"/>
+<label class="md-nav__link" for="nav-2">
       第一次使用
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-2">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+<label class="md-nav__title" for="nav-2">
         第一次使用
       </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../第一次使用/安裝/" title="安裝" class="md-nav__link">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../第一次使用/安裝/" title="安裝">
       安裝
     </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
-    
-    <label class="md-nav__link" for="nav-3">
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-toggle md-nav__toggle" data-md-toggle="nav-3" id="nav-3" type="checkbox"/>
+<label class="md-nav__link" for="nav-3">
       製作galgame
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+<label class="md-nav__title" for="nav-3">
         製作galgame
       </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../起步/" title="起步" class="md-nav__link">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../起步/" title="起步">
       起步
     </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../劇本寫法/" title="劇本寫法" class="md-nav__link">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../劇本寫法/" title="劇本寫法">
       劇本寫法
     </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../立繪/" title="立繪" class="md-nav__link">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../劇本功能/" title="劇本功能">
+      劇本功能
+    </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../立繪/" title="立繪">
       立繪
     </a>
-  </li>
-
-        
-          
-          
-          
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-toggle md-nav__toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
         客製化你的遊戲
       </label>
-    
-    <a href="./" title="客製化你的遊戲" class="md-nav__link md-nav__link--active">
+<a class="md-nav__link md-nav__link--active" href="./" title="客製化你的遊戲">
       客製化你的遊戲
     </a>
-    
-      
 <nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" title="修改配置" class="md-nav__link">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2" title="修改配置">
     修改配置
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" title="基本設定" class="md-nav__link">
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3" title="基本設定">
     基本設定
   </a>
-  
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" title="路徑設定" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4" title="路徑設定">
     路徑設定
   </a>
-  
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" title="位置設定" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5" title="位置設定">
     位置設定
   </a>
-  
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" title="演出功能設定" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6" title="演出功能設定">
     演出功能設定
   </a>
-  
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" title="嵌入其他功能" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7" title="嵌入其他功能">
     嵌入其他功能
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" title="預先配置的主題" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8" title="預先配置的主題">
     預先配置的主題
   </a>
-  
 </li>
-      
-      
-      
-      
-      
-    </ul>
-  
+</ul>
 </nav>
-    
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../生成遊戲/" title="生成遊戲" class="md-nav__link">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../生成遊戲/" title="生成遊戲">
       生成遊戲
     </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
-    
-    <label class="md-nav__link" for="nav-4">
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
+<label class="md-nav__link" for="nav-4">
       進階
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
+<nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+<label class="md-nav__title" for="nav-4">
         進階
       </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../進階/畫面的定製/" title="畫面的定製" class="md-nav__link">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../進階/畫面的定製/" title="畫面的定製">
       畫面的定製
     </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../進階/特效/" title="特效" class="md-nav__link">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../進階/特效/" title="特效">
       特效
     </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../進階/嵌入python/" title="嵌入python" class="md-nav__link">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../進階/嵌入python/" title="嵌入python">
       嵌入python
     </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../進階/設計回想/" title="設計回想" class="md-nav__link">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../進階/設計回想/" title="設計回想">
       設計回想
     </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../../接下來要做的/一些遺憾/" title="一些遺憾" class="md-nav__link">
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../接下來要做的/一些遺憾/" title="一些遺憾">
       一些遺憾
     </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../../關於Librian/關於Librian/" title="關於Librian" class="md-nav__link">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../關於Librian/關於Librian/" title="關於Librian">
       關於Librian
     </a>
-  </li>
-
-    
-  </ul>
+</li>
+</ul>
 </nav>
-                  </div>
-                </div>
-              </div>
-            
-            
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
 <nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" title="修改配置" class="md-nav__link">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2" title="修改配置">
     修改配置
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" title="基本設定" class="md-nav__link">
+<nav class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3" title="基本設定">
     基本設定
   </a>
-  
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" title="路徑設定" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4" title="路徑設定">
     路徑設定
   </a>
-  
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" title="位置設定" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5" title="位置設定">
     位置設定
   </a>
-  
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" title="演出功能設定" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6" title="演出功能設定">
     演出功能設定
   </a>
-  
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" title="嵌入其他功能" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7" title="嵌入其他功能">
     嵌入其他功能
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" title="預先配置的主題" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8" title="預先配置的主題">
     預先配置的主題
   </a>
-  
 </li>
-      
-      
-      
-      
-      
-    </ul>
-  
+</ul>
 </nav>
-                  </div>
-                </div>
-              </div>
-            
-          
-          <div class="md-content">
-            <article class="md-content__inner md-typeset">
-              
-                
-                
-                <h1 id="_1">客製化你的遊戲</h1>
+</div>
+</div>
+</div>
+<div class="md-content">
+<article class="md-content__inner md-typeset"><a class="md-icon md-content__icon" download href="..\..\Librian文檔.pdf" title="PDF Export"></a>
+<h1 id="_1">客製化你的遊戲</h1>
 <p>如果你想要客製化你的遊戲，最好瞭解一些關聯的知識，如html和css。畢竟，武裝自己的應該是知識，而不是一堆廢銅爛鐵。當然不學也沒關係吧……</p>
 <h2 id="_2">修改配置</h2>
 <p>在工程的「工程配置.yaml」中，你可以指定一些和項目相關的參數。</p>
 <h3 id="_3">基本設定</h3>
-<p><strong>標題</strong> <br />
-爲你的遊戲起一個響亮的名字。 <br />
+<p><strong>標題</strong> <br/>
+爲你的遊戲起一個響亮的名字。 <br/>
 這個名字會顯示在標題欄。</p>
-<p><strong>主題css</strong> <br />
-選擇一個你喜歡的adv界面外觀。 <br />
-<img alt="" src="../主題圖/黑色花紋邊框.jpg" />  <br />
-<img alt="" src="../主題圖/實框.jpg" />  <br />
+<p><strong>主題css</strong> <br/>
+選擇一個你喜歡的adv界面外觀。 <br/>
+<img alt="" src="../主題圖/黑色花紋邊框.jpg"/> <br/>
+<img alt="" src="../主題圖/實框.jpg"/> <br/>
 預先配置的主題會在下面列出。  </p>
 <h3 id="_4">路徑設定</h3>
-<p><strong>圖標</strong> <br />
+<p><strong>圖標</strong> <br/>
 指定「圖標」來改變標題欄圖標。</p>
 <pre><code>標題: 夢想下鄉
 圖標: 畫面/萃香.ico
 </code></pre>
-
-<p><img alt="" src="../標題欄.jpg" /></p>
-<p><img alt="" src="../標題欄2.jpg" /> <br />
+<p><img alt="" src="../標題欄.jpg"/></p>
+<p><img alt="" src="../標題欄2.jpg"/> <br/>
 <small>(這個nvidia是什麼東西……)</small></p>
-<p><strong>標題畫面</strong> <br />
+<p><strong>標題畫面</strong> <br/>
 指定「標題畫面」來使用一個title界面。你也許想要自己的title界面，如果你有一定的html基礎，這並不是什麼難事。</p>
 <pre><code>標題畫面: 標題畫面/title.html
 </code></pre>
-
-<p><img alt="" src="../標題畫面.jpg" /> <br />
+<p><img alt="" src="../標題畫面.jpg"/> <br/>
 title.html的寫法在<a href="../../進階/畫面的定製/">進階/畫面的定製</a>中介紹。</p>
-<p><strong>劇本入口</strong> <br />
+<p><strong>劇本入口</strong> <br/>
 指定「劇本入口」來選擇開始遊戲時的劇本。</p>
-<p><strong>自定css</strong> <br />
-指定「自定css」後，你可以在你的css中改變adv畫面的外觀，比如更換遊戲的字體大小，添加漂亮的光標或者對話框等。 <br />
-如果想要給遊戲，你可以使用自定css。自定css是adv頁面會額外引用的css，在其中覆蓋原有的css設定就可以完全改變畫面的樣貌。 <br />
+<p><strong>自定css</strong> <br/>
+指定「自定css」後，你可以在你的css中改變adv畫面的外觀，比如更換遊戲的字體大小，添加漂亮的光標或者對話框等。 <br/>
+如果想要給遊戲，你可以使用自定css。自定css是adv頁面會額外引用的css，在其中覆蓋原有的css設定就可以完全改變畫面的樣貌。 <br/>
 詳細在<a href="../../進階/畫面的定製/">進階/畫面的定製</a>中介紹。</p>
 <h3 id="_5">位置設定</h3>
-<p><strong>主解析度</strong> <br />
-就是你的遊戲窗口的大小。你準備的CG啊，BG啊，最好都符合這個大小，否則切換圖片的時候會有奇怪的縮放表現<small>(由於webkit的crossfade的奇怪特性)</small>。 <br />
-對了，因爲現在16:9很流行，所以在很多用戶的顯示器下，主解析度不是16:9的遊戲全屏時會有邊框。 <br />
+<p><strong>主解析度</strong> <br/>
+就是你的遊戲窗口的大小。你準備的CG啊，BG啊，最好都符合這個大小，否則切換圖片的時候會有奇怪的縮放表現<small>(由於webkit的crossfade的奇怪特性)</small>。 <br/>
+對了，因爲現在16:9很流行，所以在很多用戶的顯示器下，主解析度不是16:9的遊戲全屏時會有邊框。 <br/>
 還有就是，更改主解析度以後如果畫面元素的位置不對的話，可以自定css來解決。</p>
-<p><strong>默認立繪位置</strong> <br />
-不同人数时，各人从左到右的位置。 <br />
+<p><strong>默認立繪位置</strong> <br/>
+不同人数时，各人从左到右的位置。 <br/>
 在鏡頭的簡化寫法中，如 <code>+ [潘大爺, 林梓雨]</code> ，就會使用他們的默認立繪位置。</p>
 <pre><code>默認立繪位置: 
     1:
@@ -621,108 +340,79 @@ title.html的寫法在<a href="../../進階/畫面的定製/">進階/畫面的�
       - [100,0]
       - [550,0]
 </code></pre>
-
-<p>當畫面中有一個人—— <code>潘大爺</code> 時， <code>潘大爺</code> 就會被安排在 <code>[300,0]</code> 的位置。 <br />
+<p>當畫面中有一個人—— <code>潘大爺</code> 時， <code>潘大爺</code> 就會被安排在 <code>[300,0]</code> 的位置。 <br/>
 當畫面中有兩個人——第一個是 <code>潘大爺</code> ，第二個是 <code>林梓雨</code> 時， <code>潘大爺</code> 就會被放在 <code>[100,0]</code> 的位置，而 <code>林梓雨</code> 就會被放在 <code>[550,0]</code> 的位置。</p>
 <h3 id="_6">演出功能設定</h3>
-<p><strong>自動淡入動作</strong> <br />
+<p><strong>自動淡入動作</strong> <br/>
 當設定爲True時，出現了一個新立繪的場合(即不在上個鏡頭中出現)，自動應用動作「淡入」。</p>
-<p><strong>自動位移動作</strong> <br />
+<p><strong>自動位移動作</strong> <br/>
 當設定爲True時，一個立繪的位置改變的場合，自動應用對應的位移動作。</p>
-<p><strong>自動發言表情</strong> <br />
+<p><strong>自動發言表情</strong> <br/>
 當設定爲True時，一個人講話——且她的當前表情有對應的說話表情的場合，將她的表情變成對應的說話表情。</p>
 <h2 id="_7">嵌入其他功能</h2>
-<p>比如說這個adv劇情到一半，要進入一個魔法打架的遊戲<small>(當然這是你自己寫好的)</small>。 <br />
-這樣的情況下，我覺得好像應該把在 <code>&gt;py</code> / <code>&gt;endpy</code>裏調用你的遊戲。如果你的遊戲能嵌入pyqt5，在主窗口添加一個層，然後嵌入你的遊戲，在結束時把層消除就好了。 <br />
+<p>比如說這個adv劇情到一半，要進入一個魔法打架的遊戲<small>(當然這是你自己寫好的)</small>。 <br/>
+這樣的情況下，我覺得好像應該把在 <code>&gt;py</code> / <code>&gt;endpy</code>裏調用你的遊戲。如果你的遊戲能嵌入pyqt5，在主窗口添加一個層，然後嵌入你的遊戲，在結束時把層消除就好了。 <br/>
 我也沒試過……</p>
 <p>不過現在的遊戲引擎很多都能生成html5遊戲，說不定還不錯？</p>
 <h2 id="_8">預先配置的主題</h2>
-<p>無 <br />
-<img alt="" src="../主題圖/無.jpg" /></p>
-<p>黑色花紋邊框 <br />
-<img alt="" src="../主題圖/黑色花紋邊框.jpg" /></p>
-<p>實框 <br />
-<img alt="" src="../主題圖/實框.jpg" /></p>
-<p>線框 <br />
-<img alt="" src="../主題圖/線框.jpg" /></p>
-                
-                  
-                
-              
-              
-                
-
-
-              
-            </article>
-          </div>
-        </div>
-      </main>
-      
-        
+<p>無 <br/>
+<img alt="" src="../主題圖/無.jpg"/></p>
+<p>黑色花紋邊框 <br/>
+<img alt="" src="../主題圖/黑色花紋邊框.jpg"/></p>
+<p>實框 <br/>
+<img alt="" src="../主題圖/實框.jpg"/></p>
+<p>線框 <br/>
+<img alt="" src="../主題圖/線框.jpg"/></p>
+</article>
+</div>
+</div>
+</main>
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
-        
-          <a href="../立繪/" title="立繪" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
-            </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
+<div class="md-footer-nav">
+<nav class="md-footer-nav__inner md-grid">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../立繪/" rel="prev" title="立繪">
+<div class="md-flex__cell md-flex__cell--shrink">
+<i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+</div>
+<div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+<span class="md-flex__ellipsis">
+<span class="md-footer-nav__direction">
                   Previous
                 </span>
                 立繪
               </span>
-            </div>
-          </a>
-        
-        
-          <a href="../生成遊戲/" title="生成遊戲" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
+</div>
+</a>
+<a class="md-flex md-footer-nav__link md-footer-nav__link--next" href="../生成遊戲/" rel="next" title="生成遊戲">
+<div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+<span class="md-flex__ellipsis">
+<span class="md-footer-nav__direction">
                   Next
                 </span>
                 生成遊戲
               </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
-  
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+</div>
+</a>
+</nav>
+</div>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
         
         powered by
         <a href="https://www.mkdocs.org">MkDocs</a>
         and
         <a href="https://squidfunk.github.io/mkdocs-material/">
           Material for MkDocs</a>
-      </div>
-      
-        
-      
-    </div>
-  </div>
+</div>
+</div>
+</div>
 </footer>
-      
-    </div>
-    
-      <script src="../../assets/javascripts/application.583bbe55.js"></script>
-      
-      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
-      
-    
-    
-      
-    
-  </body>
+</div>
+<script src="../../assets/javascripts/application.583bbe55.js"></script>
+<script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+</body>
 </html>

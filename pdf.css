@@ -1,0 +1,22 @@
+@page {
+    @top-center {
+        content: string(文件名);
+    }
+    @bottom-center {
+        content: '——　' counter(__pgnum__) '　——';
+    }
+}
+@media print{
+    *{
+        font-family:'方正细雅宋_gbk';
+    }
+    rt{ /*pdf不支持這個*/
+        display: none;
+    }
+    a{ /*鏈接失效了*/
+        color: #446 !important;
+    }
+    h1{
+        string-set: 文件名 content() !important;
+    }
+}
