@@ -25,3 +25,4 @@ plugins:
   - pdf-export:
       combined: True
       combined_output_path: ./Librian文檔.pdf
+      # enabled_if_env: h
