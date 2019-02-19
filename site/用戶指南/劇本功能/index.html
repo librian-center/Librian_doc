@@ -366,8 +366,8 @@
 <p>先說一下，用豎線分割的漢字是爲「看到英文就頭大的開發者」提供的中文寫法，效果和英文完全一樣。  </p>
 <p>然後，語法欄目裏，大括號 <code>{}</code> 裏面的是參數。如果參數帶等號 <code>=</code>，說明參數有默認值，也就是你不填這個參數就會使用 <code>=</code> 後面的值。</p>
 <h3 id="bg">BG | 背景</h3>
-<p><code>BG</code> 會更換當前的<ruby>背景圖片<rt>BG</rt></ruby>爲你指定的文件。</p>
-<p><ruby>背景圖片<rt>BG</rt></ruby>總是在一點時間內漸變的。   </p>
+<p><code>BG</code> 會更換當前的<ruby>背景圖片<rt>BG</rt></ruby>爲你指定的文件。 <br/>
+<small>(當然你得在圖片文件夾裏把圖片放好)</small></p>
 <ul>
 <li>語法:</li>
 </ul>
@@ -376,9 +376,14 @@
 <ul>
 <li>樣例:</li>
 </ul>
-<pre><code>    &gt; BG 家裏.png
-    &gt; 背景 街.png
+<pre><code>    &gt; BG 魔王城內
+    &gt; 背景 染紅的街道.png
 </code></pre>
+<blockquote>
+<p><ruby>背景圖片<rt>BG</rt></ruby>總是在一點時間內漸變的。</p>
+<p>如果不指定擴展名，則會按 <code>'webp', 'png', 'jpg'</code> 的順序挑選存在文件的擴展名。</p>
+<p><ruby>背景圖片<rt>BG</rt></ruby>文件不存在的場合，背景會變成黑色，控制檯會出現警告。</p>
+</blockquote>
 <h3 id="bgm">BGM | 背景音樂 | 背景音乐</h3>
 <p><code>BGM</code> 會更換當前的<ruby>背景音樂<rt>BGM</rt></ruby>爲你指定的文件。</p>
 <p>如果指定爲 <code>None</code>，<ruby>背景音樂<rt>BGM</rt></ruby>會消除，會有一點淡出時間。但總是沒有淡入。   </p>
@@ -391,9 +396,13 @@
 <li>樣例:</li>
 </ul>
 <pre><code>    &gt; BGM 愉快的音樂.mp3
-    &gt; 背景音樂 不愉快的音樂.ogg 0.5
+    &gt; 背景音樂 不愉快的音樂 0.5
     &gt; BGM None
 </code></pre>
+<blockquote>
+<p>如果不指定擴展名，則會按 <code>'mp3', 'ogg'</code> 的順序挑選存在文件的擴展名。</p>
+<p><ruby>背景音樂<rt>BGM</rt></ruby>文件不存在的場合，背景音樂會停止，控制檯會出現警告。</p>
+</blockquote>
 <h3 id="cg">CG</h3>
 <p><code>CG</code> 進入CG模式並立即使用指定的CG。</p>
 <p>在CG模式下，CG佔據整個畫面，<ruby>立繪<rt>char</rt></ruby>不會被顯示，<ruby>背景圖片<rt>BG</rt></ruby>也是被擋住的。 <br/>
@@ -406,9 +415,13 @@
 <ul>
 <li>樣例:</li>
 </ul>
-<pre><code>    &gt; CG 極夜大戰.png
+<pre><code>    &gt; CG 極夜大戰
     &gt; CG
 </code></pre>
+<blockquote>
+<p>如果不指定擴展名，則會按 <code>'webp', 'png', 'jpg'</code> 的順序挑選存在文件的擴展名。</p>
+<p>CG文件不存在的場合，控制檯會出現警告。</p>
+</blockquote>
 <h3 id="ef">EF | 特效</h3>
 <p><code>EF</code> 改變畫面元素的<ruby>特效<rt>effect</rt></ruby>。</p>
 <ul>

@@ -189,11 +189,6 @@
     設置回想頁面
   </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4" title="爲圖片添加方法">
-    爲圖片添加方法
-  </a>
-</li>
 </ul>
 </nav>
 </li>
@@ -231,11 +226,6 @@
     設置回想頁面
   </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4" title="爲圖片添加方法">
-    爲圖片添加方法
-  </a>
-</li>
 </ul>
 </nav>
 </div>
@@ -245,25 +235,28 @@
 <article class="md-content__inner md-typeset"><a class="md-icon md-content__icon" download href="..\..\Librian文檔.pdf" title="PDF Export"></a>
 <h1 id="_1">設計回想</h1>
 <p>雖然Librian沒有提供「場景回想」之類的功能，不過自己實現起來也很容易。</p>
+<p>接下來，我們通過一個實例來瞭解如何製作場景回想。</p>
 <h2 id="_2">劇本文件的假設</h2>
 <p>我們假設你的劇本文件包括以下場景: </p>
-<pre><code>    1-1 原點.play
-    1-2 約會.play
-    1-3 蘿莉H.play
-    2-1 帶回家.play
-    2-2 蘿莉再H.play
-</code></pre>
+<blockquote>
+<p>1-1 原點.play <br/>
+1-2 約會.play <br/>
+1-3 kiss.play <br/>
+2-1 帶回家.play <br/>
+2-2 枕頭大戰.play   </p>
+</blockquote>
 <p><small>(這什麼東西我自己寫的都想笑了)</small></p>
-<p>劇本入口爲<code>原點.play</code>。 <br/>
-回想場景爲<code>1-3 蘿莉H.play</code>和<code>2-2 蘿莉再H.play</code>。   </p>
+<p>需要回想的場景爲 <code>1-3 kiss.play</code> 和 <code>2-2 枕頭大戰.play</code>。   </p>
 <h2 id="_3">設置回想頁面</h2>
-<p>首先你應當創建一個html頁面「回想.html」，在頁面上放置兩張圖片，分別爲「蘿莉H」和「蘿莉再H」的CG。   </p>
-<p>在標題頁面添加一個按鈕跳轉到你的回想頁面。 <br/>
-在回想頁面添加一個返回按鈕來返回到標題頁面。   </p>
-<p><small>(當然如果你能把這個做成標題頁面的一部分就更好了)</small></p>
-<h2 id="_4">爲圖片添加方法</h2>
-<p>對圖片「蘿莉H」添加js<code>從劇本開始('1-3 蘿莉H.play')</code>。 <br/>
-對圖片「蘿莉再H」添加js<code>從劇本開始('2-2 蘿莉再H.play')</code>。  </p>
+<p>首先你應當創建一個回想的HTML頁面——需要你使用基本的HTML技術製作一個簡單的網頁。 <br/>
+這個頁面應當和標題畫面連接，可以從標題跳轉過來，也可以按返回按鈕跳轉回標題。 <br/>
+<small>(當然如果你能把這個做成標題頁面的一部分就更好了)</small></p>
+<p>在回想頁面上放置兩張圖片，分別爲「kiss」和「枕頭大戰」的CG。   </p>
+<p>這樣一來，你就有了一個華而不實的回想頁面。 <br/>
+接下來要爲圖片添加方法，使得它們被點擊時，演出系統從對應的劇本進入。</p>
+<p>在回想頁面中，對「kiss」的CG添加onclick <code>從劇本開始('1-3 蘿莉H.play')</code> 。 <br/>
+在回想頁面中，對「枕頭大戰」的CG添加onclick <code>從劇本開始('2-2 蘿莉再H.play')</code> 。<br/>
+這個函數可以在<a href="../畫面的定製/">畫面的定製</a>中找到。</p>
 <p>這樣就足夠完成基本的回想功能了。</p>
 </article>
 </div>
