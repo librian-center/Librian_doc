@@ -153,6 +153,11 @@
         進階
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../前言/" title="前言">
+      前言
+    </a>
+</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-toggle md-nav__toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
@@ -170,7 +175,12 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_2" title="標題畫面">
+<a class="md-nav__link" href="#_2" title="利用動態類">
+    利用動態類
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3" title="標題畫面">
     標題畫面
   </a>
 </li>
@@ -222,7 +232,12 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_2" title="標題畫面">
+<a class="md-nav__link" href="#_2" title="利用動態類">
+    利用動態類
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3" title="標題畫面">
     標題畫面
   </a>
 </li>
@@ -234,17 +249,42 @@
 <div class="md-content">
 <article class="md-content__inner md-typeset"><a class="md-icon md-content__icon" download href="..\..\Librian文檔.pdf" title="PDF Export"></a>
 <h1 id="_1">畫面的定製</h1>
-<p>這一章的內容和前面的內容不太一樣，涉及到了一些和核心組件較爲接近的內容——如果你有一些編程語言的基礎的話會比較好。 </p>
-<p>如果你看到HTML和python時想到的是「前面這個是什麼單詞縮寫，後面這個是蛇<small>(大概)</small>」，說不定跳過這一章會比較好。 <br/>
-不過人必須要持續學習——武裝自己的應該是知識而不是一堆廢銅爛鐵。對你來說人生還有80年，或者60年，或者40年，即使什麼都不會，從現在開始學習python的話，只需要一年就能學有所成年薪過萬——然後就沉迷寫程序再也不寫劇本了<small>(笑)</small>。<small>(然後我再趁現在推薦幾個野雞網校賺一波廣告收入)</small></p>
-<p><small>(之後才發現那句名言原來已經在這個文檔的前面說過一次了)</small></p>
+<p>這一節需要用到HTML和css。</p>
 <h2 id="css">使用css</h2>
 <p>如果想要改變adv畫面的表現，你可以指定額外的css文件。</p>
-<p>之前雖然說過在「工程配置.yaml」裏可以設置「自定css」，但是沒有說該怎麼寫。 <br/>
-首先觀察「{librian路徑}/html/adv.html」，理解文檔結構以後，挑出你想要自定義的塊，把你的樣式寫進自定css裏。 <br/>
-這樣一來，在工程啓動時，Librian會一併加載你的css，這樣一來樣式就應用了。   </p>
-<p>需要注意的是css裏的路徑是相對css文件的路徑<small>(不知道這個有沒有必要提醒)</small>。</p>
-<h2 id="_2">標題畫面</h2>
+<p>之前雖然說過在「工程配置.yaml」裏可以設置「自定css」，但是沒有說該怎麼寫。   </p>
+<p>在默認的adv畫面<small>(即 {librian路徑}/html/adv.html)</small>中，有這些元素:</p>
+<pre><code>    總畫面:
+        配置面板:
+        工具欄:
+        adv畫面:
+            覆蓋:
+            選項:
+            cg:
+            bg:
+            立繪:
+            對話歷史:
+            對話框:
+                名字框:
+                    名字:
+                    名字框背景:
+                話語框:
+                    話語:
+                    話語框背景:
+                對話框背景:
+        提示:
+</code></pre>
+<p>把你的樣式寫進自定css裏以後，在工程啓動時，Librian會一併加載你的css。這樣一來樣式就應用了。   </p>
+<h2 id="_2">利用動態類</h2>
+<p>在演出過程中，對話框會被動態地附上帶有人名的類，即 <code>class="人物--{人物名}"</code> 。</p>
+<p>可以利用這個類給不同的人設置效果。</p>
+<pre><code>.人物--潘大爺 #名字框{ 
+    color: #ccf;
+}
+</code></pre>
+<p>這樣一來，只有 <code>潘大爺</code> 的名字變成淺藍色。</p>
+<p><img alt="" src="../bl.jpg"/></p>
+<h2 id="_3">標題畫面</h2>
 <p>標題畫面是一個可以天馬行空地創作的html，不過要實現標題畫面的功能，還需要一點花樣。  <br/>
 在 <code>head</code> 裏你得引用「/html/黑科技/qwebchannel.js」和「/html/title_js.js」來獲取標題畫面用到的幾個函數。   </p>
 <p>像是這樣:</p>
@@ -270,7 +310,7 @@
 <footer class="md-footer">
 <div class="md-footer-nav">
 <nav class="md-footer-nav__inner md-grid">
-<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../../用戶指南/生成遊戲/" rel="prev" title="生成遊戲">
+<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href="../前言/" rel="prev" title="前言">
 <div class="md-flex__cell md-flex__cell--shrink">
 <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
 </div>
@@ -279,7 +319,7 @@
 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                生成遊戲
+                前言
               </span>
 </div>
 </a>

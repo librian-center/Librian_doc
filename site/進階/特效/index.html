@@ -154,6 +154,11 @@
       </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="../前言/" title="前言">
+      前言
+    </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../畫面的定製/" title="畫面的定製">
       畫面的定製
     </a>
@@ -170,22 +175,27 @@
 <label class="md-nav__title" for="__toc">Table of contents</label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_2" title="內置的特效">
+<a class="md-nav__link" href="#_2" title="使用特效">
+    使用特效
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3" title="內置的特效">
     內置的特效
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_3" title="定義特效">
+<a class="md-nav__link" href="#_4" title="定義特效">
     定義特效
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_4" title="畫面元素的特效">
+<a class="md-nav__link" href="#_5" title="畫面元素的特效">
     畫面元素的特效
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_5" title="注意">
+<a class="md-nav__link" href="#_6" title="注意">
     注意
   </a>
 </li>
@@ -227,22 +237,27 @@
 <label class="md-nav__title" for="__toc">Table of contents</label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_2" title="內置的特效">
+<a class="md-nav__link" href="#_2" title="使用特效">
+    使用特效
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3" title="內置的特效">
     內置的特效
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_3" title="定義特效">
+<a class="md-nav__link" href="#_4" title="定義特效">
     定義特效
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_4" title="畫面元素的特效">
+<a class="md-nav__link" href="#_5" title="畫面元素的特效">
     畫面元素的特效
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_5" title="注意">
+<a class="md-nav__link" href="#_6" title="注意">
     注意
   </a>
 </li>
@@ -254,12 +269,15 @@
 <div class="md-content">
 <article class="md-content__inner md-typeset"><a class="md-icon md-content__icon" download href="..\..\Librian文檔.pdf" title="PDF Export"></a>
 <h1 id="_1">特效</h1>
+<p>這一節需要用到css。</p>
+<h2 id="_2">使用特效</h2>
 <p>Librian使用css來實現特效和動作。</p>
 <pre><code>潘大爺 [灰]「什麼情況！」
 </code></pre>
 <p><img alt="1" src="../1.jpg"/> </p>
-<p>在爲人物添加特效時，添加一個用方括號圈住的特效名就可以了。</p>
-<h2 id="_2">內置的特效</h2>
+<p>這裏的 <code>灰</code> 就是特效。 <br/>
+在爲人物添加特效時，添加一個用方括號 <code>[]</code> 圈住的特效名就可以了。</p>
+<h2 id="_3">內置的特效</h2>
 <p><strong>灰</strong> <br/>
 使目標變成灰色(去除飽和度)。 <br/>
 <strong>透明</strong> <br/>
@@ -268,9 +286,9 @@
 在出現時使用動畫，短暫的漸變。 <br/>
 <strong>下入</strong> <br/>
 在出現時使用動畫，短暫的從下方的漸變。   </p>
-<h2 id="_3">定義特效</h2>
+<h2 id="_4">定義特效</h2>
 <p>首先，在上個章節 <a href="../畫面的定製/">進階/畫面的定製</a> 中指定「自定css」後，向css中添加類。 <br/>
-<small>(這個類是內置的特效，這裏先假裝他並沒有內置，算你自己寫出來的吧)</small></p>
+<small>( <code>透明</code> 本應是內置的特效，這裏先假裝還沒有內置，算你自己寫出來的吧)</small></p>
 <pre><code>    .透明{
         opacity:0.5;
     }
@@ -289,7 +307,7 @@
         animation-fill-mode:forwards;
     }
 </code></pre>
-<h2 id="_4">畫面元素的特效</h2>
+<h2 id="_5">畫面元素的特效</h2>
 <pre><code>    &gt; EF bg 灰
 </code></pre>
 <p>爲html元素「bg」設置特效「灰」，在應用之後所有的背景都會變成灰色的。</p>
@@ -300,28 +318,8 @@
 <p>如果不指定特效就會把原有的特效清除。 <br/>
 元素的特效和立繪的特效是可以通用的。 <br/>
 此外，也可以往元素上套用動作特效<small>(如果確實有必要的話)</small>。</p>
-<p>在默認的adv畫面中，有這些元素:</p>
-<pre><code>    總畫面:
-        配置面板:
-        工具欄:
-        adv畫面:
-            覆蓋:
-            選項:
-            cg:
-            bg:
-            立繪:
-            對話歷史:
-            對話框:
-                名字框:
-                    名字:
-                    名字框背景:
-                話語框:
-                    話語:
-                    話語框背景:
-                對話框背景:
-        提示:
-</code></pre>
-<h2 id="_5">注意</h2>
+<p>關於adv畫面中元素的層級，參考<a href="../畫面的定製/">畫面的定製</a>。</p>
+<h2 id="_6">注意</h2>
 <p>由於pyqt的webkit引擎更新得很慢，並不能支持所有css的特性，比如說在animation作用的時候，filter會失效。 <br/>
 <small>(大概等他們更新就能解決吧……)</small></p>
 </article>
