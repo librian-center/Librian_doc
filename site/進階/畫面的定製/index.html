@@ -285,24 +285,23 @@
 <p>這樣一來，只有 <code>潘大爺</code> 的名字變成淺藍色。</p>
 <p><img alt="" src="../bl.jpg"/></p>
 <h2 id="_3">標題畫面</h2>
-<p>標題畫面是一個可以天馬行空地創作的html，不過要實現標題畫面的功能，還需要一點花樣。  <br/>
-在 <code>head</code> 裏你得引用「/html/黑科技/qwebchannel.js」和「/html/title_js.js」來獲取標題畫面用到的幾個函數。   </p>
+<p>標題畫面是一個可以天馬行空地創作的html。不過爲了實現標題畫面的功能，還需要一點花樣。    </p>
+<p>在標題畫面加載時就會獲得一個 <code>山彥</code> 對象，它有一些在標題畫面用得上的方法。 <br/>
+<small>(話說爲什麼是山彥？)</small></p>
 <p>像是這樣:</p>
-<pre><code class="html">    &lt;button click='開始()'&gt;Click Me!&lt;/button&gt;
+<pre><code class="html">    &lt;button click='山彥.開始()'&gt;
+        開始遊戲
+    &lt;/button&gt;
 </code></pre>
-<p>title_js.js提供的函數包括: </p>
+<p>方法包括: </p>
 <ul>
-<li>開始   <br/>
-<code>開始()</code> <br/>
+<li><code>山彥.開始()</code> <br/>
   調用之後Librian開始讀取劇本，當前頁面由標題頁面轉到adv頁面。</li>
-<li>從title讀檔  <br/>
-<code>從title讀檔()</code> <br/>
+<li><code>山彥.從title讀檔()</code> <br/>
   讀檔，並在讀檔完成後轉到adv頁面。</li>
-<li>從劇本開始 <br/>
-<code>從劇本開始(劇本路徑)</code> <br/>
+<li><code>山彥.從劇本開始(劇本路徑)</code> <br/>
   指定一個劇本的路徑，從這個劇本開始adv演出。</li>
 </ul>
-<p><small>(等等，函数名是什么？嗯，这些函数就是中文命名的……)</small></p>
 </article>
 </div>
 </div>
