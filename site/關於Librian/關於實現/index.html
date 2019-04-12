@@ -320,15 +320,13 @@
 因此，使用了這樣的正則表達式來匹配並解析——</p>
 <pre><code class="regex">(?P&lt;人名&gt;.+?) +「(?P&lt;對話&gt;.*?)」
 </code></pre>
-<p><small></small></p>
 <blockquote>
-<p>《優秀的語言是不需要詞法分析的》<br/>
+<p><small>《優秀的語言是不需要詞法分析的》<br/>
 前幾天我面試一個<strong>編程語言</strong>，連續幾個專業問題它都沒答上來。<br/>
 尷尬之餘，我問它「你沒有理想嗎？你現在最渴望的事情是什麼？」<br/>
-<strong>編程語言</strong>轉悠着大眼睛，不假思索道「找一個詞法分析器！」)<br/>
-</p></blockquote></article></div></div></main></div></body></html>
-
-<p>這樣一來 <code>馬克吐溫</code> 的名言就會被解析爲字典對象 <code>{'人名': '马克吐温', '對話': '寫作很簡單，你所要做的只有把不正確的詞都劃掉。'}</code>  。</p>
+<strong>編程語言</strong>轉悠着大眼睛，不假思索道「找一個詞法分析器！」) </small> </p>
+</blockquote>
+<p>這樣一來 <code>馬克吐溫</code> 的名言就會被解析爲字典對象 <code>{'人名': '马克吐温', '對話': '寫作很簡單，你所要做的只有把不正確的詞都劃掉。'}</code> 。</p>
 <p>因爲對話中還可能含有 <code>表情</code>，所以得在中間加上——</p>
 <pre><code class="regex">(?P&lt;人名&gt;.+?) +(\((?P&lt;表情&gt;.+?)\))? *「(?P&lt;對話&gt;.*?)」
 </code></pre>
@@ -385,10 +383,10 @@ Librian 6，似乎是被這樣稱呼的。
 {'類型': '旁白', '旁白': '…………又像是裝可愛的女兒眨着俏皮的眼睛。'}
 {'類型': '註釋', '註釋': ' 這是隨便編的……本來想隨便寫幾句程序的哲理體現一下潘大爺的厲害，結果就變成了小說23333'}
 </code></pre>
-
-
-
-
+</article>
+</div>
+</div>
+</main>
 <footer class="md-footer">
 <div class="md-footer-nav">
 <nav class="md-footer-nav__inner md-grid">
@@ -420,7 +418,8 @@ Librian 6，似乎是被這樣稱呼的。
 </div>
 </div>
 </footer>
-
+</div>
 <script src="../../assets/javascripts/application.583bbe55.js"></script>
 <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
-
+</body>
+</html>
