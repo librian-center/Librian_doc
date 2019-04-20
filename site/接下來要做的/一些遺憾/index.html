@@ -199,11 +199,6 @@
 <nav class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#saveloadpython" title="save/load不能保存python塊中定義的函數？">
-    save/load不能保存python塊中定義的函數？
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#unix" title="在unix系統中無法找到路徑？">
     在unix系統中無法找到路徑？
   </a>
@@ -237,12 +232,7 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_6" title="改進編譯器">
-    改進編譯器
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_7" title="移動端引擎">
+<a class="md-nav__link" href="#_6" title="移動端引擎">
     移動端引擎
   </a>
 </li>
@@ -293,11 +283,6 @@
 <nav class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#saveloadpython" title="save/load不能保存python塊中定義的函數？">
-    save/load不能保存python塊中定義的函數？
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#unix" title="在unix系統中無法找到路徑？">
     在unix系統中無法找到路徑？
   </a>
@@ -331,12 +316,7 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_6" title="改進編譯器">
-    改進編譯器
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_7" title="移動端引擎">
+<a class="md-nav__link" href="#_6" title="移動端引擎">
     移動端引擎
   </a>
 </li>
@@ -357,12 +337,8 @@
 <ul>
 <li>在github頁面提交<a href="https://github.com/RimoChan/Librian/issues">issue</a>。<small>(issue多的話顯得Librian比較有人氣……)</small></li>
 <li>發送郵件到我的郵箱<a href="mailto:RimoChan@stu.xmu.edu.cn">RimoChan@stu.xmu.edu.cn</a>。</li>
-<li>掃描<a href="../../主頁/#_5">前面</a>的那個QRcode，並把問題寫在備註裏。<small>(笑)</small></li>
 </ul>
 <h2 id="_1">已知問題</h2>
-<h3 id="saveloadpython">save/load不能保存python塊中定義的函數？</h3>
-<p>這個有點難。我都準備了一個字典作爲在py中的環境了，原本我想儲存下字典，利用python神奇的pickle，但是卻發現在劇本內定義的函數之類的不能被pickle導致完全pickle失敗……似乎pickle只儲存了函數名和其校驗碼，難道就沒有把函數代碼直接pickle出來的模式嗎…… <br/>
-所以退而求其次地在save時，只會保存可以被pickle的對象了。</p>
 <h3 id="unix">在unix系統中無法找到路徑？</h3>
 <p>編程真難……我還是改行吧<small>(對了聽說最近有一個叫後宮王的職業好像前程似錦，不如去試試吧)</small>！ <br/>
 windows下的pyqt5的QtWebEngine在加載路徑的時候可以使用相對路徑，但似乎unix就不行。雖然有考慮過全部轉換爲絕對路徑，但實際上在轉換的時候會出問題，因爲自定義標題在引用js的時候應該不能用絕對路徑找到js文件，怎麼辦呢……好在unix用戶比較少 (潘大爺: ？？？)</p>
@@ -372,7 +348,7 @@ windows下的pyqt5的QtWebEngine在加載路徑的時候可以使用相對路徑
 <h2 id="_4">還想做的功能</h2>
 <h3 id="_5">縮進控制</h3>
 <p>with塊，利用縮進和進入退出控制來改變狀態，類似這樣: </p>
-<pre><code>&gt;with CG('蘿莉H.png'):
+<pre><code>&gt; with CG('蘿莉H.png'):
     蘿莉 「呣~」
     潘大爺 「你真可愛。」
     潘大爺撫摸蘿莉的頭。
@@ -381,15 +357,12 @@ H好了。
 </code></pre>
 <p>這樣只有在說H話的時候才有HCG。</p>
 <p>if塊，顧名思義，類似這樣: </p>
-<pre><code>&gt;if 好感度==0:
+<pre><code>&gt; if 好感度==0:
     蘿莉 「CNM！」
 </code></pre>
 <p><big>(笑)</big> <br/>
 沒錯我就是故意打的big標籤。</p>
-<h3 id="_6">改進編譯器</h3>
-<p>話說我自己做的這個正則編譯器<small>(真的是編譯器嗎笑)</small>有時候不太好用。
-於是後來想用lex+yacc重新寫一個，但是lex和yacc實在是不稱手……</p>
-<h3 id="_7">移動端引擎</h3>
+<h3 id="_6">移動端引擎</h3>
 <p>最近手遊很流行……然後聽說pyqt5可以在安卓運行，於是就想能不能做一個…… <br/>
 不過可能會卡成sb就是了……</p>
 </article>
