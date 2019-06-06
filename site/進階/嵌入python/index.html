@@ -400,33 +400,34 @@
 <h2 id="_1">從簡單的例子開始</h2>
 <p><strong>hello world:</strong></p>
 <pre><code>潘大爺 「準備好了嗎？」
-&gt;py
+```
 print('hello, world')
-&gt;endpy
-潘大爺 「你在控制檯窗口上看到剛纔輸出的 hello world 了嗎？」    
+```
+潘大爺 「你在控制檯窗口上看到剛纔輸出的 hello world 了嗎？」
 </code></pre>
 <p>如果你看到了hello world說明你已經成爲了python大師<small>(笑)</small>，馬上就可以從這裏畢業了。 <br/>
 <img alt="hw" src="../hw.jpg"/></p>
 <p><strong>定義變量:</strong></p>
 <pre><code>潘大爺 「試着定義一些變量。」
-&gt;py
+```
 hp=150
 hp-=50
 print(f'潘大爺還有{hp}點生命值！')
-&gt;endpy
-潘大爺 「看來我的生命值已經如同風中殘燭了。」    
+```
+潘大爺 「看來我的生命值已經如同風中殘燭了。」
 </code></pre>
-<pre><code>運行結果: 潘大爺還有100點生命值！
+<p>運行結果: </p>
+<pre><code>潘大爺還有100點生命值！
 </code></pre>
 <p><code>print</code> 只會輸出在控制檯上，最終發佈的遊戲並沒有控制檯，所以這個消息是給開發人員看的。 <br/>
 如果你把 <code>print</code> 換成 <code>fusion</code> 的話，「潘大爺還有100點生命值」除了會顯示在控制檯上以外，也會顯示在adv畫面中。這種方式顯示的文字和劇本一樣經過編譯——也就是說在前面寫上人名的話就會變成對話。</p>
 <p><strong>輸出到adv界面:</strong></p>
 <pre><code>潘大爺 「我試試這樣說話……」
-&gt;py
+```
 hp=150
 hp-=50
 fusion(f'潘大爺 「我還有{hp}點生命值！」')
-&gt;endpy
+```
 潘大爺 「感覺不錯。」
 </code></pre>
 <p><img alt="100" src="../100.jpg"/> <br/>
@@ -434,20 +435,20 @@ fusion(f'潘大爺 「我還有{hp}點生命值！」')
 <h2 id="_2">稍微提升</h2>
 <p>接下來就是分支跳轉了，之前說了劇本函數 <code>WARP</code> ，接下來介紹通用的 <code>if</code> : </p>
 <pre><code>潘大爺 「if真是太棒了。」
-&gt;py
+```
 hp=5
 hp=-10
 if hp&lt;0:
     print('大爺死了。')
     goto('gameover.play')
-&gt;endpy
+```
 潘大爺 「看來我還活着。」
 </code></pre>
-<pre><code># 這是劇本gameover.play中的內容
-潘大爺 「騙人的吧？」
-&gt;py
+<p>劇本「gameover.play」中的內容: </p>
+<pre><code>潘大爺 「騙人的吧？」
+```
 adv_end()
-&gt;endpy
+```
 </code></pre>
 <p>在潘大爺的生命小於0的時候，跳轉到劇本「gameover.play」。 <br/>
 在「gameover.play」，潘大爺說出「騙人的吧？」之後，調用 <code>adv_end</code> 結束遊戲。</p>
@@ -480,8 +481,7 @@ choice(
 <h2 id="_4">究極</h2>
 <p>試着嵌入一個「在副線程進行一段時間的操作並在完成時給出反饋」的劇本。</p>
 <pre><code>潘大爺 「点一下来开始大约持续5秒的自動更新！」
-
-&gt;py
+```
 import threading
 def 更新():
     time.sleep(5)   # 连接到你自己的发布地址
@@ -492,62 +492,60 @@ def 更新():
 t = threading.Thread(target=更新)
 t.setDaemon(True)
 t.start()
-&gt;endpy
-
+```
 *back
 潘大爺 「更新还没有结束，更新完了时无需点击会自动进入下一句。」
-
-&gt;py
+```
 goto(lable='back')
-&gt;endpy
+```
 *更新完了
 潘大爺 「更新完了。」
 </code></pre>
 <p>這個我怎麼解釋……  <br/>
 <small>(話說下次提供一個副線程支持吧)</small></p>
 <p>試試RPG打架。</p>
-<pre><code>&gt; py
+<pre><code>```
 from random import randint
-def 攻擊(a,b):
-    傷害=int(randint(8,12)/10*a['攻擊力'])
-    b['當前生命']-=傷害
+def 攻擊(a, b):
+    傷害 = int(randint(8, 12) / 10 * a['攻擊力'])
+    b['當前生命'] -= 傷害
     fusion(f"{a['名']}攻擊{b['名']}！造成{傷害}點傷害！{b['名']}的生命值{b['當前生命']}/{b['總生命']}。")
-def 死亡一指(a,b):
-    b['當前生命']=0
+def 死亡一指(a, b):
+    b['當前生命'] = 0
     fusion(f"{a['名']}對{b['名']}使用死亡一指！{b['名']}的生命值{b['當前生命']}/{b['總生命']}。")
-大爺={'名':'大爺','速度':10,'攻擊力':30,'當前生命':100,'總生命':100}
-敵人={'名':'敵人','速度':5, '攻擊力':9 ,'當前生命':80 ,'總生命':80 }
-&gt;endpy
+大爺 = {'名': '大爺', '速度': 10, '攻擊力': 30, '當前生命': 100, '總生命': 100}
+敵人 = {'名': '敵人', '速度': 5, '攻擊力': 9, '當前生命': 80, '總生命': 80}
+```
 
-&gt;py
-if 大爺['速度']&gt;敵人['速度']:
-    大爺的回合=True
+```
+if 大爺['速度'] &gt; 敵人['速度']:
+    大爺的回合 = True
     fusion('潘大爺 「智者先攻」')
 else:
-    大爺的回合=False
-&gt; endpy
+    大爺的回合 = False
+```
 
 *決鬥開始
 
-&gt;py
+```
 if 大爺的回合:
     choice(
-        ('攻擊',lambda:攻擊(大爺,敵人)),
-        ('死亡一指',lambda:死亡一指(大爺,敵人))
+        ('攻擊', lambda: 攻擊(大爺, 敵人)),
+        ('死亡一指', lambda: 死亡一指(大爺, 敵人))
     )
 else:
-    攻擊(敵人,大爺)
-大爺的回合=not 大爺的回合
-&gt;endpy
+    攻擊(敵人, 大爺)
+大爺的回合 = not 大爺的回合
+```
 
-&gt;py
-if 敵人['當前生命']&lt;=0 or 大爺['當前生命']&lt;=0:
+```
+if 敵人['當前生命'] &lt;= 0 or 大爺['當前生命'] &lt;= 0:
     adv_end()
-&gt;endpy
+```
 
-&gt;py
+```
 goto(lable='決鬥開始')
-&gt;endpy
+```
 </code></pre>
 <p><small>(話說死亡一指不是應該把目標旁邊的人殺死嗎<small>(笑)</small>)</small></p>
 <h2 id="_5">注意</h2>
@@ -560,22 +558,23 @@ goto(lable='決鬥開始')
 <p>每次的py塊總是會執行到底，也就是說 <code>goto</code>, <code>call</code>, <code>fusion</code> 並不是即時的，他們真正的作用只是改變了劇本棧的順序，導致在一個塊中多次調用會产生出乎意料的演出順序。 </p>
 <p><small>(我雖然想將讀者的實例改爲遞歸的來解決這個問題，但是卻發現這樣存在一個不能存檔的問題。)</small></p>
 <p>舉這樣一個例子:   </p>
-<pre><code>&gt;py
+<pre><code>```
 call('第一章.play')
 call('第二章.play')
-&gt;endpy
+```
 </code></pre>
 <p>寫的人的想法是想要先演出第一章，第一章結束之後返回調用點，然後演出第二章。 <br/>
 但實際上的執行順序是  <code>call('第一章.play')</code>  -&gt; <code>call('第二章.play')</code> -&gt; 演出第二章 -&gt; 演出第一章。</p>
 <p>因爲在 <code>call</code> 時候劇本的棧頂被先後壓入了第一章和第二章，成爲 <code>(.., 當前劇本, 第一章, 第二章)</code>，第二章在棧頂導致先演出。</p>
 <p>我想過的解決辦法是在每一次 <code>call</code> 的時候直接重建一個讀者實例，然後直接進入這個新實例執行，在這個實例執行完畢之後就可以回到調用點執行之後的語句了……但問題是存檔時只能儲存劇本棧不能儲存調用棧，也就是無法在新劇本執行完畢之後返回調用點。</p>
 <p>也就是說，由於這個問題，這個做法暫時只能寫成: </p>
-<pre><code>&gt;py
+<pre><code>```
 call('第一章.play')
-&gt;endpy
-&gt;py
+```
+
+```
 call('第二章.play')
-&gt;endpy
+```
 </code></pre>
 <p>如果你有方法的話，歡迎掃描前面的QRcode……不，這個還是火速聯繫我吧。</p>
 <h3 id="goto">goto在副線程調用時不會立即跳轉</h3>
@@ -595,9 +594,7 @@ adv_end()
 <h3 id="gotocall">goto/call</h3>
 <p><code>goto</code> 跳轉到另一個路徑爲 <code>path</code> 的劇本<small>（默认是自身）</small>的一個躍點的位置。如果躍點 <code>tag</code> 不指定就會跳到開頭。 <br/>
 <code>push</code> 的功能是 <code>goto</code> 加上目標劇本演出結束後回到調用處。   </p>
-<pre><code>&gt; py
-    goto(path='第9章.play', lable='躍點A')
-&gt; endpy
+<pre><code>goto(path='第9章.play', lable='躍點A')
 </code></pre>
 <p>在目標文件裏要有對應的躍點。</p>
 <pre><code>*躍點A
@@ -611,8 +608,7 @@ adv_end()
 <h3 id="adv_end">adv_end</h3>
 <p>清空劇本棧使得adv演出進入結束狀態。</p>
 <h2 id="_9">内置函数的别名</h2>
-<p>爲了照顧某些看到英文就頭大的開發者而提供了這樣的名字…… <br/>
-<small>(話說需要這個功能的人真的有嗎……)</small></p>
+<p>爲了照顧某些……嗯，看到英文就頭大的開發者，還有狂熱的<ruby>民族主義者<rt>リモちゃん</rt></ruby>，而提供了這樣的名字……   </p>
 <ul>
 <li><code>goto</code>     =  <code>跳轉</code> </li>
 <li><code>call</code>     =  <code>調用</code> </li>
@@ -621,12 +617,11 @@ adv_end()
 <li><code>fusion</code>   =  <code>同化</code> <small>(沒錯這個不是「融合」而是<ruby>「假魂的同化」<rt>ネフェシャドール・フュージョン</rt></ruby>)</small></li>
 </ul>
 <p>這樣一來就可以中文編程——</p>
-<pre><code>&gt; py
-    生命=99
-    同化(f'潘大爺 「我還有{生命}點生命值！」')
-&gt; endpy
+<pre><code>```
+生命=99
+同化(f'潘大爺 「我還有{生命}點生命值！」')
+```
 </code></pre>
-<p><small>(反而更加看不懂了……)</small></p>
 </article>
 </div>
 </div>

@@ -8,7 +8,10 @@
 }
 @media print{
     *{
-        font-family:'方正细雅宋_gbk';
+        font-family: Consolas, 源流明體 TTF regular;
+    }
+    code {
+        font-family: Consolas, 源流明體 TTF regular;
     }
     rt{ /*pdf不支持這個*/
         display: none;

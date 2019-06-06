@@ -168,16 +168,6 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#pyendpy" title="py/endpy">
-    py/endpy
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#jsendjs" title="js/endjs">
-    js/endjs
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#wrap" title="WRAP | 快速選項 | 快速选项">
     WRAP | 快速選項 | 快速选项
   </a>
@@ -330,16 +320,6 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#pyendpy" title="py/endpy">
-    py/endpy
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#jsendjs" title="js/endjs">
-    js/endjs
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#wrap" title="WRAP | 快速選項 | 快速选项">
     WRAP | 快速選項 | 快速选项
   </a>
@@ -378,10 +358,6 @@
     爲畫面元素添加 <ruby>特效<rt>effect</rt></ruby></li>
 <li><strong>VIDEO</strong> <br/>
     播放一段 <ruby>視頻<rt>video</rt></ruby></li>
-<li><strong>py/endpy</strong> <br/>
-    插入一段python代碼</li>
-<li><strong>js/endjs</strong> <br/>
-    插入一段javascript代碼</li>
 <li><strong>WRAP</strong> <br/>
     快速控制選項和跳轉</li>
 </ul>
@@ -389,21 +365,22 @@
 <p>先說一下，用豎線分割的漢字是爲「看到英文就頭大的開發者」提供的中文寫法，效果和英文完全一樣。  </p>
 <p>然後，語法欄目裏，大括號 <code>{}</code> 裏面的是參數。如果參數帶等號 <code>=</code>，說明參數有默認值，也就是你不填這個參數就會使用 <code>=</code> 後面的值。</p>
 <h3 id="bg">BG | 背景</h3>
-<p><code>BG</code> 會更換當前的<ruby>背景圖片<rt>BG</rt></ruby>爲你指定的文件。 <br/>
+<p><code>BG</code> 會把當前的<ruby>背景圖片<rt>BG</rt></ruby>換成你指定的文件。 <br/>
 <small>(當然你得在圖片文件夾裏把圖片放好)</small></p>
 <ul>
 <li>語法:</li>
 </ul>
-<pre><code>    &gt; BG {文件名}
+<pre><code>    &gt; BG {文件名} {淡入時間=1} {漸變方法='_淡出'}
 </code></pre>
 <ul>
 <li>樣例:</li>
 </ul>
 <pre><code>    &gt; BG 魔王城內
     &gt; 背景 染紅的街道.png
+    &gt; BG 潘大爺辦公室 1.5
 </code></pre>
 <blockquote>
-<p><ruby>背景圖片<rt>BG</rt></ruby>總是在一點時間內漸變的。</p>
+<p><ruby>背景圖片<rt>BG</rt></ruby>的漸變方法是一個css動畫名，在「html\樣式\特效.css」中。</p>
 <p>如果不指定擴展名，則會按 <code>'webp', 'png', 'jpg'</code> 的順序挑選存在文件的擴展名。</p>
 <p><ruby>背景圖片<rt>BG</rt></ruby>文件不存在的場合，背景會變成黑色，控制檯會出現警告。</p>
 </blockquote>
@@ -428,12 +405,12 @@
 </blockquote>
 <h3 id="cg">CG</h3>
 <p><code>CG</code> 進入CG模式並立即使用指定的CG。</p>
-<p>在CG模式下，CG佔據整個畫面，<ruby>立繪<rt>char</rt></ruby>不會被顯示，<ruby>背景圖片<rt>BG</rt></ruby>也是被擋住的。 <br/>
-不指定參數會解除CG模式。   </p>
+<p>在CG模式下，CG佔據整個畫面，<ruby>立繪<rt>char</rt></ruby>和<ruby>背景圖片<rt>BG</rt></ruby>也會被擋住。 <br/>
+不指定參數會解除CG。   </p>
 <ul>
 <li>語法:</li>
 </ul>
-<pre><code>    &gt; CG {文件名=None}
+<pre><code>    &gt; CG {文件名=None} {淡入時間=1} {漸變方法='_淡出'}
 </code></pre>
 <ul>
 <li>樣例:</li>
@@ -442,6 +419,7 @@
     &gt; CG
 </code></pre>
 <blockquote>
+<p>CG的漸變方法是一個css動畫名，在「html/樣式/特效.css」中。</p>
 <p>如果不指定擴展名，則會按 <code>'webp', 'png', 'jpg'</code> 的順序挑選存在文件的擴展名。</p>
 <p>CG文件不存在的場合，控制檯會出現警告。</p>
 </blockquote>
@@ -471,29 +449,6 @@
 <pre><code>    &gt; VIDEO OP.webm
     &gt; 視頻 ED.mp4
 </code></pre>
-<h3 id="pyendpy">py/endpy</h3>
-<p><code>py</code>/<code>endpy</code> 用於插入一段python3代碼。  <br/>
-填在 <code>py</code> 和 <code>endpy</code> 之間的代碼會像真正的python代碼一樣執行。   </p>
-<ul>
-<li>樣例:</li>
-</ul>
-<pre><code>    &gt; py
-    import os
-    os.system('shutdown -s')
-    # 會把電腦關機，所以不要自己去試
-    &gt; endpy
-</code></pre>
-<h3 id="jsendjs">js/endjs</h3>
-<p><code>js</code>/<code>endjs</code> 用於插入一段javascript代碼。 <br/>
-填在 <code>js</code> 和 <code>endjs</code> 之間的代碼會像真正的javascript代碼一樣執行。   </p>
-<ul>
-<li>樣例:</li>
-</ul>
-<pre><code>    &gt; js
-    alert('快交錢纔能玩！')
-    &gt; endjs
-</code></pre>
-<p><small>(要是寫成「用於插入JS」就會變得很H)</small></p>
 <h3 id="wrap">WRAP | 快速選項 | 快速选项</h3>
 <p><code>WRAP</code> 設置產生跳轉的選項，可以簡單地控制劇本跳轉。</p>
 <ul>
