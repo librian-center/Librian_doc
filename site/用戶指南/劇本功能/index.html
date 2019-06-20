@@ -441,14 +441,18 @@
 <ul>
 <li>語法:</li>
 </ul>
-<pre><code>    &gt; VIDEO {影片名}
+<pre><code>    &gt; VIDEO {影片名} {可以跳過=False}
 </code></pre>
 <ul>
 <li>樣例:</li>
 </ul>
 <pre><code>    &gt; VIDEO OP.webm
-    &gt; 視頻 ED.mp4
+    &gt; 視頻 ED.mp4 True
 </code></pre>
+<blockquote>
+<p>在指定 <code>可以跳過</code> 爲True後，可以點擊視頻來跳過。</p>
+<p>不要在默認格式的語法中再顯式指定False，因爲無法區分字符串……</p>
+</blockquote>
 <h3 id="wrap">WRAP | 快速選項 | 快速选项</h3>
 <p><code>WRAP</code> 設置產生跳轉的選項，可以簡單地控制劇本跳轉。</p>
 <ul>
