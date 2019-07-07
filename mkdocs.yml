@@ -23,10 +23,10 @@ nav:
 theme: material
 extra_css:
   - '../pdf.css'
-  - './_樣式/css.css'
-  
+  - './樣式/css.css'
+use_directory_urls: false
 plugins:
   - pdf-export:
       combined: True
       combined_output_path: ./Librian文檔.pdf
-      # enabled_if_env: h
+      enabled_if_env: h
