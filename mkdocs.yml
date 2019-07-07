@@ -23,6 +23,7 @@ nav:
 theme: material
 extra_css:
   - '../pdf.css'
+  - './_樣式/css.css'
   
 plugins:
   - pdf-export:

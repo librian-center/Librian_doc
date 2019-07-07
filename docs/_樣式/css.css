@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+SC:600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+SC&display=swap');
+@media screen {
+    body{
+        font-family: 'Noto Serif SC';
+    }
+    code{
+        font-family: consolas, 'Noto Sans SC';
+    }
+    .md-header {
+        background-color: #feebc5 !important;
+        background-image: url(http://magic-lib.com/紙背景花紋模糊.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        color: #000;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    }
+}
