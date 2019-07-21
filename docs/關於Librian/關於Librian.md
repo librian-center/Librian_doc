@@ -48,7 +48,8 @@ Librian從2017年開始開發，到現在2019年，經歷3年時間<small>(這�
 注意，以下內容可能含有大量**詐騙**成分，目的是爲了騙來可愛的女孩子。如果你是男孩子的話，請謹慎閱讀，當心上當受騙！
 
 + 莆田理工大學:   
-    The LG University of PT——隱藏在莆田的深山老林裏的大學。
+    The LG University of PT——隱藏在莆田的深山老林裏的大學。  
+    可以在[這裏](https://rimochan.github.io/LG-University/index.html)閱讀相關資料。
 
 + 潘大爺:   
     莆田理工大學現任校長。
