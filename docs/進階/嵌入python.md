@@ -60,19 +60,19 @@ Librian的嵌入python可以用於實現劇本的邏輯，也可以成爲獨立�
     hp=-10
     if hp<0:
         print('大爺死了。')
-        goto('gameover.play')
+        goto('gameover.liber')
     ```
     潘大爺 「看來我還活着。」
     
-劇本「gameover.play」中的內容: 
+劇本「gameover.liber」中的內容: 
 
     潘大爺 「騙人的吧？」
     ```
     adv_end()
     ```
 
-在潘大爺的生命小於0的時候，跳轉到劇本「gameover.play」。   
-在「gameover.play」，潘大爺說出「騙人的吧？」之後，調用 `adv_end` 結束遊戲。
+在潘大爺的生命小於0的時候，跳轉到劇本「gameover.liber」。   
+在「gameover.liber」，潘大爺說出「騙人的吧？」之後，調用 `adv_end` 結束遊戲。
 
 ## 難題
 
@@ -83,8 +83,8 @@ Librian的嵌入python可以用於實現劇本的邏輯，也可以成爲獨立�
 def f():
     好感度+=1      #英文真難！
 choice(
-    ('跳到一章',lambda: goto('一章.play')),
-    ('跳到二章',lambda: goto('二章.play')),
+    ('跳到一章',lambda: goto('一章.liber')),
+    ('跳到二章',lambda: goto('二章.liber')),
     ('刷好感度', f )
 )
 ```
@@ -96,14 +96,14 @@ choice(
 
 在 [劇本功能](../用戶指南/劇本功能.md) 中說過的 `WARP`，實際上是 `choice` 和 `push` 的語法糖。   
 ```
-WARP [接受治療,壞結局.play] [放棄治療,好結局.play] [蘿莉治療,一章.play,原點]
+WARP [接受治療,壞結局.liber] [放棄治療,好結局.liber] [蘿莉治療,一章.liber,原點]
 ```
 相當於
 ```python
 choice(
-    ('接受治療',lambda: call('壞結局.play')),
-    ('放棄治療',lambda: call('好結局.play')),
-    ('蘿莉治療',lambda: call('一章.play','原點'))
+    ('接受治療',lambda: call('壞結局.liber')),
+    ('放棄治療',lambda: call('好結局.liber')),
+    ('蘿莉治療',lambda: call('一章.liber','原點'))
 )
 ```
 
@@ -198,12 +198,12 @@ choice(
 舉這樣一個例子:   
 
     ```
-    call('第一章.play')
-    call('第二章.play')
+    call('第一章.liber')
+    call('第二章.liber')
     ```
     
 寫的人的想法是想要先演出第一章，第一章結束之後返回調用點，然後演出第二章。   
-但實際上的執行順序是  `call('第一章.play')`  -> `call('第二章.play')` -> 演出第二章 -> 演出第一章。
+但實際上的執行順序是  `call('第一章.liber')`  -> `call('第二章.liber')` -> 演出第二章 -> 演出第一章。
 
 因爲在 `call` 時候劇本的棧頂被先後壓入了第一章和第二章，成爲 `(.., 當前劇本, 第一章, 第二章)`，第二章在棧頂導致先演出。
 
@@ -212,11 +212,11 @@ choice(
 也就是說，由於這個問題，這個做法暫時只能寫成: 
 
     ```
-    call('第一章.play')
+    call('第一章.liber')
     ```
     
     ```
-    call('第二章.play')
+    call('第二章.liber')
     ```
 
 如果你有方法的話，歡迎掃描前面的QRcode……不，這個還是火速聯繫我吧。
@@ -243,7 +243,7 @@ adv_end()
 `goto` 跳轉到另一個路徑爲 `path` 的劇本<small>（默认是自身）</small>的一個躍點的位置。如果躍點 `tag` 不指定就會跳到開頭。   
 `push` 的功能是 `goto` 加上目標劇本演出結束後回到調用處。   
 
-    goto(path='第9章.play', lable='躍點A')
+    goto(path='第9章.liber', lable='躍點A')
     
 在目標文件裏要有對應的躍點。
 

@@ -163,11 +163,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
-      第一次使用
+      快速上手
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
-        第一次使用
+        快速上手
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -180,6 +180,30 @@
   <li class="md-nav__item">
     <a href="../第一次使用/安裝.html" title="安裝" class="md-nav__link">
       安裝
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../第一次使用/小試牛刀.html" title="小試牛刀" class="md-nav__link">
+      小試牛刀
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../第一次使用/10分鐘製作《哈姆雷特》.html" title="10分鐘製作《哈姆雷特》" class="md-nav__link">
+      10分鐘製作《哈姆雷特》
     </a>
   </li>
 
@@ -655,22 +679,22 @@
 <p>這個章節將會介紹如何使用控制劇本演出的功能。</p>
 <h2 id="_2">功能表</h2>
 <ul>
-<li><strong>BG</strong> <br />
+<li>BG <br />
     更換 <ruby>背景圖片<rt>BG</rt></ruby></li>
-<li><strong>BGM</strong>  <br />
+<li>BGM  <br />
     更換 <ruby>背景音樂<rt>BGM</rt></ruby></li>
-<li><strong>CG</strong> <br />
+<li>CG <br />
     顯示或消除CG   </li>
-<li><strong>EF</strong>  <br />
+<li>EF  <br />
     爲畫面元素添加 <ruby>特效<rt>effect</rt></ruby></li>
-<li><strong>VIDEO</strong>  <br />
+<li>VIDEO  <br />
     播放一段 <ruby>視頻<rt>video</rt></ruby></li>
-<li><strong>WRAP</strong> <br />
+<li>WRAP <br />
     快速控制選項和跳轉</li>
 </ul>
 <h2 id="_3">詳細介紹</h2>
 <p>先說一下，用豎線分割的漢字是爲「看到英文就頭大的開發者」提供的中文寫法，效果和英文完全一樣。  </p>
-<p>然後，語法欄目裏，大括號 <code>{}</code> 裏面的是參數。如果參數帶等號 <code>=</code>，說明參數有默認值，也就是你不填這個參數就會使用 <code>=</code> 後面的值。</p>
+<p>然後，語法欄目裏，大括號 <code>{}</code> 裏面的是參數的名字。如果名字後有等號 <code>=</code>，說明參數有默認值——也就是你不填這個參數就自動使用 <code>=</code> 後面的值。</p>
 <h3 id="bg">BG | 背景</h3>
 <p><code>BG</code> 會把當前的<ruby>背景圖片<rt>BG</rt></ruby>換成你指定的文件。 <br />
 <small>(當然你得在圖片文件夾裏把圖片放好)</small></p>
@@ -768,7 +792,8 @@
 
 <blockquote>
 <p>在指定 <code>可以跳過</code> 爲True後，可以點擊視頻來跳過。</p>
-<p>不要在默認格式的語法中再顯式指定False，因爲無法區分字符串……</p>
+<p>不要在默認格式的語法中再顯式指定False，因爲是字符串，反而會變成True。<br />
+<small>(如果你不知道上面這句話在說什麼就當作它不存在吧……)</small></p>
 </blockquote>
 <h3 id="wrap">WRAP | 快速選項 | 快速选项</h3>
 <p><code>WRAP</code> 設置產生跳轉的選項，可以簡單地控制劇本跳轉。</p>
@@ -781,18 +806,18 @@
 <ul>
 <li>樣例:</li>
 </ul>
-<pre><code>    &gt; WRAP [接受治療,壞結局.play] [放棄治療,好結局.play]
-    &gt; 快速選項 [上,H劇情.play] [不上,正常劇情.play,不H]
+<pre><code>    &gt; WRAP [接受治療,壞結局.liber] [放棄治療,好結局.liber]
+    &gt; 快速選項 [上,H劇情.liber] [不上,正常劇情.liber,不H]
 </code></pre>
 
 <p>對於這個例子:</p>
-<pre><code>    &gt; WRAP [接受治療,壞結局.play] [放棄治療,好結局.play] [蘿莉治療,一章.play,原點]
+<pre><code>    &gt; WRAP [接受治療,壞結局.liber] [放棄治療,好結局.liber] [蘿莉治療,一章.liber,原點]
 </code></pre>
 
 <p>會產生3個選項。 <br />
-第一個選項是「接受治療」，選擇後跳轉到劇本「壞結局.play」。 <br />
-第二個選項是「接受治療」，選擇後跳轉到劇本「好結局.play」。 <br />
-第二個選項是「蘿莉治療」，選擇後跳轉到劇本「一章.play」的躍點「原點」處。   </p>
+第一個選項是「接受治療」，選擇後跳轉到劇本「壞結局.liber」。 <br />
+第二個選項是「接受治療」，選擇後跳轉到劇本「好結局.liber」。 <br />
+第三個選項是「蘿莉治療」，選擇後跳轉到劇本「一章.liber」的躍點「原點」處。   </p>
 <p>想要瞭解進階的流程控制的話，可以參考<a href="../進階/嵌入python.html">進階/嵌入python.md</a>。</p>
 <h2 id="python">python風格的寫法</h2>
 <p>如果你有編程經驗的話，可能會喜歡類似函數調用風格的寫法。</p>
