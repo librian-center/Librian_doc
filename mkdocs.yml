@@ -22,7 +22,18 @@ nav:
 - 關於Librian: 
   - 關於Librian/關於Librian.md
   - 關於Librian/關於實現.md
-theme: material
+theme:
+    name: null
+    custom_dir: 'material改'
+    language: en
+    palette:
+    font:
+      text: Roboto
+      code: Roboto Mono
+    logo:
+      icon: "\uE80C"
+    feature:
+      tabs: false
 extra_css:
   - '../pdf.css'
   - './樣式/css.css'
