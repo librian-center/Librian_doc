@@ -336,23 +336,23 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" title="其他方法" class="md-nav__link">
-    其他方法
+  <a href="#_2" title="把遊戲發給別人玩" class="md-nav__link">
+    把遊戲發給別人玩
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#librian" title="脫離Librian的發佈方法" class="md-nav__link">
+    脫離Librian的發佈方法
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" title="發佈到你的網頁上" class="md-nav__link">
-    發佈到你的網頁上
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" title="發佈到輕文上" class="md-nav__link">
-    發佈到輕文上
+  <a href="#_3" title="生成純粹的網頁版" class="md-nav__link">
+    生成純粹的網頁版
   </a>
   
 </li>
@@ -605,23 +605,23 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" title="其他方法" class="md-nav__link">
-    其他方法
+  <a href="#_2" title="把遊戲發給別人玩" class="md-nav__link">
+    把遊戲發給別人玩
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#librian" title="脫離Librian的發佈方法" class="md-nav__link">
+    脫離Librian的發佈方法
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" title="發佈到你的網頁上" class="md-nav__link">
-    發佈到你的網頁上
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" title="發佈到輕文上" class="md-nav__link">
-    發佈到輕文上
+  <a href="#_3" title="生成純粹的網頁版" class="md-nav__link">
+    生成純粹的網頁版
   </a>
   
 </li>
@@ -656,12 +656,16 @@
                 
                 
                 <h1 id="_1">生成遊戲</h1>
-<p>接下來我們假設，在經過三天三夜的通宵開發之後，你做出了充滿<del>歐派</del>的galgame，並要把它交付給甲方<small>(太真實了吧)</small>！</p>
+<p>接下來我們假設，在經過三天三夜的通宵開發之後，你做出了充滿<del>歐派</del>萝莉的galgame，並要把它交付給甲方<small>(太真實了吧)</small>！</p>
 <h2 id="exe">生成可執行的exe文件</h2>
-<p>運行「Librian面板」，在「開啓工程」中選擇你的工程，點「生成exe」，就可以在Librian的路徑下生成一個exe文件。</p>
-<p><img alt="" src="../第一次使用/R.jpg" /></p>
+<p>運行「Librian面板」，選擇你的工程進入。</p>
+<p>點「生成exe」，就可以在Librian的路徑下生成一個exe文件。</p>
+<p><img alt="" src="生成1.jpg" /></p>
 <p>點開這個exe就不使用Librian面板直接運行你的遊戲。</p>
-<p>然後，注意這是重點——  </p>
+<p><img alt="" src="生成2.jpg" /></p>
+<p>exe的圖標就是這個工程配置裏指定的圖標，如果沒有指定，會使用Librian的默認圖標。</p>
+<h2 id="_2">把遊戲發給別人玩</h2>
+<p>因爲點開生成的exe就能玩了，所以接下來只要——</p>
 <ol>
 <li>
 <p>把Librian的文件夾複製一遍！</p>
@@ -673,26 +677,17 @@
 <p>把新文件夾打包，發過去！</p>
 </li>
 </ol>
-<p><small>
-因爲實際上並沒有做任何編譯的工作，只是把調用python文件的命令寫在exe裏了——因此所有的文件都必須完全保持原樣才能工作。
-</small></p>
-<h2 id="_2">其他方法</h2>
-<p>如果你的劇本是沒有分支的，或者分支處直接往下走不會對劇情產生很大影響的話，你也可以用這些方法發佈你的遊戲。 <br />
-這些方法相對與將遊戲整個打包有一些其他好處……和壞處。 </p>
-<h3 id="_3">發佈到你的網頁上</h3>
+<p><small>因爲實際上並沒有做任何打包啊編譯之類的工作，只是把調用python文件的命令寫在exe裏了——因此大部分的文件都必須完全保持原樣才能工作。</small></p>
+<h2 id="librian">脫離Librian的發佈方法</h2>
+<p>也有出於方便預覽等考慮無法使用python的時候，你可以用以下方法來發佈。</p>
+<p>這些方法會在編譯時執行嵌入的python代碼，甚至忽略python代碼——意味着你的遊戲應當是單線的。</p>
+<p><small>之前還有一個導出輕文的方法，後來輕文倒閉了……</small></p>
+<h3 id="_3">生成純粹的網頁版</h3>
 <p>運行「Librian面板」，在「開啓工程」中選擇你的工程，點「生成html」，會生成一個js文件。</p>
-<p>這個操作會把工程在運行過程中達到的所有狀態寫進一個js文件裏。這樣一來，「html/adv_虛擬.html」就可以脫離python運行了。 <br />
-將html文件夾和project文件夾放進簡單的網頁服務器裏<small>(當然要保持相對路徑不變)</small>，就可以在瀏覽器中運行了。</p>
+<p>這個操作會把工程在運行過程中達到的所有狀態寫進一個js文件裏。這樣一來，「adv.html」就可以脫離python運行了。</p>
+<p>將html文件夾和project文件夾放進簡單的網頁服務器裏<small>(當然要保持相對路徑不變)</small>，就可以在瀏覽器中運行了。</p>
 <p>這個發佈是完全靜態的，因此遊玩起來完全沒有延遲，而且可以利用github page來玩耍。</p>
 <p>不過不保證chrome以外的瀏覽器能正確運行……</p>
-<h3 id="_4">發佈到輕文上</h3>
-<p><small>話說爲什麼會有這個選項啊輕文給我錢了嗎……</small></p>
-<p>「導出輕文.py」可以將你的遊戲導出一個可以直接用於「輕文」的「IQA引擎」的劇本。 <br />
-<small>(這個功能不會出現在Librian面板上)</small></p>
-<p>比較起來現在的輕文引擎的語法過於底層，似乎對人類很不友好<small>(差不多已經是asm碼了)</small>——當然是不開可視化界面的時候<small>(而且居然沒法切換！)</small>……  <br />
-而且我這個文檔比他的漂亮<small>(笑)</small>。   </p>
-<p>雖然受到一些引擎的限制以至於表現並不完全一致，不過放個在線demo應該還是沒問題的。 <br />
-<small>(因爲這是隨手做的，所以鬼知道會不會維護。)</small></p>
 <h3 id="pdf">導出pdf</h3>
 <p>「導出pdf」顧名思義地用於將你的單個劇本文件導出pdf。<br />
 導出pdf與工程無關，只對單獨的劇本文件生效，也可以配置自己的css樣式表。</p>
