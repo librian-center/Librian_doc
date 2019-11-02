@@ -186,7 +186,6 @@ kbd {
   .md-typeset pre {
     background-color: rgba(236, 236, 236, 0.5);
     color: #37474F;
-    font-size: 85%;
     direction: ltr; }
   .md-typeset code {
     margin: 0 0.29412em;
