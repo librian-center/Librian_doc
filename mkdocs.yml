@@ -42,6 +42,8 @@ extra_css:
   - '../pdf.css'
   - './樣式/css.css'
 use_directory_urls: false
+markdown_extensions:
+    - attr_list
 plugins:
   - pdf-export:
       combined: True

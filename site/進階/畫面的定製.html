@@ -632,13 +632,15 @@
 <h2 id="css">使用css</h2>
 <p>如果想要改變adv畫面的表現，你可以指定額外的css文件。</p>
 <p>之前雖然說過在「工程配置.yaml」裏可以設置「自定css」，但是沒有說該怎麼寫。   </p>
-<p>在默認的adv畫面<small>(即 {librian路徑}/html/adv.html)</small>中，有這些元素:</p>
-<pre><code>    總畫面:
-        配置面板:
-        工具欄:
-        adv畫面:
-            覆蓋:
-            選項:
+<p>在默認的adv畫面<small>(即 {librian路徑}/Librian本體/前端/adv.html)</small>中，有這些元素:</p>
+<pre><code>總畫面:
+    video:
+    配置面板:
+    工具欄:
+    adv畫面:
+        覆蓋:
+        選項:
+        主畫面:
             cg:
             bg:
             立繪:
@@ -651,7 +653,7 @@
                     話語:
                     話語框背景:
                 對話框背景:
-        提示:
+    提示:
 </code></pre>
 
 <p>把你的樣式寫進自定css裏以後，在工程啓動時，Librian會一併加載你的css。這樣一來樣式就應用了。   </p>
@@ -664,15 +666,15 @@
 </code></pre>
 
 <p>這樣一來，只有 <code>潘大爺</code> 的名字變成淺藍色。</p>
-<p><img alt="" src="bl.jpg" /></p>
+<p><img alt="" class="極" src="bl.jpg" /></p>
 <h2 id="_3">標題畫面</h2>
 <p>標題畫面是一個可以天馬行空地創作的html。不過爲了實現標題畫面的功能，還需要一點花樣。    </p>
 <p>在標題畫面加載時就會獲得一個 <code>山彥</code> 對象，它有一些在標題畫面用得上的方法。 <br />
 <small>(話說爲什麼是山彥？)</small></p>
 <p>像是這樣:</p>
-<pre><code class="html">    &lt;button click='山彥.開始()'&gt;
-        開始遊戲
-    &lt;/button&gt;
+<pre><code class="html">&lt;button click='山彥.開始()'&gt;
+    開始遊戲
+&lt;/button&gt;
 </code></pre>
 
 <p>方法包括: </p>
