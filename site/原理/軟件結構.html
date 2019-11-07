@@ -473,8 +473,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" title="大體" class="md-nav__link">
-    大體
+  <a href="#_2" title="簡介" class="md-nav__link">
+    簡介
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="運行簡要" class="md-nav__link">
+    運行簡要
   </a>
   
     <nav class="md-nav">
@@ -596,8 +603,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" title="大體" class="md-nav__link">
-    大體
+  <a href="#_2" title="簡介" class="md-nav__link">
+    簡介
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="運行簡要" class="md-nav__link">
+    運行簡要
   </a>
   
     <nav class="md-nav">
@@ -642,11 +656,16 @@
                 <h1 id="_1">軟件結構</h1>
 <p>這一章是給真正的程序員看的。<br />
 也許可以提高你的編程能力，但是對開發Galgame沒有什麼幫助。</p>
-<p>所以說不看也沒什麼關係，如果你也想開發Galgame引擎的話可以參考一下。不過等到時代改變以後，這些技術說不定也用不上了。</p>
+<p>所以說不看也沒什麼關係，如果你也想開發Galgame引擎的話可以參考一下。</p>
 <p>不過裏面也有一些隨性寫的部分，反正很快就過時了所以沒關係。</p>
-<h2 id="_2">大體</h2>
+<h2 id="_2">簡介</h2>
+<p>「Librian由Python和JavaScript編寫而成，基於CEFPython前端。」——首頁是這樣說的。</p>
+<p>Librian主程序是前後端分離的結構，類似一個在本地運行的網站。<br />
+後端運行在python環境中，前端運行在嵌入式的Chromium中，前後端通過cefpython提供的共享對象交互。</p>
+<p>使用python讀入數據、運行劇本，然後把畫面發送到前端，使用JavaScript繪製html畫面。</p>
 <p><img alt="結構.jpg" class="極" src="結構.jpg" />  </p>
 <p>按數據在各個功能間的流動畫了這樣一幅圖，大概就是這樣的意思了。</p>
+<h2 id="_3">運行簡要</h2>
 <h3 id="librian">Librian面板的部分</h3>
 <p>這個項目裏所有的exe都是假的，裏面的代碼都是靜態的。<br />
 無論是你生成的exe，還是Librian面板的exe，其內容都只有調用python執行py文件。</p>
