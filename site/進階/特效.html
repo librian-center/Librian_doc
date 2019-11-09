@@ -362,8 +362,8 @@
 
 
   <li class="md-nav__item">
-    <a href="畫面的定製.html" title="畫面的定製" class="md-nav__link">
-      畫面的定製
+    <a href="CSS與HTML.html" title="CSS與HTML" class="md-nav__link">
+      CSS與HTML
     </a>
   </li>
 
@@ -405,12 +405,25 @@
     使用特效
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" title="內置的特效" class="md-nav__link">
-    內置的特效
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="人物特效" class="md-nav__link">
+    人物特效
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dom" title="DOM對象特效" class="md-nav__link">
+    DOM對象特效
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -422,15 +435,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" title="畫面元素的特效" class="md-nav__link">
-    畫面元素的特效
+  <a href="#_5" title="注意" class="md-nav__link">
+    注意
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" title="注意" class="md-nav__link">
-    注意
+  <a href="#_6" title="內置的特效" class="md-nav__link">
+    內置的特效
   </a>
   
 </li>
@@ -608,12 +621,25 @@
     使用特效
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" title="內置的特效" class="md-nav__link">
-    內置的特效
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="人物特效" class="md-nav__link">
+    人物特效
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dom" title="DOM對象特效" class="md-nav__link">
+    DOM對象特效
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -625,15 +651,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" title="畫面元素的特效" class="md-nav__link">
-    畫面元素的特效
+  <a href="#_5" title="注意" class="md-nav__link">
+    注意
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" title="注意" class="md-nav__link">
-    注意
+  <a href="#_6" title="內置的特效" class="md-nav__link">
+    內置的特效
   </a>
   
 </li>
@@ -656,64 +682,76 @@
                 
                 
                 <h1 id="_1">特效</h1>
-<p>這一節需要用到css。</p>
+<p>這一節需要用到CSS。</p>
+<p>也需要你掌握前一節的內容。</p>
 <h2 id="_2">使用特效</h2>
-<p>Librian使用css來實現特效和動作。</p>
+<h3 id="_3">人物特效</h3>
 <pre><code>潘大爺 [灰]「什麼情況！」
 </code></pre>
-<p><img alt="1" class="極" src="1.jpg" />   </p>
+
 <p>這裏的 <code>灰</code> 就是特效。 <br />
-在爲人物添加特效時，添加一個用方括號 <code>[]</code> 圈住的特效名就可以了。</p>
-<h2 id="_3">內置的特效</h2>
-<p><strong>灰</strong> <br />
-使目標變成灰色(去除飽和度)。 <br />
-<strong>透明</strong> <br />
-使目標變得透明(施加一半的透明度)。 <br />
-<strong>淡入</strong> <br />
-在出現時使用動畫，短暫的漸變。 <br />
-<strong>下入</strong> <br />
-在出現時使用動畫，短暫的從下方的漸變。   </p>
+使用一個用方括號 <code>[]</code> 圈住特效名來爲人物添加特效。</p>
+<p>如果你忘記了語法，可以倒回去看 <a href="../用戶指南/劇本寫法.html">用戶指南/劇本寫法</a>。</p>
+<h3 id="dom">DOM對象特效</h3>
+<pre><code>&gt; EF adv畫面 灰
+</code></pre>
+
+<p>爲 <code>id='adv畫面'</code> 的元素設置特效「灰」。<br />
+在應用之後整個場景都會變成灰的。</p>
+<p>這是樣例效果，分別是原本、人物特效、DOM對象特效適用的結果。</p>
+<p><img alt="樣例.webp" class="極" src="樣例.webp" /></p>
 <h2 id="_4">定義特效</h2>
-<p>首先，在上個章節 <a href="畫面的定製.html">進階/畫面的定製</a> 中指定「自定css」後，向css中添加類。 <br />
-<small>( <code>透明</code> 本應是內置的特效，這裏先假裝還沒有內置，算你自己寫出來的吧)</small></p>
-<pre><code>    .透明{
-        opacity:0.5;
-    }
+<p>Librian使用CSS來實現特效，每個特效都會被渲染爲元素的 <code>特效</code> 屬性。</p>
+<p>首先，在上個章節 <a href="CSS與HTML.html">進階/CSS與HTML</a> 中指定「自定css」後，向你的CSS添加屬性選擇器。   </p>
+<p>我們以實現一個 <code>喘氣</code> 特效爲例，用 <code>keyframes</code> 和 <code>animation</code> 屬性，讓特效成爲動畫——</p>
+<pre><code class="css">@-webkit-keyframes _喘氣{
+    0%{transform: translateY(0px);}
+    50%{transform: translateY(4px);}
+    100%{transform: translateY(0px);}
+}
+[特效~=喘氣]{
+    animation:_喘氣 0.7s linear infinite;
+}
 </code></pre>
 
-<p>然後在人物處調用: </p>
-<pre><code>    潘大爺 [透明]「相位轉移！」
+<p>然後在人物處應用: </p>
+<pre><code>潘大爺 [喘氣](大笑)「心靈信標就在這裏了。」
 </code></pre>
 
-<p><img alt="2" class="極" src="2.jpg" /></p>
-<p>動作也是一樣的，只要先定義幀然後用animation屬性就行了。</p>
-<pre><code>    @keyframes _淡入{
-        0%{opacity:0;}
-        100%{opacity:1;}
-    }
-    .淡入{
-        animation:_淡入 0.6s;
-        animation-fill-mode:forwards;
-    }
-</code></pre>
-
-<h2 id="_5">畫面元素的特效</h2>
-<pre><code>    &gt; EF bg 灰
-</code></pre>
-
-<p>爲html元素「bg」設置特效「灰」，在應用之後所有的背景都會變成灰色的。</p>
-<pre><code>    &gt; EF adv畫面 灰
-</code></pre>
-
-<p>爲整個畫面設置特效「灰」，適用於過去的記憶等場景。  <br />
-<img alt="3" class="極" src="3.jpg" /></p>
-<p>如果不指定特效就會把原有的特效清除。 <br />
-元素的特效和立繪的特效是可以通用的。 <br />
-此外，也可以往元素上套用動作特效<small>(如果確實有必要的話)</small>。</p>
-<p>關於adv畫面中元素的層級，參考<a href="畫面的定製.html">畫面的定製</a>。</p>
-<h2 id="_6">注意</h2>
-<p>引擎支持的css和chrome是相同的。如果你發現你設置的特效沒有起作用的話，可以先檢查一下chrome是否支持。</p>
-<p><small>(順便吐槽一下css的背投濾鏡感覺很容易實現嘛爲什麼默認不支持的……還有爲什麼ps裏明明有智能濾鏡卻沒有濾鏡調整圖層？)</small></p>
+<p><img alt="上下.webp" class="極" src="上下.webp" /><br />
+<small>(注意看這是動圖)</small></p>
+<p>大成功！</p>
+<h2 id="_5">注意</h2>
+<p>DOM對象特效是持續的。如果在語法中不指定特效，就會把原有的特效清除。   </p>
+<p>DOM對象的特效和立繪的特效不加區分，同一個CSS選擇器可以對兩者使用。</p>
+<h2 id="_6">內置的特效</h2>
+<p>基本上只做測試用，能派上用場的特效還得你自己寫。</p>
+<ul>
+<li>
+<dl>
+<dt>灰</dt>
+<dd>使目標變成灰色<small>(去除飽和度)</small>。   </dd>
+</dl>
+</li>
+<li>
+<dl>
+<dt>透明</dt>
+<dd>使目標變得透明<small>(施加一半的透明度)</small>。   </dd>
+</dl>
+</li>
+<li>
+<dl>
+<dt>淡入</dt>
+<dd>在出現時使用動畫，短暫的漸變。   </dd>
+</dl>
+</li>
+<li>
+<dl>
+<dt>下入</dt>
+<dd>在出現時使用動畫，短暫的從下方的漸變。   </dd>
+</dl>
+</li>
+</ul>
                 
                   
                 
@@ -734,7 +772,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="畫面的定製.html" title="畫面的定製" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="CSS與HTML.html" title="CSS與HTML" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -743,7 +781,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                畫面的定製
+                CSS與HTML
               </span>
             </div>
           </a>

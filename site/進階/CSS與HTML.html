@@ -38,7 +38,7 @@
     
     
       
-        <title>畫面的定製 - Librian中文文檔</title>
+        <title>CSS與HTML - Librian中文文檔</title>
       
     
     
@@ -77,7 +77,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../#_1" tabindex="1" class="md-skip">
+      <a href="../#csshtml" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -103,7 +103,7 @@
                 Librian中文文檔
               </span>
               <span class="md-header-nav__topic">
-                畫面的定製
+                CSS與HTML
               </span>
             
           
@@ -371,11 +371,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        畫面的定製
+        CSS與HTML
       </label>
     
-    <a href="畫面的定製.html" title="畫面的定製" class="md-nav__link md-nav__link--active">
-      畫面的定製
+    <a href="CSS與HTML.html" title="CSS與HTML" class="md-nav__link md-nav__link--active">
+      CSS與HTML
     </a>
     
       
@@ -389,22 +389,42 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#css" title="使用css" class="md-nav__link">
-    使用css
+  <a href="#css" title="使用CSS改變畫面外觀" class="md-nav__link">
+    使用CSS改變畫面外觀
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" title="利用動態類" class="md-nav__link">
-    利用動態類
+  <a href="#_1" title="動態屬性" class="md-nav__link">
+    動態屬性
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="樣例" class="md-nav__link">
+    樣例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_3" title="標題畫面" class="md-nav__link">
     標題畫面
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="注意" class="md-nav__link">
+    注意
   </a>
   
 </li>
@@ -590,22 +610,42 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#css" title="使用css" class="md-nav__link">
-    使用css
+  <a href="#css" title="使用CSS改變畫面外觀" class="md-nav__link">
+    使用CSS改變畫面外觀
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" title="利用動態類" class="md-nav__link">
-    利用動態類
+  <a href="#_1" title="動態屬性" class="md-nav__link">
+    動態屬性
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="樣例" class="md-nav__link">
+    樣例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_3" title="標題畫面" class="md-nav__link">
     標題畫面
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="注意" class="md-nav__link">
+    注意
   </a>
   
 </li>
@@ -627,65 +667,83 @@
               
                 
                 
-                <h1 id="_1">畫面的定製</h1>
-<p>這一節需要用到HTML和css。</p>
-<h2 id="css">使用css</h2>
-<p>如果想要改變adv畫面的表現，你可以指定額外的css文件。</p>
-<p>之前雖然說過在「工程配置.yaml」裏可以設置「自定css」，但是沒有說該怎麼寫。   </p>
-<p>在默認的adv畫面<small>(即 {librian路徑}/Librian本體/前端/adv.html)</small>中，有這些元素:</p>
-<pre><code>總畫面:
-    video:
-    配置面板:
-    工具欄:
-    adv畫面:
-        覆蓋:
-        選項:
-        主畫面:
-            cg:
-            bg:
-            立繪:
-            對話歷史:
-            對話框:
-                名字框:
-                    名字:
-                    名字框背景:
-                話語框:
-                    話語:
-                    話語框背景:
-                對話框背景:
-    提示:
-</code></pre>
-
-<p>把你的樣式寫進自定css裏以後，在工程啓動時，Librian會一併加載你的css。這樣一來樣式就應用了。   </p>
-<h2 id="_2">利用動態類</h2>
-<p>在演出過程中，對話框會被動態地附上帶有人名的類，即 <code>class="人物--{人物名}"</code> 。</p>
-<p>可以利用這個類給不同的人設置效果。</p>
-<pre><code>.人物--潘大爺 #名字框{ 
-    color: #ccf;
+                <h1 id="csshtml">CSS與HTML</h1>
+<p>這一節需要用到CSS与HTML。</p>
+<h2 id="css">使用CSS改變畫面外觀</h2>
+<p>Librian的前端使用HTML實現，因此可以使用CSS來定製畫面。</p>
+<p>在「工程配置.yaml」裏有 <code>自定css</code> 項。這是一個<ruby>列表<rt>list</rt></ruby>，用於指定你的外部CSS文件所在的路徑。</p>
+<p>在遊戲進入ADV畫面後，這些CSS會一併適用於畫面元素。</p>
+<p>關於默認ADV畫面的DOM树，可以打開 <code>{librian路徑}/Librian本體/前端/adv.html</code> 來查看。</p>
+<p>此外，在遊戲中右鍵菜單是禁用的，但是你仍可以在默認標題畫面按右鍵呼出 Developer Tools 來調試。</p>
+<h2 id="_1">動態屬性</h2>
+<p>在演出過程中，各個類被動態地添加上屬性，你可以在CSS中對它們使用屬性選擇器。</p>
+<ul>
+<li>
+<dl>
+<dt><code>#對話框</code></dt>
+<dd>屬性 <code>對話類型</code> 隨着劇本被設置爲 <code>對話</code> 和 <code>旁白</code>。<br />
+屬性 <code>名字</code> 隨着劇本被設置爲說話者的名字。</dd>
+</dl>
+</li>
+<li>
+<dl>
+<dt><code>#總畫面</code></dt>
+<dd>屬性 <code>對話類型</code> 隨着配置面板的開關狀態設置爲 <code>on</code> 和 <code>off</code>。</dd>
+</dl>
+</li>
+<li>
+<dl>
+<dt><code>*</code></dt>
+<dd>屬性 <code>特效</code> 隨着劇本指定的被設置爲那個特效的名字。</dd>
+</dl>
+</li>
+</ul>
+<h3 id="_2">樣例</h3>
+<pre><code class="css">#對話框[名字=潘大爺] #名字框{ 
+    color: #ffc;
 }
 </code></pre>
 
-<p>這樣一來，只有 <code>潘大爺</code> 的名字變成淺藍色。</p>
-<p><img alt="" class="極" src="bl.jpg" /></p>
+<p>這是默認工程的一行代碼。<br />
+當 <code>潘大爺</code> 說話時，名字變爲亮黃色。</p>
 <h2 id="_3">標題畫面</h2>
-<p>標題畫面是一個可以天馬行空地創作的html。不過爲了實現標題畫面的功能，還需要一點花樣。    </p>
-<p>在標題畫面加載時就會獲得一個 <code>山彥</code> 對象，它有一些在標題畫面用得上的方法。 <br />
-<small>(話說爲什麼是山彥？)</small></p>
+<p>標題畫面是一個可以天馬行空地創作的HTML。不過爲了實現標題畫面的功能，還需要一點花樣。    </p>
+<p>在標題畫面加載時，它會在JavaScript層面收到一個來自後端的 <code>山彥</code> 對象。這是前端與後端通信的接口。 <br />
+它是全局的<small>(即<code>window.山彥</code>)</small>，包含一些方法，用來完成標題畫面的功能。   </p>
 <p>像是這樣:</p>
 <pre><code class="html">&lt;button click='山彥.開始()'&gt;
     開始遊戲
 &lt;/button&gt;
 </code></pre>
 
-<p>方法包括: </p>
+<p>在標題畫面，可用的接口僅有: </p>
 <ul>
-<li><code>山彥.開始()</code>    <br />
-  調用之後Librian開始讀取劇本，當前頁面由標題頁面轉到adv頁面。</li>
-<li><code>山彥.從title讀檔()</code>  <br />
-  讀檔，並在讀檔完成後轉到adv頁面。</li>
-<li><code>山彥.從劇本開始(劇本路徑)</code>  <br />
-  指定一個劇本的路徑，從這個劇本開始adv演出。</li>
+<li>
+<dl>
+<dt><code>山彥.開始()</code></dt>
+<dd>開始遊戲。
+調用之後Librian後端開始讀取默認劇本，並由標題頁面轉到ADV頁面。</dd>
+</dl>
+</li>
+<li>
+<dl>
+<dt><code>山彥.從title讀檔()</code></dt>
+<dd>讀檔，之後開始遊戲。<br />
+由後端提供存檔路徑選擇，並在讀檔完成後轉到ADV頁面。</dd>
+</dl>
+</li>
+<li>
+<dl>
+<dt><code>山彥.從劇本開始(劇本路徑)</code></dt>
+<dd>從一個指定的劇本開始遊戲。
+Librian後端加載指定劇本，之後轉到ADV頁面。</dd>
+</dl>
+</li>
 </ul>
+<h2 id="_4">注意</h2>
+<p>Librian的前端由嵌入Chromium實現，因此支持的CSS和Chrome是幾乎相同的。<br />
+如果你發現你設置的CSS沒有起作用的話，可以先檢查一下本地的Chrome是否支持。</p>
+<p>此外，Chromium的版本號是66<small>(cefpython沒更新我也沒辦法)</small>，相當於2018年4月的瀏覽器，因此不能支持backdrop-filter。</p>
                 
                   
                 
