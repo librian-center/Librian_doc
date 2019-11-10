@@ -694,24 +694,23 @@
 在輪到角色說話的時候，他所對應的鏡頭就會生效，那個鏡頭中所有角色的立繪都會按鏡頭中的位置出現在場上。</p>
 <p>如果下次重新設置一個包含相同角色的鏡頭時，那個角色就不再使用舊鏡頭了。</p>
 <h2 id="_3">語法</h2>
-<pre><code>+ {潘大爺: [100, 100], 林梓雨: [500, 100, 1.2]}
+<pre><code>+ {舟舟: [100, 0, 1], 潘大爺: [550, 0, 1]}
 </code></pre>
 
-<p>這是一個普通的多人鏡頭，不僅確定了 <code>潘大爺</code> 和 <code>林梓雨</code> 的位置，而且綁定了兩人。當其中一人在對話中出現時，另一人也會隨之出現。  </p>
+<p>這是一個普通的多人鏡頭，不僅確定了 <code>舟舟</code> 和 <code>潘大爺</code> 的位置，而且綁定了兩人。當其中一人在對話中出現時，另一人也會隨之出現。  </p>
 <p>這個語法的要點就是那對 <code>花括號</code> 裏有數個 <code>角色: 位置</code> 的組合，然後中間用 <code>逗號</code> 隔開。<br />
 明白這點的話你就可以輕鬆地把它擴展成三人以上的鏡頭。<br />
 <small>如果你知道JSON，顯然……這個語法只是在 <code>+</code> 後擺上一個JSON。</small></p>
 <p>第三个参数可以省略，这样就是保持原本大小<small>(即1倍縮放)</small>。</p>
 <p>像是這樣的效果: 
-<img alt="圖2" class="極" src="樣例_東方.jpg" /><br />
-<small>(我上哪去找林梓雨……姑且用可愛的女孩子湊個數吧)</small></p>
+<img alt="圖2" class="極" src="樣例.jpg" />  </p>
 <h3 id="_4">簡化鏡頭</h3>
-<pre><code>+ [潘大爺, 林梓雨]
+<pre><code>+ [舟舟, 潘大爺]
 </code></pre>
 
 <p>這是推薦的簡化寫法。<br />
 <small>(輕鬆多了！)</small></p>
-<p>同樣是雙人鏡頭，這會直接把 <code>潘大爺</code> 和 <code>林梓雨</code> 放在他們的默認位置上。在項目設置中設定「默認位置」。</p>
+<p>同樣是雙人鏡頭，這會直接把 <code>舟舟</code> 和 <code>潘大爺</code> 放在他們的默認位置上。在項目設置中設定「默認位置」。</p>
 <h3 id="_5">鏡頭解除</h3>
 <p>有時候我們希望人物對話時顯示名字，但不顯示立繪，可以: </p>
 <pre><code>- 潘大爺
@@ -723,9 +722,9 @@
 <small>(在意名字你就輸了)</small></p>
 <pre><code>潘大爺 「你們又把系統更新了嗎？」
 + [潘大爺, 林梓雨]
-+ [校長, 張主任]
++ [舟舟, 張主任]
 林梓雨 「欸，沒聽說啊？」
-校長 「啊啊，我昨天看到路上的〇學生就順便把系統更新了。」
+舟舟 「啊啊，我昨天看到路上的〇學生就順便把系統更新了。」
 張主任 「話說系統和〇學生有什麼關係……」
 潘大爺 「怪不得我這裏連不上了……」
 </code></pre>
@@ -738,15 +737,15 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;林梓雨  <br />
 「欸，沒聽說啊？」 <br />
 <small>( <strong>潘大爺</strong> 的立繪移動到左側，<strong>林梓雨</strong> 的立繪出現在右側。)</small></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;校長  <br />
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;舟舟  <br />
 「啊啊，我昨天看到路上的〇學生就順便把系統更新了。」 <br />
-<small>( <strong>潘大爺</strong> 和 <strong>林梓雨</strong> 的立繪消失，<strong>校長</strong> 和 <strong>張主任</strong> 出現在畫面的左右兩側)</small></p>
+<small>( <strong>潘大爺</strong> 和 <strong>林梓雨</strong> 的立繪消失，<strong>舟舟</strong> 和 <strong>張主任</strong> 出現在畫面的左右兩側)</small></p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;張主任  <br />
 「話說系統和〇學生有什麼關係……」 <br />
 <small>(鏡頭和立繪沒有變化)</small></p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;潘大爺  <br />
 「怪不得我這裏連不上了……」 <br />
-<small>( <strong>校長</strong> 和 <strong>張主任</strong> 的立繪消失，<strong>潘大爺</strong> 和 <strong>林梓雨</strong> 出現在畫面的左右兩側)</small></p>
+<small>( <strong>舟舟</strong> 和 <strong>張主任</strong> 的立繪消失，<strong>潘大爺</strong> 和 <strong>林梓雨</strong> 出現在畫面的左右兩側)</small></p>
 </blockquote>
 <h2 id="_7">注意</h2>
 <ol>
@@ -781,6 +780,11 @@
 + [林梓雨]
 林梓雨 「潘大爺走了……我要偷偷把他的期末成績改掉。」
 </code></pre>
+</li>
+<li>
+<p>在樣例 <code>{舟舟: [100, 0, 1], 潘大爺: [550, 0, 1]}</code> 中，兩個人不一樣高的問題——舟舟距離上邊界的距離是0，爲什麼不是頂着天花板。</p>
+<p>PSD文件中已有預留邊距，這也是實現不同身高的辦法。實際上div的位置的確是 <code>[100, 0]</code> 和 <code>[550, 0]</code>，在 Developer Tools 看起來像是這樣——</p>
+<p><img alt="樣例提示.jpg" class="極" src="樣例提示.jpg" /></p>
 </li>
 </ol>
                 
