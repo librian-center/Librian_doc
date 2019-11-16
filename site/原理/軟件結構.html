@@ -20,7 +20,7 @@
               repo: 'Librian-gitalk',
               owner: 'Librian-gitalk',
               admin: ['RimoChan'],
-              id: location.pathname.split('/').pop(),
+              id: decodeURI(location.pathname.split('/').pop()),
               language: 'zh-TW',
               createIssueManually: true,
             })
