@@ -217,18 +217,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../第一次使用/10分鐘製作《哈姆雷特》.html" title="10分鐘製作《哈姆雷特》" class="md-nav__link">
-      10分鐘製作《哈姆雷特》
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -782,19 +770,20 @@
 <ul>
 <li>語法:</li>
 </ul>
-<pre><code>    &gt; BG {文件名} {淡入時間=1} {漸變方法='_淡出'}
+<pre><code>&gt; BG {文件名} {淡入時間=1} {位置=&quot;0% 0%&quot;} {漸變方法='_淡出'}
 </code></pre>
 
 <ul>
 <li>樣例:</li>
 </ul>
-<pre><code>    &gt; BG 魔王城內
-    &gt; 背景 染紅的街道.png
-    &gt; BG 潘大爺辦公室 1.5
+<pre><code>&gt; BG 魔王城內
+&gt; 背景 染紅的街道.png
+&gt; BG 潘大爺神殿 1.5 &quot;50% 50%&quot;
 </code></pre>
 
 <blockquote>
-<p><ruby>背景圖片<rt>BG</rt></ruby>的漸變方法是一個css動畫名，在「html\樣式\特效.css」中。</p>
+<p>漸變方法參數是由對應的CSS屬性指定的，在「前端/樣式/特效.css」中實現了幾個預置的漸變。</p>
+<p>位置參數就是background-position。</p>
 <p>如果不指定擴展名，則會按 webp, png, jpg 的順序挑選存在文件的擴展名。</p>
 <p><ruby>背景圖片<rt>BG</rt></ruby>文件不存在的場合，背景會變成黑色，控制檯會出現警告。</p>
 </blockquote>
@@ -804,15 +793,15 @@
 <ul>
 <li>語法:</li>
 </ul>
-<pre><code>    &gt; BGM {文件名} {音量=1}
+<pre><code>&gt; BGM {文件名} {音量=1}
 </code></pre>
 
 <ul>
 <li>樣例:</li>
 </ul>
-<pre><code>    &gt; BGM 愉快的音樂.mp3
-    &gt; 背景音樂 不愉快的音樂 0.5
-    &gt; BGM None
+<pre><code>&gt; BGM 愉快的音樂.mp3
+&gt; 背景音樂 不愉快的音樂 0.5
+&gt; BGM None
 </code></pre>
 
 <blockquote>
@@ -826,18 +815,18 @@
 <ul>
 <li>語法:</li>
 </ul>
-<pre><code>    &gt; CG {文件名=None} {淡入時間=1} {漸變方法='_淡出'}
+<pre><code>&gt; CG {文件名=None} {淡入時間=1} {漸變方法='_淡出'}
 </code></pre>
 
 <ul>
 <li>樣例:</li>
 </ul>
-<pre><code>    &gt; CG 極夜大戰
-    &gt; CG
+<pre><code>&gt; CG 極夜大戰
+&gt; CG
 </code></pre>
 
 <blockquote>
-<p>CG的漸變方法是一個css動畫名，在「html/樣式/特效.css」中。</p>
+<p>漸變方法參數是由對應的CSS屬性指定的，在「前端/樣式/特效.css」中實現了幾個預置的漸變。</p>
 <p>如果不指定擴展名，則會按 webp, png, jpg 的順序挑選存在文件的擴展名。</p>
 <p>CG文件不存在的場合，控制檯會出現警告。</p>
 </blockquote>
@@ -846,13 +835,13 @@
 <ul>
 <li>語法:</li>
 </ul>
-<pre><code>    &gt; EF {元素ID} {特效名}
+<pre><code>&gt; EF {元素ID} {特效名}
 </code></pre>
 
 <ul>
 <li>樣例:</li>
 </ul>
-<pre><code>    &gt; EF bg 灰 
+<pre><code>&gt; EF bg 灰 
 </code></pre>
 
 <p>樣例使<ruby>背景圖片<rt>BG</rt></ruby>變得灰暗，需要參考 <a href="../進階/特效.html">進階/特效</a> 。</p>
@@ -861,14 +850,14 @@
 <ul>
 <li>語法:</li>
 </ul>
-<pre><code>    &gt; VIDEO {影片名} {可以跳過=False}
+<pre><code>&gt; VIDEO {影片名} {可以跳過=False}
 </code></pre>
 
 <ul>
 <li>樣例:</li>
 </ul>
-<pre><code>    &gt; VIDEO OP.webm
-    &gt; 視頻 ED.mp4 True
+<pre><code>&gt; VIDEO OP.webm
+&gt; 視頻 ED.mp4 True
 </code></pre>
 
 <blockquote>
@@ -881,18 +870,18 @@
 <ul>
 <li>語法:</li>
 </ul>
-<pre><code>    WRAP [{文字1},{跳轉文件1},{躍點1=None}] [{文字2},{跳轉文件2},{躍點2=None}] ... 
+<pre><code>WRAP [{文字1},{跳轉文件1},{躍點1=None}] [{文字2},{跳轉文件2},{躍點2=None}] ... 
 </code></pre>
 
 <ul>
 <li>樣例:</li>
 </ul>
-<pre><code>    &gt; WRAP [接受治療,壞結局.liber] [放棄治療,好結局.liber]
-    &gt; 快速選項 [上,H劇情.liber] [不上,正常劇情.liber,不H]
+<pre><code>&gt; WRAP [接受治療,壞結局.liber] [放棄治療,好結局.liber]
+&gt; 快速選項 [上,H劇情.liber] [不上,正常劇情.liber,不H]
 </code></pre>
 
 <p>對於這個例子:</p>
-<pre><code>    &gt; WRAP [接受治療,壞結局.liber] [放棄治療,好結局.liber] [蘿莉治療,一章.liber,原點]
+<pre><code>&gt; WRAP [接受治療,壞結局.liber] [放棄治療,好結局.liber] [蘿莉治療,一章.liber,原點]
 </code></pre>
 
 <p>會產生3個選項。 <br />
@@ -905,10 +894,12 @@
 <pre><code>&gt; BG 家裏.png
 &gt; BGM 打架的聲音.mp3
 </code></pre>
+
 <p>也可以寫成</p>
 <pre><code>&gt; BG('家裏.png')
 &gt; BGM('打架的聲音.mp3')
 </code></pre>
+
 <p>這些命令都可以直接寫成python語句，參數和原本的寫法是一樣的。 <br />
 因爲直接調用了 <code>eval</code> 所以其實可以調用系統函數……不過好在每句都使用獨立的運行環境，不會互相干擾。</p>
 <h2 id="_4">注意</h2>
