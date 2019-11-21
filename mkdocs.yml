@@ -18,12 +18,12 @@ nav:
   - 進階/特效.md
   - 進階/嵌入python.md
   - 進階/設計回想.md
-- 一些遺憾: 接下來要做的/一些遺憾.md
 - 實現與原理: 
   - 原理/軟件結構.md
   - 原理/編譯.md
 - 關於Librian: 
   - 關於Librian/關於Librian.md
+  - 關於Librian/一些遺憾.md
   - 關於Librian/使用許可.md
 theme:
     name: null
