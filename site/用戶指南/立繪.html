@@ -316,22 +316,22 @@
     準備立繪
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" title="準備文件" class="md-nav__link">
-    準備文件
-  </a>
-  
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" title="適用立繪" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="適用立繪" class="md-nav__link">
     適用立繪
   </a>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="額外功能" class="md-nav__link">
+    額外功能
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_5" title="固有縮放" class="md-nav__link">
@@ -628,22 +628,22 @@
     準備立繪
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" title="準備文件" class="md-nav__link">
-    準備文件
-  </a>
-  
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" title="適用立繪" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="適用立繪" class="md-nav__link">
     適用立繪
   </a>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="額外功能" class="md-nav__link">
+    額外功能
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_5" title="固有縮放" class="md-nav__link">
@@ -692,62 +692,73 @@
 <p>Librian使用自動化的立繪控制系統，你不需要對每句話指定立繪的位置。</p>
 <p>只需要花一點時間來準備你的立繪，就能體驗到高度自動化的立繪演出。</p>
 <h2 id="_2">準備立繪</h2>
-<pre><code>@潘大爺 + 西裝    
-潘大爺 (怒)「看在上帝的名分上！」
-潘大爺 (怒)「你們這些混帳玩意，早晚我要把你們統統開除！」
-</code></pre>
-
-<p>儘管穿着 <code>西裝</code> 的 <code>潘大爺</code> 以 <code>怒</code> 的表情怒斥着學生，但在你配置立繪文件之前，<code>潘大爺</code> 的立繪並不會出現在遊戲畫面上。</p>
-<h3 id="_3">準備文件</h3>
-<p>爲了顯示 <code>潘大爺</code> ，你可以簡單地在工程的立繪路徑下放置圖片「潘大爺.png」，這個文件就是 <code>潘大爺</code> 的人物立繪了。<br />
+<p>爲了在遊戲中顯示你的角色……還是以 <code>潘大爺</code> 舉例好了 ，你可以簡單地在工程的立繪路徑下放置圖片「潘大爺.png」，這個文件就是 <code>潘大爺</code> 的人物立繪了。<br />
 但如果這樣做， <code>潘大爺</code> 只能使用固定的表情和衣着。</p>
-<p>如果需要用到可變的表情和衣着的話，放的就不是png而是photoshop文件「潘大爺.psd」，然後在「映射.yaml」裏指定你的表情配置文檔。</p>
-<p>如果「潘大爺.psd」看起來像這樣:  <br />
-<img alt="圖3" class="極" src="圖3.png" /> <br />
-<small>(說明用……圖層是隨便畫的，你看那兩個表情是不是長得一樣)</small></p>
-<p>表情配置文檔看起來應該像這樣: </p>
+<p>如果需要用到可變的表情和衣着的話，放的就不是png而是photoshop文件「潘大爺.psd」，然後在「映射.yaml」裏指定你的差分配置。</p>
+<p>你可以任意準備一個包含立繪各個部分的PSD，只要有頭有身體就行了。<br />
+比如說像這樣——<br />
+<img alt="ps圖層1.png" class="極" src="ps圖層1.png" />   </p>
+<p>上面兩個圖層是潘大爺不同表情的眉毛和嘴，然後是眼睛，下面兩個圖層是身體。</p>
+<p>我們希望能組合出潘大爺的四種狀態，即兩種衣服搭配兩種表情:<br />
+<img alt="潘大爺排列組合.jpg" class="極" src="潘大爺排列組合.jpg" />  </p>
+<p>配置文檔看起來應該像這樣:  </p>
 <pre><code class="yaml">潘大爺:
     衣:
         _默認:
-            - 衣/制服
-        常服:
-            - 衣/常服
+            - 通常
+        裸體:
+            - 裸體
     顏: 
         _默認:
-            - 顏/通常
-        笑:
-            - 顏/笑
-        怒:
-            - 顏/怒
-            - 特效/怒氣特效
+            - 無表情
+            - 眼睛
+        大笑:
+            - 大笑
+            - 眼睛
 </code></pre>
 
-<p>首先，最外層的是人物名，也是psd的文件名——<code>潘大爺</code>。<br />
-第二層用來區分「衣」-&gt; 衣服，「顏」-&gt; 表情。 <br />
-第三層就是各個狀態的名稱了， <code>潘大爺 (怒)「看在上帝的名分上！」</code> 中的 <code>怒</code> 就是這裏的 <code>怒</code> 。 <br />
-第四層是每個狀態對應到psd文件中的哪些圖層。可以把圖層組用斜線寫出，來使用包含在圖層組裏的圖層——比如 <code>衣/制服</code> 即爲 <code>衣</code> 圖層組中的  <code>制服</code> 圖層。</p>
-<p>對了，圖層順序可以交換，不一定要和你準備的psd文件順序一致。</p>
-<p><small>(雖然說了很多，不過可能只看這個結構就知道是什麼意思了……)</small></p>
-<h3 id="_4">適用立繪</h3>
-<p>還是這個例子: </p>
-<pre><code>@潘大爺 + 制服    
-潘大爺 (怒)「看在上帝的名分上！」
+<p>yaml文檔以縮進來分級，解釋一下就是: </p>
+<dl>
+<dt>第一層是人物名 <code>潘大爺</code>。</dt>
+<dd>也是psd的文件名。  </dd>
+<dt>第二層是物件類別 <code>衣</code> 和 <code>顏</code>。</dt>
+<dd>用來區分「衣」-&gt; 衣服，「顏」-&gt; 表情。<br />
+<small>(我當時隨手打的鍵……)</small></dd>
+<dt>第三層是狀態名稱 <code>_默認</code> 、 <code>裸體</code> 等等。</dt>
+<dd>「衣」中的每一個是服裝狀態，「顏」中的每一個是表情狀態。<br />
+<code>潘大爺 (大笑)「哈哈哈！」</code> 中的 <code>大笑</code> 就是這裏的表情狀態。</dd>
+<dt>第四層是引用的圖層名。</dt>
+<dd>每個狀態對應到psd文件中的哪些圖層。 <br />
+橫線之後接一個空格，然後寫下這個狀態需要psd中的哪些圖層。</dd>
+</dl>
+<p>此外，如果你喜歡按圖層組整理圖層，像是這樣: <br />
+<img alt="ps圖層2.png" class="極" src="ps圖層2.png" /> <br />
+也可以把圖層組用斜線寫出，來使用包含在圖層組裏的圖層——比如 <code>群組 1/大笑</code> 即爲 <code>群組 1</code> 圖層組中的  <code>大笑</code> 圖層。</p>
+<h2 id="_3">適用立繪</h2>
+<p>又隨便寫了樣例: </p>
+<pre><code>@潘大爺 + 裸體    
+潘大爺 「我看看……」
+潘大爺 (大笑)「哈哈哈，你是豬嗎？」
 </code></pre>
 
-<p>如果你正確配置了立繪，那麼Librian在執行到 <code>「看在上帝的名分上！」</code> 的時候，會以這樣的順序進行處理——</p>
+<p>Librian是這樣處理的——</p>
 <ol>
 <li>
-<p>選擇衣服。選擇「潘大爺.psd」中  <code>衣</code> 圖層組的 <code>制服</code> 圖層。</p>
+<p><code>@潘大爺 + 裸體</code>。</p>
+<p>後端將 <code>潘大爺</code> 的衣服設置爲 <code>裸體</code>。</p>
 </li>
 <li>
-<p>選擇表情。選擇「潘大爺.psd」中  <code>顏</code> 圖層組的 <code>怒</code> 圖層，以及 <code>特效</code> 圖層組的 <code>怒氣特效</code>。</p>
+<p><code>潘大爺 「我看看……」</code> <small>(對話，沒有指定表情)</small>。</p>
+<p>後端將 <code>潘大爺</code> 的表情設置爲 <code>_默認</code> 。</p>
+<p>前端繪圖，此時 <code>潘大爺</code> 爲 <code>裸體+默認表情</code> 的狀態。因此從「潘大爺.psd」取得 <code>裸體</code> 、 <code>無表情</code> 、 <code>眼睛</code> 三個圖層，從下往上進行疊加。</p>
 </li>
 <li>
-<p>圖層疊加。把選擇的 <code>制服</code> <code>怒</code> <code>怒氣特效</code> 按從下往上的順序疊加。</p>
+<p><code>潘大爺 (大笑)「哈哈哈，你是豬嗎！」</code> <small>(對話，有表情)</small>。</p>
+<p>後端將 <code>潘大爺</code> 的表情設置爲 <code>_大笑</code> 。  </p>
+<p>前端繪圖，此時 <code>潘大爺</code> 爲 <code>裸體+大笑表情</code> 的狀態。因此從「潘大爺.psd」取得 <code>裸體</code> 、 <code>大笑</code> 、 <code>眼睛</code> 三個圖層，從下往上進行疊加。</p>
 </li>
 </ol>
-<p>最終表現爲一個穿着 <code>制服</code> ，表情爲 <code>怒</code>，且帶有 <code>怒氣特效</code> 的 <code>潘大爺</code>。</p>
-<p>自然，疊加位置是總是保持psd文件中圖層原本的相對位置。</p>
+<h2 id="_4">額外功能</h2>
 <h3 id="_5">固有縮放</h3>
 <p>在「映射.yaml」裏你可以對每個立繪指定一個固有縮放值，將立繪整體縮放一個數值。 <br />
 這個功能可能用於:   </p>
