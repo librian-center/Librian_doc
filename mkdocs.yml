@@ -45,7 +45,7 @@ markdown_extensions:
     - attr_list
     - def_list
 plugins:
-  - pdf-export:
-      combined: True
-      combined_output_path: ./Librian文檔.pdf
-      enabled_if_env: h
+    []
+#   - pdf-export:
+#       combined: True
+#       combined_output_path: ./Librian文檔.pdf

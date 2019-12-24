@@ -316,6 +316,33 @@
     準備立繪
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#png" title="單張png" class="md-nav__link">
+    單張png
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#psd" title="帶差分的psd" class="md-nav__link">
+    帶差分的psd
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#png_1" title="多張png模擬差分" class="md-nav__link">
+    多張png模擬差分
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -628,6 +655,33 @@
     準備立繪
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#png" title="單張png" class="md-nav__link">
+    單張png
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#psd" title="帶差分的psd" class="md-nav__link">
+    帶差分的psd
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#png_1" title="多張png模擬差分" class="md-nav__link">
+    多張png模擬差分
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -692,8 +746,12 @@
 <p>Librian使用自動化的立繪控制系統，你不需要對每句話指定立繪的位置。</p>
 <p>只需要花一點時間來準備你的立繪，就能體驗到高度自動化的立繪演出。</p>
 <h2 id="_2">準備立繪</h2>
-<p>爲了在遊戲中顯示你的角色……還是以 <code>潘大爺</code> 舉例好了 ，你可以簡單地在工程的立繪路徑下放置圖片「潘大爺.png」，這個文件就是 <code>潘大爺</code> 的人物立繪了。<br />
+<h3 id="png">單張png</h3>
+<p>以 <code>潘大爺</code> 舉例好了。</p>
+<p>你只要隨便找一張png圖片，把它改名成「潘大爺.png」，放進工程的立繪路徑。這個文件就是 <code>潘大爺</code> 的立繪了。<br />
 但如果這樣做， <code>潘大爺</code> 只能使用固定的表情和衣着。</p>
+<p><small>(帶通道的BMP已經過時了……)</small></p>
+<h3 id="psd">帶差分的psd</h3>
 <p>如果需要用到可變的表情和衣着的話，放的就不是png而是photoshop文件「潘大爺.psd」，然後在「映射.yaml」裏指定你的差分配置。</p>
 <p>你可以任意準備一個包含立繪各個部分的PSD，只要有頭有身體就行了。<br />
 比如說像這樣——<br />
@@ -719,21 +777,45 @@
 
 <p>yaml文檔以縮進來分級，解釋一下就是: </p>
 <dl>
-<dt>第一層是人物名 <code>潘大爺</code>。</dt>
-<dd>也是psd的文件名。  </dd>
+<dt>第一層是人物 <code>潘大爺</code>。</dt>
+<dd>它應當是對應的psd文件名。<br />
+也是人物在劇本中惟一的名字。  </dd>
 <dt>第二層是物件類別 <code>衣</code> 和 <code>顏</code>。</dt>
-<dd>用來區分「衣」-&gt; 衣服，「顏」-&gt; 表情。<br />
+<dd>它們只能是這兩個字。<br />
+用來區分「衣」-&gt; 衣服，「顏」-&gt; 表情。<br />
 <small>(我當時隨手打的鍵……)</small></dd>
 <dt>第三層是狀態名稱 <code>_默認</code> 、 <code>裸體</code> 等等。</dt>
-<dd>「衣」中的每一個是服裝狀態，「顏」中的每一個是表情狀態。<br />
-<code>潘大爺 (大笑)「哈哈哈！」</code> 中的 <code>大笑</code> 就是這裏的表情狀態。</dd>
+<dd>它們可以隨你的喜好命名。<br />
+「衣」中的每一個是服裝狀態，「顏」中的每一個是表情狀態。<br />
+<code>_默認</code> 一定要有，這是你沒有指定時的默認狀態。<br />
+<code>潘大爺 (大笑)「哈哈哈！」</code> 中的 <code>大笑</code> 就是這裏的表情狀態。  </dd>
 <dt>第四層是引用的圖層名。</dt>
-<dd>每個狀態對應到psd文件中的哪些圖層。 <br />
+<dd>它們應當與對應的圖層名一致。<br />
+每一行都會選取psd文件中那個同名圖層。<br />
 橫線之後接一個空格，然後寫下這個狀態需要psd中的哪些圖層。</dd>
 </dl>
 <p>此外，如果你喜歡按圖層組整理圖層，像是這樣: <br />
 <img alt="ps圖層2.png" class="極" src="ps圖層2.png" /> <br />
 也可以把圖層組用斜線寫出，來使用包含在圖層組裏的圖層——比如 <code>群組 1/大笑</code> 即爲 <code>群組 1</code> 圖層組中的  <code>大笑</code> 圖層。</p>
+<h3 id="png_1">多張png模擬差分</h3>
+<p>有時你會在網路上找到這樣的立繪包，裏面的立繪除了表情都長得一樣。</p>
+<p>像是這樣: </p>
+<p><img alt="潘大爷冗余.png" src="潘大爷冗余.png" /></p>
+<p>你需要將他們拼接成一張psd。把所有的圖片全都塞進一張psd裏就行了。</p>
+<p>你的配置文檔應該像這樣:  </p>
+<pre><code class="yaml">潘大爺:
+    衣:
+        _默認: []
+    顏:
+        _默認:
+            - 1
+        大笑:
+            - 2
+        嚴肅:
+            - 3
+</code></pre>
+
+<p>然後你就可以像使用普通的psd立繪一樣使用它了。</p>
 <h2 id="_3">適用立繪</h2>
 <p>又隨便寫了樣例: </p>
 <pre><code>@潘大爺 + 裸體    
