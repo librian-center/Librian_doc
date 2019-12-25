@@ -271,8 +271,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../用戶指南/劇本功能.html" title="劇本功能" class="md-nav__link">
-      劇本功能
+    <a href="../用戶指南/劇本命令.html" title="劇本命令" class="md-nav__link">
+      劇本命令
     </a>
   </li>
 
@@ -888,8 +888,10 @@ choice(
 <p>爲什麼分了三行…… <code>lambda</code> 是什麼玩意……爲什麼單獨定義了函數 <code>f</code> …… <br />
 好像對於沒python的小夥伴來說太難了點，要解釋的話甚至還設計到了語句和表達式的關係…… <br />
 只是依葫蘆畫瓢的話會比較好嗎，不過搞不清楚什麼時候填 <code>lambda</code> 的話就連依葫蘆畫瓢都做不到了……都是不學習的錯<small>(傲嬌臉)</small>！</p>
-<p>在 <a href="../用戶指南/劇本功能.html">劇本功能</a> 中說過的 <code>WARP</code>，實際上是 <code>choice</code> 和 <code>push</code> 的語法糖。   </p>
-<pre><code>WARP [接受治療,壞結局.liber] [放棄治療,好結局.liber] [蘿莉治療,一章.liber,原點]
+<p>在 <a href="../用戶指南/劇本寫法.html">劇本寫法</a> 中說過的 <code>? 〇〇 -&gt; 〇〇</code>，實際上是 <code>choice</code> 和 <code>call</code> 的語法糖。   </p>
+<pre><code class="liber">? 接受治療 -&gt; 壞結局.liber
+? 放棄治療 -&gt; 好結局.liber
+? 蘿莉治療 -&gt; 一章.liber, 原點
 </code></pre>
 
 <p>相當於</p>
@@ -1016,7 +1018,7 @@ adv_end()
 
 <h3 id="gotocall">goto/call</h3>
 <p><code>goto</code> 跳轉到另一個路徑爲 <code>path</code> 的劇本<small>（默认是自身）</small>的一個躍點的位置。如果躍點 <code>tag</code> 不指定就會跳到開頭。 <br />
-<code>push</code> 的功能是 <code>goto</code> 加上目標劇本演出結束後回到調用處。   </p>
+<code>call</code> 的功能是 <code>goto</code> 加上目標劇本演出結束後回到調用處。   </p>
 <pre><code>goto(path='第9章.liber', lable='躍點A')
 </code></pre>
 <p>在目標文件裏要有對應的躍點。</p>
