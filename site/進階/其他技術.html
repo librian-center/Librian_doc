@@ -57,7 +57,7 @@
     
     
       
-        <title>設計回想 - Librian中文文檔</title>
+        <title>其他技術 - Librian中文文檔</title>
       
     
     
@@ -122,7 +122,7 @@
                 Librian中文文檔
               </span>
               <span class="md-header-nav__topic">
-                設計回想
+                其他技術
               </span>
             
           
@@ -414,11 +414,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        設計回想
+        其他技術
       </label>
     
-    <a href="設計回想.html" title="設計回想" class="md-nav__link md-nav__link--active">
-      設計回想
+    <a href="其他技術.html" title="其他技術" class="md-nav__link md-nav__link--active">
+      其他技術
     </a>
     
       
@@ -432,15 +432,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" title="劇本文件的假設" class="md-nav__link">
-    劇本文件的假設
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" title="設置回想頁面" class="md-nav__link">
-    設置回想頁面
+  <a href="#_2" title="設計回想" class="md-nav__link">
+    設計回想
   </a>
   
 </li>
@@ -590,15 +583,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" title="劇本文件的假設" class="md-nav__link">
-    劇本文件的假設
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" title="設置回想頁面" class="md-nav__link">
-    設置回想頁面
+  <a href="#_2" title="設計回想" class="md-nav__link">
+    設計回想
   </a>
   
 </li>
@@ -620,32 +606,21 @@
               
                 
                 
-                <h1 id="_1">設計回想</h1>
-<p>這一節需要用到HTML。</p>
-<p>雖然Librian沒有提供「場景回想」之類的功能，不過自己實現起來也很容易。</p>
-<p>接下來，我們通過一個實例來瞭解如何製作場景回想。</p>
-<h2 id="_2">劇本文件的假設</h2>
-<p>我們假設你的劇本文件包括以下場景: </p>
-<blockquote>
-<p>1-1 原點.liber <br />
-1-2 約會.liber <br />
-1-3 kiss.liber <br />
-2-1 帶回家.liber <br />
-2-2 枕頭大戰.liber   </p>
-</blockquote>
-<p><small>(這什麼東西我自己寫的都想笑了)</small></p>
-<p>需要回想的場景爲 <code>1-3 kiss.liber</code> 和 <code>2-2 枕頭大戰.liber</code>。   </p>
-<h2 id="_3">設置回想頁面</h2>
-<p>首先你應當創建一個回想的HTML頁面——需要你使用基本的HTML技術製作一個簡單的網頁。 <br />
-這個頁面應當和標題畫面連接，可以從標題跳轉過來，也可以按返回按鈕跳轉回標題。 <br />
-<small>(當然如果你能把這個做成標題頁面的一部分就更好了)</small></p>
-<p>在回想頁面上放置兩張圖片，分別爲「kiss」和「枕頭大戰」的CG。   </p>
-<p>這樣一來，你就有了一個華而不實的回想頁面。 <br />
-接下來要爲圖片添加方法，使得它們被點擊時，演出系統從對應的劇本進入。</p>
-<p>在回想頁面中，對「kiss」的CG添加onclick <code>從劇本開始('1-3 蘿莉H.liber')</code> 。 <br />
-在回想頁面中，對「枕頭大戰」的CG添加onclick <code>從劇本開始('2-2 蘿莉再H.liber')</code> 。<br />
-這個函數可以在<a href="CSS與HTML.html">CSS與HTML</a>中找到。</p>
-<p>這樣就足夠完成基本的回想功能了。</p>
+                <h1 id="_1">其他技術</h1>
+<p>有時候也許需要用到一些高級的功能，似乎又找不到……</p>
+<p>沒關係，我會教你自己寫。</p>
+<h2 id="_2">設計回想</h2>
+<p>你可以試着爲你的遊戲添加一個回想畫面。</p>
+<p>首先，你得使用自定的標題畫面，接下來新建一個HTML文件，你可以叫他 <code>回想.html</code> 。</p>
+<p>在標題畫面裏加上一個按鈕，來跳轉到回想畫面。你可以直接寫成 <code>&lt;a href='回想.html'&gt;</code> ，也可以寫成一整個頁面(SPA)。</p>
+<p>接下來，你可以隨意地佈置你的回想頁面了。把CG預覽圖都放上去吧，它看起來應該會變成這樣——</p>
+<p><img alt="回想.jpg" class="極" src="回想.jpg" /></p>
+<p>我們假設有兩個要回想的劇本，分別是 <code>1_在中庭.liber</code> 和 <code>2_在天台.liber</code>。</p>
+<p>接下來，對兩個img綁定點擊事件來進入劇本，比如這樣寫——</p>
+<pre><code class="html">&lt;img src='./2.jpg' onclick='山彥.從劇本開始(&quot;2_在天台.liber&quot;)'/&gt;
+</code></pre>
+
+<p>這樣一來，點擊就能跳轉到對應的劇本，回想功能就做好了。</p>
                 
                   
                 
