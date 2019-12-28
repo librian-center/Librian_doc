@@ -795,18 +795,18 @@
 <h3 id="cg">CG</h3>
 <p><code>CG</code> 進入CG模式並立即使用指定的CG。</p>
 <p>在CG模式下，CG佔據整個畫面，<ruby>立繪<rt>char</rt></ruby>和<ruby>背景圖片<rt>BG</rt></ruby>也會被擋住。 <br />
-不指定參數會解除CG。   </p>
+如果指定爲 <code>None</code>，會解除CG。   </p>
 <ul>
 <li>語法:</li>
 </ul>
-<pre><code>&gt; CG {文件名=None} {淡入時間=1} {漸變方法='_淡出'}
+<pre><code>&gt; CG {文件名} {淡入時間=1} {漸變方法='_淡出'}
 </code></pre>
 
 <ul>
 <li>樣例:</li>
 </ul>
 <pre><code>&gt; CG 極夜大戰
-&gt; CG
+&gt; CG None
 </code></pre>
 
 <blockquote>
