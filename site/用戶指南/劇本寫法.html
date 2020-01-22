@@ -324,8 +324,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#html" title="在對話中加入HTML" class="md-nav__link">
-    在對話中加入HTML
+  <a href="#html" title="在文本中加入HTML" class="md-nav__link">
+    在文本中加入HTML
   </a>
   
 </li>
@@ -445,15 +445,15 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#_19" title="「```」" class="md-nav__link">
-    「```」
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" title="嵌入代碼" class="md-nav__link">
+    嵌入代碼
+  </a>
   
 </li>
       
@@ -789,8 +789,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#html" title="在對話中加入HTML" class="md-nav__link">
-    在對話中加入HTML
+  <a href="#html" title="在文本中加入HTML" class="md-nav__link">
+    在文本中加入HTML
   </a>
   
 </li>
@@ -910,15 +910,15 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#_19" title="「```」" class="md-nav__link">
-    「```」
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" title="嵌入代碼" class="md-nav__link">
+    嵌入代碼
+  </a>
   
 </li>
       
@@ -989,16 +989,16 @@
 <p>相比之下少了後面的方引號內的內容。 <br />
 這不會作爲 <code>潘大爺</code> 說的一句話來處理，也不需要玩家點擊來跳過，但是會把鏡頭指向 <code>潘大爺</code> 並改變潘大爺的表情和特效。</p>
 <p>關於鏡頭，參考 <a href="立繪.html">用戶指南/立繪</a>。</p>
-<h3 id="html">在對話中加入HTML</h3>
-<p>對話中可以自由地嵌入HTML來增強表現力，html也會渲染到畫面中。</p>
-<pre><code>幼馴染 「&lt;small&gt;不是特意給你做的&lt;/small&gt;」
+<h3 id="html">在文本中加入HTML</h3>
+<p>文本中可以自由地嵌入HTML來增強表現力，HTML也會渲染到畫面中。</p>
+<pre><code>舟舟 「&lt;small&gt;不是特意給你做的&lt;/small&gt;」
 </code></pre>
 <p>顯示的效果大概是這樣:    </p>
 <blockquote>
-<p>&nbsp;&nbsp;&nbsp;幼馴染  <br />
+<p>&nbsp;&nbsp;&nbsp;舟舟  <br />
 「<small>不是特意給你做的</small>」</p>
 </blockquote>
-<p><small>(這個地方原本寫的人物是潘大爺……人物崩壞真可怕……)</small></p>
+<p>你可以用這個功能搞出許多花樣，比如用 <code>&lt;br&gt;</code> 來實現多行旁白，用 <code>&lt;ruby&gt;</code> 來註出奇怪的讀音什麼的。</p>
 <h3 id="_7">關於引號</h3>
 <pre><code>潘大爺 “真是沒辦法呀。”
 </code></pre>
@@ -1029,6 +1029,8 @@
 <p>關於詳細的劇本功能介紹，參考<a href="劇本命令.html">劇本命令</a>。  </p>
 <h2 id="_10">快捷跳轉</h2>
 <h3 id="_11">「?」</h3>
+<p>你可以用問號表達式來快速地設置一組跳轉，它們的格式是 <code>? {選項} -&gt; {去哪裏}</code>。<br />
+每個選項被選擇後，就會跳到 <code>-&gt;</code> 所指定的劇本去。</p>
 <pre><code>&gt; BG 機房
 潘大爺 「我覺得你需要治療！」
 ? 接受治療 -&gt; 壞結局.liber
@@ -1036,8 +1038,6 @@
 </code></pre>
 
 <p><img alt="治療.jpg" class="極" src="治療.jpg" /></p>
-<p>你可以用問號表達式來快速地設置一組跳轉，它們的格式是 <code>? {選項} -&gt; {去哪裏}</code>。<br />
-每個選項被選擇後，就會跳到 <code>-&gt;</code> 所指定的劇本去。  </p>
 <p>跳轉的目標位置可以是一個劇本的文件名，也可以是在文件名後加上逗號來跳轉到其中的躍點，比如 <code>劇本.liber, H的部分</code>。<br />
 關於躍點，參考下面的「*」。<br />
 <small>(我猜你能明白我在說什麼……)</small></p>
@@ -1097,25 +1097,24 @@
 =========================第一章.png
 </code></pre>
 
-<h3 id="_19">「```」</h3>
-<p>三個反引號(是tab上面和波浪線在一起的鍵)。</p>
-<p>用一對的<code>```</code>包圍你插入的代碼，可以使用python或javascript。 <br />
-劇本執行到這個地方的時候，代碼會像真正的代碼一樣運行。</p>
-<p>不指定代碼類型，就當作是python代碼了。</p>
-<pre><code>import os
-os.system('shutdown -s')
-# 會把電腦關機，所以不要自己去試
+<h2 id="_19">嵌入代碼</h2>
+<p>你還可以使用 <code>```</code> 三個反引號在劇本裏直接嵌入程式代碼。<br />
+<small>(是tab上面和波浪線在一起的鍵)</small></p>
+<p>可以使用的語言包括Python、JavaScript、HTML。</p>
+<p>劇本執行到嵌入代碼的地方的時候，代碼就會運行。<br />
+Python會在後端運行，JavaScript會在前端運行，HTML會直接渲染在畫面上。</p>
+<pre><code>```html
+&lt;img src="https://librian.it/圖/librian.png" 
+  style="position:absolute; top:100px; left:420px;" /&gt;
+```
+潘大爺 「這不是把我的頭都擋住了嘛！」
 </code></pre>
-
-<p>或者插入javascript<small>(要是寫出「插入JS」就會變得很H)</small>: </p>
-<pre><code class="js">alert('快交錢纔能玩！')
-</code></pre>
-
-<p>也可以參考 <a href="../進階/嵌入python.html">進階/嵌入python</a>。</p>
+<p><img alt="html.jpg" class="極" src="html.jpg" /></p>
+<p>此外可以參考 <a href="../進階/嵌入python.html">進階/嵌入python</a>。</p>
 <h2 id="_20">語義着色</h2>
 <p>「資源」中贈送的sublime語義文件可以幫助你進行語義着色。 <br />
 在我這裏，着色後的劇本看起來就像這樣。 <br />
-<img alt="着色" class="極" src="着色.png" />
+<img alt="着色" class="極" src="着色.png" /><br />
 sublime真是太棒了！ <br />
 <small>(不過這個語義文件寫的很差)</small></p>
                 
