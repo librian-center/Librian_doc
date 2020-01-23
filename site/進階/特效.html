@@ -580,6 +580,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../關於Librian/關於技術選型.html" title="關於技術選型" class="md-nav__link">
+      關於技術選型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../關於Librian/一些遺憾.html" title="一些遺憾" class="md-nav__link">
       一些遺憾
     </a>
@@ -707,9 +719,10 @@
 在應用之後整個場景都會變成灰的。</p>
 <p>這是樣例效果，分別是原本、人物特效、DOM對象特效適用的結果。</p>
 <p><img alt="樣例.webp" class="極" src="樣例.webp" /></p>
+<p><small>(並不是你的視力有問題而是我偷偷調大了飽和度……)</small></p>
 <h2 id="_4">定義特效</h2>
 <p>Librian使用CSS來實現特效，每個特效都會被渲染爲元素的 <code>特效</code> 屬性。</p>
-<p>首先，在上個章節 <a href="CSS與HTML.html">進階/CSS與HTML</a> 中指定「自定css」後，向你的CSS添加屬性選擇器。   </p>
+<p>首先，在上個章節 <a href="CSS與HTML.html">CSS與HTML</a> 中指定「自定css」後，向你的CSS添加屬性選擇器。   </p>
 <p>我們以實現一個 <code>喘氣</code> 特效爲例，用 <code>keyframes</code> 和 <code>animation</code> 屬性，讓特效成爲動畫——</p>
 <pre><code class="css">@-webkit-keyframes _喘氣{
     0%{transform: translateY(0px);}

@@ -75,4 +75,6 @@ Librian的前端使用HTML實現，因此可以使用CSS來定製畫面。
 Librian的前端由嵌入Chromium實現，因此支持的CSS和Chrome是幾乎相同的。  
 如果你發現你設置的CSS沒有起作用的話，可以先檢查一下本地的Chrome是否支持。
     
-此外，Chromium的版本號是66<small>(cefpython沒更新我也沒辦法)</small>，相當於2018年4月的瀏覽器，因此不能支持backdrop-filter。
+此外，Chromium的版本號是66，相當於2018年4月的瀏覽器，因此不能支持backdrop-filter。
+
+<small>cefpython沒更新我也沒辦法(鴿子: 馬上就更新了！)</small>
