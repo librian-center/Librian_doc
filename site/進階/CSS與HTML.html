@@ -407,30 +407,31 @@
     動態屬性
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" title="樣例" class="md-nav__link">
-    樣例
-  </a>
-  
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#1" title="樣例1" class="md-nav__link">
+    樣例1
+  </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" title="標題畫面" class="md-nav__link">
+  <a href="#2" title="樣例2" class="md-nav__link">
+    樣例2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="標題畫面" class="md-nav__link">
     標題畫面
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" title="注意" class="md-nav__link">
+  <a href="#_3" title="注意" class="md-nav__link">
     注意
   </a>
   
@@ -640,30 +641,31 @@
     動態屬性
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" title="樣例" class="md-nav__link">
-    樣例
-  </a>
-  
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#1" title="樣例1" class="md-nav__link">
+    樣例1
+  </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" title="標題畫面" class="md-nav__link">
+  <a href="#2" title="樣例2" class="md-nav__link">
+    樣例2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="標題畫面" class="md-nav__link">
     標題畫面
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" title="注意" class="md-nav__link">
+  <a href="#_3" title="注意" class="md-nav__link">
     注意
   </a>
   
@@ -689,9 +691,19 @@
                 <h1 id="csshtml">CSS與HTML</h1>
 <p>這一節需要用到CSS与HTML。</p>
 <h2 id="css">使用CSS改變畫面外觀</h2>
-<p>Librian的前端使用HTML實現，因此可以使用CSS來定製畫面。</p>
-<p>在「工程配置.yaml」裏有 <code>自定css</code> 項。這是一個<ruby>列表<rt>list</rt></ruby>，用於指定你的外部CSS文件所在的路徑。</p>
-<p>在遊戲進入ADV畫面後，這些CSS會一併適用於畫面元素。</p>
+<p>有兩種可選的辦法: </p>
+<ul>
+<li>在「工程配置.yaml」裏有 <code>自定css</code> 項。這是一個<ruby>列表<rt>list</rt></ruby>，用於指定你的外部CSS文件路徑。</li>
+</ul>
+<dl>
+<dd>這是永久的。在遊戲進入ADV畫面後，這些CSS會一併適用於畫面元素。</dd>
+</dl>
+<ul>
+<li>在劇本中嵌入HTML代碼的 <code>&lt;style&gt;</code> 標籤。這是臨時的。</li>
+</ul>
+<dl>
+<dd>這是臨時的。在執行到那段代碼後，CSS會適用於畫面元素。只要去除標籤，效果就會消除。</dd>
+</dl>
 <p>關於默認ADV畫面的DOM树，可以打開 <code>{librian路徑}/Librian本體/前端/adv.html</code> 來查看。</p>
 <p>此外，在遊戲中右鍵菜單是禁用的，但是你仍可以在默認標題畫面按右鍵呼出 Developer Tools 來調試。</p>
 <h2 id="_1">動態屬性</h2>
@@ -707,7 +719,13 @@
 <li>
 <dl>
 <dt><code>#總畫面</code></dt>
-<dd>屬性 <code>對話框</code> <code>歷史</code> <code>配置面板</code> 隨着各自的開關狀態設置爲 <code>on</code> 和 <code>off</code>。</dd>
+<dd>屬性 <code>對話框</code> <code>歷史</code> <code>配置面板</code> <code>存檔讀檔面板</code> 隨着各自的開關狀態設置爲 <code>on</code> 和 <code>off</code>。</dd>
+</dl>
+</li>
+<li>
+<dl>
+<dt><code>#選項 &gt; a</code></dt>
+<dd>屬性 <code>選項號</code> 被設置爲從 <code>0</code> 開始的自然數序列。</dd>
 </dl>
 </li>
 <li>
@@ -717,15 +735,50 @@
 </dl>
 </li>
 </ul>
-<h3 id="_2">樣例</h3>
+<h2 id="1">樣例1</h2>
 <pre><code class="css">#對話框[名字=潘大爺] #名字框{ 
     color: #ffc;
 }
 </code></pre>
 
-<p>這是默認工程的一行代碼。<br />
-當 <code>潘大爺</code> 說話時，名字變爲亮黃色。</p>
-<h2 id="_3">標題畫面</h2>
+<p>這是默認工程的一行代碼，使 <code>潘大爺</code> 的名字變爲亮黃色。</p>
+<p><img alt="名字.jpg" class="極" src="名字.jpg" /></p>
+<h2 id="2">樣例2</h2>
+<p>也可以改變各個選項的外觀。</p>
+<p>就以常見的切換場景選項爲例，<code>潘大爺</code> 在決定他接下來是要去 <code>屋上</code> 還是去 <code>倉庫</code> 。</p>
+<pre><code class="liber">潘大爺 (微笑)「接下來要去哪裏呢？」
+? 屋上 -&gt; 劇本1.liber
+? 倉庫 -&gt; 劇本2.liber
+</code></pre>
+
+<p>原本的效果應該是這樣: <br />
+<img alt="選項1.jpg" class="極" src="選項1.jpg" /></p>
+<p>在選項出現之前嵌入幾個CSS。</p>
+<pre><code>```html
+&lt;style&gt;
+[選項號]{
+    width: 40% !important;
+    height: 40% !important;
+    display: inline-block !important;
+    background-size: cover !important;
+    text-shadow: 0px 0px 5px #000 !important;
+    box-shadow: 0px 0px 20px #000 !important;
+}
+[選項號="0"]{
+    background-image: url("../project/潘大爺遊戲/我的圖片/屋上.jpg") !important;
+}
+[選項號="1"]{
+    background-image: url("../project/潘大爺遊戲/我的圖片/倉庫.jpg") !important;
+}
+&lt;/style&gt;
+```
+潘大爺 (微笑)「接下來要去哪裏呢？」
+? 屋上 -&gt; 劇本1.liber
+? 倉庫 -&gt; 劇本2.liber
+</code></pre>
+<p>選項就會變成這樣——</p>
+<p><img alt="選項2.jpg" class="極" src="選項2.jpg" /></p>
+<h2 id="_2">標題畫面</h2>
 <p>標題畫面是一個可以天馬行空地創作的HTML。不過爲了實現標題畫面的功能，還需要一點花樣。    </p>
 <p>在標題畫面加載時，它會在JavaScript層面收到一個來自後端的 <code>山彥</code> 對象。這是前端與後端通信的接口。 <br />
 它是全局的<small>(即<code>window.山彥</code>)</small>，包含一些方法，用來完成標題畫面的功能。   </p>
@@ -759,11 +812,12 @@ Librian後端加載指定劇本，之後轉到ADV頁面。</dd>
 </dl>
 </li>
 </ul>
-<h2 id="_4">注意</h2>
+<h2 id="_3">注意</h2>
 <p>Librian的前端由嵌入Chromium實現，因此支持的CSS和Chrome是幾乎相同的。<br />
 如果你發現你設置的CSS沒有起作用的話，可以先檢查一下本地的Chrome是否支持。</p>
 <p>此外，Chromium的版本號是66，相當於2018年4月的瀏覽器，因此不能支持backdrop-filter。</p>
 <p><small>cefpython沒更新我也沒辦法(鴿子: 馬上就更新了！)</small></p>
+<p>此外，因爲可惡的CSS沒法設置不同文件的優先級，只好用 <code>!important</code> 解決一切問題了<small>(笑)</small>。</p>
                 
                   
                 
