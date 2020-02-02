@@ -1,5 +1,5 @@
 @import url('https://fonts.loli.net/css?family=Noto+Serif+SC:500&display=swap');
-@import url('https://fonts.loli.net/css?family=Noto+Sans+SC&display=swap');
+@import url('https://fonts.loli.net/css?family=Noto+Sans+SC:400&display=swap');
 
 @media screen {
     body {
@@ -21,12 +21,11 @@
     }
 
     .md-content strong {
-        /* 加載太多思源字重會卡 */
         text-shadow: 0px 0px 2px rgb(0,0,0,0.4);
     }
 
     h2, h3, h4, h5 {
-        font-family: 'Noto Sans SC';
+        text-shadow: 0px 0px 2px rgb(0,0,0,0.4);
     }
 
     h1 {
