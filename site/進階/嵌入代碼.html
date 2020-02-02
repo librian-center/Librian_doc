@@ -497,6 +497,18 @@
 
 
   <li class="md-nav__item">
+    <a href="Liber語言文檔.html" title="Liber語言文檔" class="md-nav__link">
+      Liber語言文檔
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="其他技術.html" title="其他技術" class="md-nav__link">
       其他技術
     </a>
@@ -849,7 +861,7 @@ else:
 ```
 </code></pre>
 <h3 id="_5">一些坑</h3>
-<p>每次的代碼段總是會執行到底，也就是說 <code>goto</code>, <code>call</code>, <code>fusion</code> 並不是即時的，他們真正的作用只是改變了劇本棧的順序，導致在一個塊中多次調用會产生出乎意料的演出順序。 </p>
+<p>每次的代碼段總是會執行到底， <code>goto</code>, <code>call</code>, <code>fusion</code> 並不是即時的，他們真正的作用只是改變了劇本棧的順序，這導致在一個塊中多次調用會产生出乎意料的演出順序。</p>
 <p><small>(我雖然想將讀者的實例改爲遞歸的來解決這個問題，但是卻發現這樣存在一個不能存檔的問題。)</small></p>
 <p>舉這樣一個例子:   </p>
 <pre><code>```
@@ -857,7 +869,7 @@ call('第一章.liber')
 call('第二章.liber')
 ```
 </code></pre>
-<p>寫的人的想法是想要先演出第一章，第一章結束之後返回調用點，然後演出第二章。 <br />
+<p>作家的想法是想要先演出第一章，第一章結束之後返回調用點，然後演出第二章。 <br />
 但實際上的執行順序是  <code>call('第一章.liber')</code>  -&gt; <code>call('第二章.liber')</code> -&gt; 演出第二章 -&gt; 演出第一章。</p>
 <p>因爲在 <code>call</code> 時候劇本的棧頂被先後壓入了第一章和第二章，成爲 <code>(.., 當前劇本, 第一章, 第二章)</code>，第二章在棧頂導致先演出。</p>
 <p>我想過的解決辦法是在每一次 <code>call</code> 的時候直接重建一個讀者實例，然後直接進入這個新實例執行，在這個實例執行完畢之後就可以回到調用點執行之後的語句了……但問題是存檔時只能儲存劇本棧不能儲存調用棧，也就是無法在新劇本執行完畢之後返回調用點。</p>
@@ -917,13 +929,13 @@ call('第二章.liber')
           </a>
         
         
-          <a href="其他技術.html" title="其他技術" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="Liber語言文檔.html" title="Liber語言文檔" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                其他技術
+                Liber語言文檔
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
