@@ -54,6 +54,8 @@ Librian從2017年開始開發，到現在已歷經4年時間<small>(這樣算真
 
 + BeautyYuYanli <small>(<https://github.com/BeautyYuYanli>)</small>
 
++ Xianguang Zhou <small>(<https://github.com/Xianguang-Zhou>)</small>
+
 
 ## 關於文檔中出現的人名和地名
 
