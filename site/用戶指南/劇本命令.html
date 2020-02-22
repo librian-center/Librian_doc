@@ -329,6 +329,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#se" title="SE | 效果音" class="md-nav__link">
+    SE | 效果音
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#cg" title="CG" class="md-nav__link">
     CG
   </a>
@@ -698,6 +705,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#se" title="SE | 效果音" class="md-nav__link">
+    SE | 效果音
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#cg" title="CG" class="md-nav__link">
     CG
   </a>
@@ -762,6 +776,8 @@
     更換 <ruby>背景圖片<rt>BG</rt></ruby></li>
 <li>BGM  <br />
     更換 <ruby>背景音樂<rt>BGM</rt></ruby></li>
+<li>SE<br />
+    播放一個 <ruby>效果音<rt>SE</rt></ruby></li>
 <li>CG <br />
     顯示或消除CG   </li>
 <li>EF  <br />
@@ -815,6 +831,24 @@
 <blockquote>
 <p>如果不指定擴展名，則會按 opus, mp3, ogg 的順序挑選存在文件的擴展名。</p>
 <p><ruby>背景音樂<rt>BGM</rt></ruby>文件不存在的場合，背景音樂會停止，控制檯會出現警告。</p>
+</blockquote>
+<h3 id="se">SE | 效果音</h3>
+<p><code>SE</code> 會播放一個你指定的 <ruby>效果音<rt>SE</rt></ruby>。</p>
+<ul>
+<li>語法:</li>
+</ul>
+<pre><code>&gt; SE {文件名} {音量=1}
+</code></pre>
+
+<ul>
+<li>樣例:</li>
+</ul>
+<pre><code>&gt; SE 跳的聲音.mp3
+</code></pre>
+
+<blockquote>
+<p>如果不指定擴展名，則會按 opus, mp3, ogg 的順序挑選存在文件的擴展名。</p>
+<p>文件不存在的場合，控制檯會出現警告。</p>
 </blockquote>
 <h3 id="cg">CG</h3>
 <p><code>CG</code> 進入CG模式並立即使用指定的CG。</p>
