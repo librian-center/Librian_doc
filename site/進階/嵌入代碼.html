@@ -480,6 +480,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_6" title="總表" class="md-nav__link">
+    總表
+  </a>
+  
+</li>
+      
       
       
       
@@ -733,6 +740,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_6" title="總表" class="md-nav__link">
+    總表
+  </a>
+  
+</li>
+      
       
       
       
@@ -753,7 +767,7 @@
                 <h1 id="_1">嵌入代碼</h1>
 <p>這一節需要用到各種代碼。</p>
 <h2 id="python">嵌入Python</h2>
-<p>Librian的嵌入python可以用於實現劇本的邏輯，也可以成爲獨立的擴展功能。  </p>
+<p>Librian的嵌入Python可以用於實現劇本的邏輯，也可以成爲獨立的擴展功能。  </p>
 <p>這些代碼運行在同一個虛擬環境裏，在各處嵌入的代碼都會共享全局變量。如果你不希望這樣，也可以把你的代碼寫成Python文件然後 <code>import</code> 。   </p>
 <p>當然你可以用一些Python的黑魔法直接操作Librian<small>(雖然我不會教你)</small>。   </p>
 <h3 id="_2">全局函數參考</h3>
@@ -905,6 +919,50 @@ call('第二章.liber')
 <p>在前端有一個層 <code>&lt;div id='html疊加'&gt;</code> ，你可以直接往其中寫入HTML代碼。</p>
 <p>每次使用HTML代碼段，都會將上次的代碼覆蓋。</p>
 <p>樣例在 <a href="../用戶指南/劇本寫法.html#_19">劇本寫法</a> 和 <a href="CSS與HTML.html#2">CSS與HTML</a> 。</p>
+<h2 id="_6">總表</h2>
+<table>
+<thead>
+<tr>
+<th>語言類型</th>
+<th>重複使用</th>
+<th>作用域</th>
+<th>存檔</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Python</td>
+<td>疊加</td>
+<td>共享</td>
+<td>存檔</td>
+</tr>
+<tr>
+<td>JavaScript</td>
+<td>疊加，但在停滯點之間會覆蓋</td>
+<td>全局</td>
+<td>不存檔</td>
+</tr>
+<tr>
+<td>HTML</td>
+<td>覆蓋</td>
+<td>-</td>
+<td>存檔</td>
+</tr>
+<tr>
+<td>CSS</td>
+<td>覆蓋</td>
+<td>-</td>
+<td>存檔</td>
+</tr>
+<tr>
+<td>SASS/SCSS</td>
+<td>覆蓋</td>
+<td>-</td>
+<td>存檔</td>
+</tr>
+</tbody>
+</table>
+<p>現在 HTML / CSS / SASS / SCSS 共用同一個空間，它們也會互相覆蓋。</p>
                 
                   
                 
