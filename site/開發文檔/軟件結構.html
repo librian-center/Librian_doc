@@ -514,6 +514,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_2" title="如何啓動" class="md-nav__link">
+    如何啓動
+  </a>
+  
+</li>
+      
       
       
       
@@ -659,6 +666,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_2" title="如何啓動" class="md-nav__link">
+    如何啓動
+  </a>
+  
+</li>
+      
       
       
       
@@ -695,6 +709,24 @@
 <p>它讀取劇本，將其編譯成一個JSON，之後用一個指針在其中逐句執行，更新自身的狀態，畫面狀態也是它的一部分。</p>
 <p>當Librian虛擬機走到停滯點時，就會把當前的畫面狀態導出，由通信機傳給前端。在前端用鼠標單擊，會向後端發送一個步進命令，讓Librian虛擬機繼續走。</p>
 <p>這樣就循環起來了。</p>
+<h2 id="_2">如何啓動</h2>
+<p>你的Python版本應當是3.6或者3.7，在release版本中附帶的Python爲3.6版本。</p>
+<p>之所以不能用3.5是因爲3.5的沒有f-string，不能用3.8是因爲有一些庫暫時不支持3.8。</p>
+<pre><code class="sh">pip install -r requirements.txt
+</code></pre>
+
+<p>這會安裝所有的依賴，包括librian面板和librian本體的。</p>
+<pre><code class="sh">python -m librian.librian面板.librian_panel
+</code></pre>
+
+<p>這是運行librian面板的命令。它得在最外層運行，就是 <code>ls</code> 的時候能看到 <code>readme.md</code> 的那個文件夾。</p>
+<pre><code class="sh">python -m librian.librian本體.librian --project {工程路徑} --config {一個JSON}
+</code></pre>
+
+<p>這是運行librian本體的命令。</p>
+<p>我也不知道爲什麼當時我會在config後面設了一個JSON……什麼時候把它改掉吧……</p>
+<p>前端的路徑在 <code>librian\librian本體\前端</code> ，只要進到這裏然後 <code>webpack</code> 就行了。</p>
+<p>因爲我其實不會前端所以我也不知道要注意什麼……</p>
                 
                   
                 
