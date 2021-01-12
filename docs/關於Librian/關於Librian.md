@@ -41,20 +41,12 @@ Librian的作者是「黃巍」，是真實存在的人物，並不是「<ruby>�
 
 ## 開發歷史
 
-Librian從2017年開始開發，到現在已歷經4年時間<small>(這樣算真的沒問題嗎？)</small>，共計3位代碼貢獻者。  
+Librian從2017年開始開發，到現在已歷經5年時間<small>(這樣算真的沒問題嗎？)</small>，共計6位代碼貢獻者。  
 <small>而且在開發期間由於房間裏的蘿〇美少女逐漸增加而喪失動力！</small>
 
 在2017年以前其實還有kirikiri的版本和flask的版本<small>(可以聯網)</small>，不過經過各種考慮以後還是做成了現在的樣子。
 
-代碼貢獻者: 
-
-+ RimoChan <small>(<https://github.com/RimoChan>)</small>
-
-+ pokemonchw <small>(<https://github.com/pokemonchw>)</small>
-
-+ BeautyYuYanli <small>(<https://github.com/BeautyYuYanli>)</small>
-
-+ Xianguang Zhou <small>(<https://github.com/Xianguang-Zhou>)</small>
+紀念碑: <https://github.com/RimoChan/Librian/graphs/contributors>
 
 
 ## 關於文檔中出現的人名和地名
